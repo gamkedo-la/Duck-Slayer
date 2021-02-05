@@ -10,7 +10,7 @@ public class Launcher : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("LaunchProjectile", 2.0f, 2.0f);
+        InvokeRepeating("LaunchProjectile", 2.0f, 5.0f);
     }
 
     // Update is called once per frame
