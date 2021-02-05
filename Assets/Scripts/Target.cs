@@ -2,7 +2,7 @@
 
 public class Target : MonoBehaviour
 {
-  float health = 200f;
+  float health = 100f;
   public void TakeDamage(float amount)
   {
     health -= amount;
