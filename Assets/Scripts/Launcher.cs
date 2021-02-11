@@ -6,11 +6,12 @@ public class Launcher : MonoBehaviour
 {
     public GameObject ItemPrefab;
     public float thrust = 1.0f;
+    public WaitForSeconds timeBetweenLaunches = new WaitForSeconds(1.0f);
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("LaunchProjectile", 2.0f, 5.0f);
+        StartCoroutine(LaunchProjectile());
     }
 
     // Update is called once per frame
@@ -20,7 +21,7 @@ public class Launcher : MonoBehaviour
         
     }
 
-    void LaunchProjectile()
+    private IEnumerator LaunchProjectile()
     {
       GameObject box = Instantiate(ItemPrefab, transform);
       Rigidbody boxRB = box.GetComponent<Rigidbody>();
@@ -28,5 +29,7 @@ public class Launcher : MonoBehaviour
       {
         boxRB.AddForce(transform.up * thrust);
       }
+      yield return timeBetweenLaunches;
+      StartCoroutine(LaunchProjectile());
     }
 }

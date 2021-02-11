@@ -19,13 +19,12 @@ public class GunFire : MonoBehaviour
       laserLine = GetComponent<LineRenderer>();
       audioSource = GetComponent<AudioSource>();
       fpsCam = GetComponentInParent<Camera>();
-
     }
 
     // Update is called once per frame
     void Update()
     {
-      if(Input.GetButtonDown("Fire1") && Time.time > 1) {
+      if(Input.GetButtonDown("Fire1")) {
         Debug.Log("shoot");
         Shoot();
       }
@@ -64,6 +63,5 @@ public class GunFire : MonoBehaviour
       laserLine.enabled = true;
       yield return shotDuration;
       laserLine.enabled = false;
-
     }
 }
