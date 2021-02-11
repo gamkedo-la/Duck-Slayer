@@ -11,3 +11,7 @@
 
 - What are the core concepts in unity, Transforms, Vector3, Colliders,
   RigidBodies
+
+  Quarterniaons
+  Awake vs Start
+  Player Prefs

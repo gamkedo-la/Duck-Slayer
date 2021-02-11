@@ -11,18 +11,22 @@ public class GunFire : MonoBehaviour
     private LineRenderer laserLine;
     private Camera fpsCam;
     private WaitForSeconds shotDuration = new WaitForSeconds(0.1f);
+    private AudioSource audioSource;
     private float nextFireTime;
 
     void Start()
     {
       laserLine = GetComponent<LineRenderer>();
+      audioSource = GetComponent<AudioSource>();
       fpsCam = GetComponentInParent<Camera>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-      if(Input.GetButtonDown("Fire1")) {
+      if(Input.GetButtonDown("Fire1") && Time.time > 1) {
+        Debug.Log("shoot");
         Shoot();
       }
     }
@@ -51,6 +55,7 @@ public class GunFire : MonoBehaviour
         endOfLaser = rayOrigin + (fpsCam.transform.forward * range);
       }
 
+      audioSource.PlayOneShot(audioSource.clip);
       laserLine.SetPosition(1, endOfLaser);
     }
 
