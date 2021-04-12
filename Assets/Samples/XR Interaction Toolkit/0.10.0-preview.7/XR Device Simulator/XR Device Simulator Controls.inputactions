@@ -471,7 +471,7 @@
                 },
                 {
                     "name": "Trigger",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "4c755f54-9a5b-4ab4-8971-86e750cce8c5",
                     "expectedControlType": "Button",
                     "processors": "",

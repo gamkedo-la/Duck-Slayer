@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.InputSystem;
 
 public class GunFire : MonoBehaviour
 {
@@ -7,38 +8,38 @@ public class GunFire : MonoBehaviour
     public float damage = 100f;
     public float range = 1000f;
     public float fireRate = 0.25f;
+    [SerializeField] InputActionReference fireAction;
 
     private LineRenderer laserLine;
-    private Camera fpsCam;
+    //private Camera fpsCam;
     private WaitForSeconds shotDuration = new WaitForSeconds(0.1f);
-    private AudioSource audioSource;
+    //private AudioSource audioSource;
     private float nextFireTime;
 
     void Start()
     {
       laserLine = GetComponent<LineRenderer>();
-      audioSource = GetComponent<AudioSource>();
-      fpsCam = GetComponentInParent<Camera>();
+      //audioSource = GetComponent<AudioSource>();
+      //fpsCam = GetComponentInParent<Camera>();
+      fireAction.action.performed += Shoot;
     }
 
     // Update is called once per frame
     void Update()
     {
-      if(Input.GetButtonDown("Fire1")) {
-        Debug.Log("shoot");
-        Shoot();
-      }
+
     }
 
-    void Shoot() 
+    void Shoot(InputAction.CallbackContext context) 
     {
       RaycastHit hit;
       Vector3 endOfLaser;
-      Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
+      Debug.Log("Shoot");
+      //Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
       StartCoroutine(ShotEffect());
       laserLine.SetPosition(0, gunEnd.position);
 
-      if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
+      if (Physics.Raycast(gunEnd.position, gunEnd.transform.forward, out hit, range))
       {
         //handle damage if hit
         Target target = hit.transform.GetComponent<Target>();
@@ -51,11 +52,11 @@ public class GunFire : MonoBehaviour
       } else
       {
         //handle laser render on no hit
-        endOfLaser = rayOrigin + (fpsCam.transform.forward * range);
+        //endOfLaser = rayOrigin + (fpsCam.transform.forward * range);
       }
 
-      audioSource.PlayOneShot(audioSource.clip);
-      laserLine.SetPosition(1, endOfLaser);
+//      audioSource.PlayOneShot(audioSource.clip);
+      //laserLine.SetPosition(1, endOfLaser);
     }
 
     private IEnumerator ShotEffect()

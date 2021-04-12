@@ -13,7 +13,7 @@ public class Target : MonoBehaviour
   }
 
   private void Start() {
-    Invoke("Die", 10.0f); 
+    // Invoke("Die", 10.0f); 
   }
 
   void Die() {
