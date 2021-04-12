@@ -3,7 +3,8 @@ using UnityEngine.InputSystem;
 
 public class MouseLook : MonoBehaviour
 {
-    
+    public InputActionReference horizontalLook;
+    public InputActionReference verticalLook; 
     public Transform playerBody;
     public float mouseSensitivity = 100f;
     float pitch = 0f;
@@ -14,27 +15,28 @@ public class MouseLook : MonoBehaviour
     void Start()
     {
       Cursor.lockState = CursorLockMode.Locked;
+      horizontalLook.action.performed += HandleHorizontalLook;
+      verticalLook.action.performed += HandleVerticalLook;
     }
 
     // Update is called once per frame
     void Update()
     {
-      float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-      float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+    }
 
-      pitch -= mouseY;
-      pitch = Mathf.Clamp(pitch, -70f, 70f);
-
-      yaw += mouseX;
-      yaw = Mathf.Clamp(yaw, -45f, 45f);
-
-
-      //transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-      transform.localRotation = Quaternion.AngleAxis(pitch, Vector3.right);
-      //playerBody.Rotate(new Vector3(0, 1, 0) * mouseX);
+    void HandleHorizontalLook(InputAction.CallbackContext obj)
+    {
+      Debug.Log("YE YAAAAW");
+      yaw += obj.ReadValue<float>();
       playerBody.localRotation = Quaternion.AngleAxis(yaw, Vector3.up);
 
-      Debug.Log(playerBody.rotation);
+    }
+
+    void HandleVerticalLook(InputAction.CallbackContext obj)
+    {
+      Debug.Log("Lifes a pitch");
+      pitch -= obj.ReadValue<float>();
+      transform.localRotation = Quaternion.AngleAxis(pitch, Vector3.right);
     }
 
     

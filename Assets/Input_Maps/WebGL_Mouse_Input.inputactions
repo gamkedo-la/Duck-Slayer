@@ -1,0 +1,71 @@
+{
+    "name": "WebGL_Mouse_Input",
+    "maps": [
+        {
+            "name": "Web_GL_Input_Map",
+            "id": "ce3afaf2-949b-4905-90c6-6bb4905da1fc",
+            "actions": [
+                {
+                    "name": "Horizontal Look",
+                    "type": "Value",
+                    "id": "5003dca6-1a83-45a2-be4b-8a048395cd49",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Vertical Look",
+                    "type": "Value",
+                    "id": "8c29aac0-7549-4e16-b17d-57df959e9046",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Shoot",
+                    "type": "Button",
+                    "id": "942496c0-6426-44ac-93a2-23d79dad9598",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "59b5ba0b-3b00-4284-9307-dfa220869474",
+                    "path": "<Mouse>/delta/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Horizontal Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4bb19d89-5e41-4b1e-a295-cba63d824e30",
+                    "path": "<Mouse>/delta/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Vertical Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cec9195e-b4be-4bc6-99e6-5bf84900286d",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
