@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Raycast_Shoot : MonoBehaviour
+public class RaycastShoot : MonoBehaviour
 {
 
     public InputActionReference FireButton;
@@ -21,5 +21,10 @@ public class Raycast_Shoot : MonoBehaviour
         Target target = hit.transform.GetComponent<Target>();
         target.TakeDamage(100.0f);
       }
+
+    }
+
+    void update()
+    {
     }
 }
