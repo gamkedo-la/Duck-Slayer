@@ -5,17 +5,8 @@ using UnityEngine;
 public class RaycastViewer : MonoBehaviour
 {
     public float weaponRange = 50.0f;
-
-    private Camera fpsCam;
-
-    void Start()
-    {
-      fpsCam = GetComponentInParent<Camera>();
-    }
-
     void Update()
     {
-      Vector3 lineOrigin = fpsCam.ViewportToWorldPoint (new Vector3(0.5f, 0.5f, 0));
-      Debug.DrawRay(lineOrigin, fpsCam.transform.forward * weaponRange, Color.green);
+      Debug.DrawRay(transform.position, transform.forward * weaponRange, Color.green);
     }
 }

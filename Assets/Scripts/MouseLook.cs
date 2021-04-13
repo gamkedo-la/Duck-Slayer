@@ -26,7 +26,6 @@ public class MouseLook : MonoBehaviour
 
     void HandleHorizontalLook(InputAction.CallbackContext obj)
     {
-      Debug.Log("YE YAAAAW");
       yaw += obj.ReadValue<float>();
       playerBody.localRotation = Quaternion.AngleAxis(yaw, Vector3.up);
 
@@ -34,7 +33,6 @@ public class MouseLook : MonoBehaviour
 
     void HandleVerticalLook(InputAction.CallbackContext obj)
     {
-      Debug.Log("Lifes a pitch");
       pitch -= obj.ReadValue<float>();
       transform.localRotation = Quaternion.AngleAxis(pitch, Vector3.right);
     }

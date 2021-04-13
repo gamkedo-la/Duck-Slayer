@@ -2,7 +2,9 @@
 
 public class Target : MonoBehaviour
 {
+  public ParticleSystem onDestroyParticles;
   float health = 100f;
+  
 
   public void TakeDamage(float amount)
   {
@@ -12,12 +14,11 @@ public class Target : MonoBehaviour
     }
   }
 
-  private void Start() {
-    // Invoke("Die", 10.0f); 
-  }
-
   void Die() {
     Destroy(gameObject);
+    ParticleSystem particles = Instantiate(onDestroyParticles, transform.position, transform.rotation);
+    Color cubeColor = GetComponent<Renderer>().material.color; 
+    particles.GetComponent<ParticleSystemRenderer>().material.color = cubeColor;
   }
 }
 
