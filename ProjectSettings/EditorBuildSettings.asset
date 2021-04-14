@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Duck_Slayer_Level_1.unity
     guid: cb3450f6775874f9ead9cabb6414746d
+  - enabled: 1
+    path: Assets/Scenes/Poly_World.unity
+    guid: c3c7a599c12b6424ab8db17bafd1c365
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 64d7ffbc742eb4884b39f17e33524efa,
       type: 2}
