@@ -14,9 +14,8 @@ public class LaserSight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      Vector3 lineEndPosition = transform.forward * 50;
+      Vector3 lineEndPosition = transform.position + (transform.forward * 50);
       lineRenderer.SetPosition(0, transform.position);
-      lineRenderer.SetPosition(1, lineEndPosition);
- 
+      lineRenderer.SetPosition(1, lineEndPosition); 
     }
 }
