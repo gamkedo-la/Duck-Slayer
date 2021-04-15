@@ -198,23 +198,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7319739301334628499, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
-        type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7319739301334628499, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
-        type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
-      value: 0.15867805
-      objectReference: {fileID: 0}
     - target: {fileID: 7319739301334628501, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7319739301334628499, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
 --- !u!1001 &93171957
 PrefabInstance:
@@ -452,7 +441,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 36344946}
   m_PrefabAsset: {fileID: 0}
---- !u!120 &1130513551
+--- !u!120 &1130513553
 LineRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -501,8 +490,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 1
+        time: 0.005290985
+        value: 0.094675064
         inSlope: 0
         outSlope: 0
         tangentMode: 0
