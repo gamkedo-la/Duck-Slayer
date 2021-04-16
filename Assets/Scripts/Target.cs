@@ -17,7 +17,8 @@ public class Target : MonoBehaviour
   void Die() {
     Destroy(gameObject);
     ParticleSystem particles = Instantiate(onDestroyParticles, transform.position, transform.rotation);
-    Color cubeColor = GetComponent<Renderer>().material.color; 
+    Color cubeColor = GetComponentInChildren<MeshRenderer>().material.color;
+    
     particles.GetComponent<ParticleSystemRenderer>().material.color = cubeColor;
   }
 }
