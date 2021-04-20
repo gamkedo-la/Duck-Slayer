@@ -1,5 +1,38 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!95 &3611433915589003571
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772755342057324032}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9116b3e345f53f443b109062d497d5f1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5141962024320532429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772755342057324032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f367cdc36c34245a878e868d064e74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3611433915589003571}
+  isFlyingID: 0
 --- !u!1 &5642516305770464084
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,7 +46,6 @@ GameObject:
   - component: {fileID: 7176343762786340136}
   - component: {fileID: -750415349601217763}
   - component: {fileID: 8485968993483762695}
-  - component: {fileID: 3092307066948261038}
   m_Layer: 0
   m_Name: Duck1
   m_TagString: Untagged
@@ -93,25 +125,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DurationInSeconds: 10
---- !u!95 &3092307066948261038
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5642516305770464084}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9116b3e345f53f443b109062d497d5f1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &466132673020134225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -181,6 +194,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac89a80746fcc8b44987c91196f7384f, type: 3}
+--- !u!1 &772755342057324032 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ac89a80746fcc8b44987c91196f7384f,
+    type: 3}
+  m_PrefabInstance: {fileID: 466132673020134225}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &140368392676500666 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac89a80746fcc8b44987c91196f7384f,

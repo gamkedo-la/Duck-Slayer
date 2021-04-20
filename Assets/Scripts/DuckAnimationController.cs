@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class DuckAnimationController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] Animator animator;
+    public int isFlyingID;
+
+    private void Awake()
+    {
+        isFlyingID = Animator.StringToHash("IsFlying");
+    }
+
     void Start()
     {
-        
+        animator.SetBool(isFlyingID, true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
