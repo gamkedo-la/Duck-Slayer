@@ -59,7 +59,11 @@ public class PathFollower : MonoBehaviour
 
         if (lookForward)
         {
-            transform.LookAt(position + spline.GetDirection(progress));
+            if (goingForward)
+                transform.LookAt(position + spline.GetDirection(progress));
+
+            if (!goingForward)
+                transform.LookAt(position - spline.GetDirection(progress));
         }
     }
 }

@@ -33,7 +33,7 @@ public class BezierSplineInspector : Editor
             Vector3 p2 = ShowPoint(i + 1);
             Vector3 p3 = ShowPoint(i + 2);
 
-            Handles.color = Color.yellow;
+            Handles.color = Color.black;
             Handles.DrawLine(p0, p1);
             Handles.DrawLine(p2, p3);
 
@@ -126,7 +126,7 @@ public class BezierSplineInspector : Editor
             size *= 2f;
         }
 
-        if (Handles.Button(point, handleRotation, size * handleSize, size * pickSize, Handles.DotHandleCap))
+        if (Handles.Button(point, handleRotation, size * handleSize, size * pickSize, Handles.CubeHandleCap))
         {
             spline.SetSelectedIndex(index);
             Repaint();
