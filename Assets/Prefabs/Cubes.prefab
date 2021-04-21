@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 8980291659295642756}
   - component: {fileID: 8980291659295642755}
   - component: {fileID: 8980291659295642754}
+  - component: {fileID: 7282875}
   m_Layer: 0
   m_Name: Blue_Cube
   m_TagString: Untagged
@@ -93,7 +94,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 053bbaa867b014f8bb1004700872d340, type: 2}
+  - {fileID: 2100000, guid: fd49a990f845844a6a1ba23401d59e0a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -141,6 +142,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestroyParticles: {fileID: 1955533477162177923, guid: 2cce83d11dae94c13a13c9e3a5bf8b2d,
     type: 3}
+--- !u!114 &7282875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8980291659295642752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f54d3fe5a8ceb4cf4b7c6b6c5064bbbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
 --- !u!1 &8980291659445597579
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,8 +168,9 @@ GameObject:
   - component: {fileID: 8980291659445597583}
   - component: {fileID: 8980291659445597582}
   - component: {fileID: 8980291659445597581}
+  - component: {fileID: 1216309127}
   m_Layer: 0
-  m_Name: Yellow_Cube
+  m_Name: Purple_Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -201,7 +216,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e3ad97fae3be847019549487047d4b9c, type: 2}
+  - {fileID: 2100000, guid: 66396b4d0fa844929abc6370bf533561, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -249,6 +264,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestroyParticles: {fileID: 1955533477162177923, guid: 2cce83d11dae94c13a13c9e3a5bf8b2d,
     type: 3}
+--- !u!114 &1216309127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8980291659445597579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f54d3fe5a8ceb4cf4b7c6b6c5064bbbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
 --- !u!1 &8980291659632255840
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,8 +290,9 @@ GameObject:
   - component: {fileID: 8980291659632255844}
   - component: {fileID: 8980291659632255843}
   - component: {fileID: 8980291659632255842}
+  - component: {fileID: 1837388069}
   m_Layer: 0
-  m_Name: Red_Cube
+  m_Name: Pink_Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -309,7 +338,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9b42255068e1f4c11adc945a869f2c59, type: 2}
+  - {fileID: 2100000, guid: bcdacadd1b72f4bfba83570171b92bdb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -357,3 +386,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestroyParticles: {fileID: 1955533477162177923, guid: 2cce83d11dae94c13a13c9e3a5bf8b2d,
     type: 3}
+--- !u!114 &1837388069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8980291659632255840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f54d3fe5a8ceb4cf4b7c6b6c5064bbbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
