@@ -4,12 +4,23 @@ public class Target : MonoBehaviour
 {
   public ParticleSystem onDestroyParticles;
   float health = 100f;
-  
 
-  public void TakeDamage(float amount)
+  SlowMotion slowMotion;
+
+	private void Start()
+	{
+        slowMotion = GameObject.FindWithTag("SlowDown").GetComponent<SlowMotion>();
+	}
+
+
+	public void TakeDamage(float amount)
   {
     health -= amount;
     if(health <= 0) {
+        if(slowMotion != null)
+	    {
+                slowMotion.SlowDown();
+	    }
       Die();
     }
   }
