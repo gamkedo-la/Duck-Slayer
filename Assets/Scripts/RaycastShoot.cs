@@ -19,7 +19,10 @@ public class RaycastShoot : MonoBehaviour
       if(Physics.Raycast(transform.position, transform.forward, out hit))
       {
         Target target = hit.transform.GetComponent<Target>();
-        target.TakeDamage(100.0f);
+            if (target != null)
+            {
+                target.TakeDamage(100.0f);
+            }
       }
 
     }
