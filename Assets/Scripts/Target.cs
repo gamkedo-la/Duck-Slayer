@@ -5,11 +5,18 @@ public class Target : MonoBehaviour
   public ParticleSystem onDestroyParticles;
   float health = 100f;
 
-  SlowMotion slowMotion;
+  private GameObject gameManager;
+  private SlowMotion slowMotion;
+  private Score score;
 
 	private void Start()
 	{
-        slowMotion = GameObject.FindWithTag("SlowDown").GetComponent<SlowMotion>();
+        gameManager = GameObject.FindWithTag("GameManager");
+        if(gameManager != null)
+		{
+            slowMotion = gameManager.GetComponent<SlowMotion>();
+            score = gameManager.GetComponent<Score>();
+		}
 	}
 
 
@@ -19,7 +26,11 @@ public class Target : MonoBehaviour
     if(health <= 0) {
         if(slowMotion != null)
 	    {
-                slowMotion.SlowDown();
+            slowMotion.SlowDown();
+	    }
+        if(score != null)
+	    {
+            score.IncreaseScore();
 	    }
       Die();
     }

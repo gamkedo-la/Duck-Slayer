@@ -4,7 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - SlowDown
+  - GameManager
   layers:
   - Default
   - TransparentFX
