@@ -48,12 +48,20 @@ public class BezierSplineInspector : Editor
     public override void OnInspectorGUI()
     {
         spline = target as BezierSpline;
-        Debug.Log("On Inspector" + spline.GetSelectedIndex());
+
         int index = spline.GetSelectedIndex();
 
         if (index >= 0 && index < spline.ControlPointCount)
         { DrawSelectedPointInspector(index); Debug.Log("After Draw Call" + index); }
 
+        EditorGUI.BeginChangeCheck();
+        bool loop = EditorGUILayout.Toggle("Loop", spline.Loop);
+        if (EditorGUI.EndChangeCheck())
+        {
+            Undo.RecordObject(spline, "Toggle Loop");
+            EditorUtility.SetDirty(spline);
+            spline.Loop = loop;
+        }
 
         if (GUILayout.Button("Add Curve"))
         {
@@ -74,6 +82,16 @@ public class BezierSplineInspector : Editor
             EditorUtility.SetDirty(spline);
             spline.SetControlPoint(index, point);
         }
+
+        EditorGUI.BeginChangeCheck();
+        BezierControlPointMode mode = (BezierControlPointMode)EditorGUILayout.EnumPopup("Mode",
+                                                                                        spline.GetControlPointMode(index));
+        if (EditorGUI.EndChangeCheck())
+        {
+            Undo.RecordObject(spline, "Change Point Mode");
+            spline.SetControlPointMode(index, mode);
+            EditorUtility.SetDirty(spline);
+        }
     }
 
     private void ShowDirections()
@@ -90,12 +108,24 @@ public class BezierSplineInspector : Editor
         }
     }
 
+    private static Color[] modeColors = {
+        Color.white,
+        Color.yellow,
+        Color.cyan
+    };
+
     private Vector3 ShowPoint(int index)
     {
         Vector3 point = handleTransform.TransformPoint(spline.GetControlPoint(index));
 
-        Handles.color = Color.white;
+        Handles.color = modeColors[(int)spline.GetControlPointMode(index)];
         float size = HandleUtility.GetHandleSize(point);
+
+        if (index == 0)
+        {
+            size *= 2f;
+        }
+
         if (Handles.Button(point, handleRotation, size * handleSize, size * pickSize, Handles.DotHandleCap))
         {
             spline.SetSelectedIndex(index);
