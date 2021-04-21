@@ -5,8 +5,17 @@ using UnityEngine;
 
 public class BezierSpline : MonoBehaviour
 {
-    public Vector3[] points;
+    [SerializeField]
+    private Vector3[] points;
+    public int ControlPointCount { get { return points.Length; } }
     public int CurveCount { get { return (points.Length - 1) / 3; } }
+
+    [SerializeField]
+    private BezierControlPointMode[] modes;
+
+    private int selectedIndex = -1;
+    public int GetSelectedIndex() { return selectedIndex; }
+    public void SetSelectedIndex(int index) { selectedIndex = index; }
 
     public void Reset()
     {
@@ -17,6 +26,31 @@ public class BezierSpline : MonoBehaviour
             new Vector3(3f, 0f, 0f),
             new Vector3(4f, 0f, 0f),
         };
+
+        modes = new BezierControlPointMode[] {
+            BezierControlPointMode.Free,
+            BezierControlPointMode.Free
+        };
+    }
+
+    public Vector3 GetControlPoint(int index)
+    {
+        return points[index];
+    }
+
+    public void SetControlPoint(int index, Vector3 point)
+    {
+        points[index] = point;
+    }
+
+    public BezierControlPointMode GetControlPointMode(int index)
+    {
+        return modes[(index + 1) / 3];
+    }
+
+    public void SetControlPointMode(int index, BezierControlPointMode mode)
+    {
+        modes[(index + 1) / 3] = mode;
     }
 
     public Vector3 GetPoint(float t)
@@ -72,5 +106,8 @@ public class BezierSpline : MonoBehaviour
         points[points.Length - 2] = point;
         point.x += 1f;
         points[points.Length - 1] = point;
+
+        Array.Resize(ref modes, modes.Length + 1);
+        modes[modes.Length - 1] = modes[modes.Length - 2];
     }
 }
