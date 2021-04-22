@@ -529,6 +529,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FireButton: {fileID: 2915566457910256351, guid: 91ebc526e060742618648ea5df3b31fe,
     type: 3}
+  particlesOnShoot: {fileID: 0}
+  endOfGun: {fileID: 0}
 --- !u!33 &7319739301334628497
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1075,6 +1077,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FireButton: {fileID: 83097790271614945, guid: fa9bb3bb80eb242a1bbc7adb422ead58,
     type: 3}
+  particlesOnShoot: {fileID: 0}
+  endOfGun: {fileID: 0}
 --- !u!1 &7319739301531468112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,6 +1554,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FireButton: {fileID: -5982496924579745919, guid: fa9bb3bb80eb242a1bbc7adb422ead58,
     type: 3}
+  particlesOnShoot: {fileID: 0}
+  endOfGun: {fileID: 0}
 --- !u!1 &7319739301668396489
 GameObject:
   m_ObjectHideFlags: 0

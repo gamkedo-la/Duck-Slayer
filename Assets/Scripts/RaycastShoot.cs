@@ -7,6 +7,8 @@ public class RaycastShoot : MonoBehaviour
 {
 
     public InputActionReference FireButton;
+    public ParticleSystem particlesOnShoot;
+    public Transform endOfGun;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,7 @@ public class RaycastShoot : MonoBehaviour
 
     void HandleFireButtonPress(InputAction.CallbackContext obj)
     {
+      ParticleSystem muzzleBlast;
       RaycastHit hit;
       if(Physics.Raycast(transform.position, transform.forward, out hit))
       {
@@ -24,10 +27,7 @@ public class RaycastShoot : MonoBehaviour
                 target.TakeDamage(100.0f);
             }
       }
-
-    }
-
-    void update()
-    {
+      muzzleBlast = Instantiate(particlesOnShoot, endOfGun.position, endOfGun.rotation);
+      Destroy(muzzleBlast, 2f);
     }
 }
