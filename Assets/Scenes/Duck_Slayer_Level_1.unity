@@ -354,7 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemPrefab: {fileID: 5642516305770464084, guid: 2b17e159f4f37514dbf312377bf15c2e,
     type: 3}
-  spawnTime: 1.7
+  spawnTime: 5.33
   thrust: 1400
 --- !u!4 &423112747
 Transform:
@@ -628,7 +628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemPrefab: {fileID: 5642516305770464084, guid: 2b17e159f4f37514dbf312377bf15c2e,
     type: 3}
-  spawnTime: 5
+  spawnTime: 10
   thrust: 1200
 --- !u!4 &626514115
 Transform:
@@ -1229,7 +1229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemPrefab: {fileID: 5642516305770464084, guid: 2b17e159f4f37514dbf312377bf15c2e,
     type: 3}
-  spawnTime: 2
+  spawnTime: 8
   thrust: 1400
 --- !u!4 &1558462074
 Transform:
@@ -1681,6 +1681,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6d02293eeb6a54ebe111e6ef00ac79, type: 3}
+--- !u!1001 &1818594952
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 768369462810395004, guid: 6f1540a9f1f073b459910c6110181bda,
+        type: 3}
+      propertyPath: m_Name
+      value: GunMuzzleFlash
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435739032668537645, guid: 6f1540a9f1f073b459910c6110181bda,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435739032668537645, guid: 6f1540a9f1f073b459910c6110181bda,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.0740602
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435739032668537645, guid: 6f1540a9f1f073b459910c6110181bda,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5664122
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435739032668537645, guid: 6f1540a9f1f073b459910c6110181bda,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.1682343
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435739032668537645, guid: 6f1540a9f1f073b459910c6110181bda,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435739032668537645, guid: 6f1540a9f1f073b459910c6110181bda,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435739032668537645, guid: 6f1540a9f1f073b459910c6110181bda,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435739032668537645, guid: 6f1540a9f1f073b459910c6110181bda,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435739032668537645, guid: 6f1540a9f1f073b459910c6110181bda,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435739032668537645, guid: 6f1540a9f1f073b459910c6110181bda,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2435739032668537645, guid: 6f1540a9f1f073b459910c6110181bda,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243597152781012276, guid: 6f1540a9f1f073b459910c6110181bda,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6f1540a9f1f073b459910c6110181bda, type: 3}
 --- !u!1 &1907366626 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7319739301531468112, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
