@@ -6,7 +6,6 @@ public class Target : MonoBehaviour
   float health = 100f;
 
   private GameObject gameManager;
-  private SlowMotion slowMotion;
   private Score score;
 
 	private void Start()
@@ -14,7 +13,6 @@ public class Target : MonoBehaviour
         gameManager = GameObject.FindWithTag("GameManager");
         if(gameManager != null)
 		{
-            slowMotion = gameManager.GetComponent<SlowMotion>();
             score = gameManager.GetComponent<Score>();
 		}
 	}
@@ -24,13 +22,9 @@ public class Target : MonoBehaviour
   {
     health -= amount;
     if(health <= 0) {
-        if(slowMotion != null)
+      if(score != null)
 	    {
-            slowMotion.SlowDown();
-	    }
-        if(score != null)
-	    {
-            score.IncreaseScore();
+        score.IncreaseScore();
 	    }
       Die();
     }
@@ -40,7 +34,6 @@ public class Target : MonoBehaviour
     Destroy(gameObject);
     ParticleSystem particles = Instantiate(onDestroyParticles, transform.position, transform.rotation);
     Color cubeColor = GetComponentInChildren<MeshRenderer>().material.color;
-    
     particles.GetComponent<ParticleSystemRenderer>().material.color = cubeColor;
   }
 }

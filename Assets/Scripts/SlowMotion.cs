@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SlowMotion : MonoBehaviour
 {
-    public float slowDownRate;
+  public float slowDownRate;
 	public float slowDownSeconds;
 
 	private void Update()
