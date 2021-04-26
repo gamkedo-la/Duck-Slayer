@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: -750415349601217763}
   - component: {fileID: 8485968993483762695}
   - component: {fileID: 666551224}
+  - component: {fileID: 3924427265240231800}
   m_Layer: 0
   m_Name: Duck1
   m_TagString: Untagged
@@ -139,6 +140,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 10
+--- !u!114 &3924427265240231800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642516305770464084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df367bc77fce2543b5941a83b02f3a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spline: {fileID: 0}
+  mode: 0
+  lookForward: 0
+  duration: 0
 --- !u!1001 &466132673020134225
 PrefabInstance:
   m_ObjectHideFlags: 0
