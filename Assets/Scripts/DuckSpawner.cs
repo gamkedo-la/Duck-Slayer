@@ -42,6 +42,8 @@ public class DuckSpawner : MonoBehaviour
 
             GameObject D = Instantiate(DuckPrefab);
 
+            D.transform.parent = transform;
+
             BezierSpline thisSpline = null;
 
             weight = Random.Range(1, AttackWeight + PassiveWeight + 1);
