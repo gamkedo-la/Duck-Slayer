@@ -12,8 +12,10 @@ public class PathFollower : MonoBehaviour
 
     public bool lookForward;
     public float duration;
+    public bool destroyAtEndOfPath;
 
     private float progress;
+
 
     private void Update()
     {
@@ -26,8 +28,11 @@ public class PathFollower : MonoBehaviour
             {
                 switch (mode)
                 {
-                    case PathFollowMode.Once:
-                        progress = 1f;
+                    case PathFollowMode.Once: // Refactor this later
+                        {
+                            progress = 1f;
+                            if (destroyAtEndOfPath) { Destroy(this); }
+                        }
                         break;
 
                     case PathFollowMode.Loop:
