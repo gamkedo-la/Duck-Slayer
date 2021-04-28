@@ -31,7 +31,7 @@ public class PathFollower : MonoBehaviour
                     case PathFollowMode.Once: // Refactor this later
                         {
                             progress = 1f;
-                            if (destroyAtEndOfPath) { Destroy(this); }
+                            if (destroyAtEndOfPath) { Destroy(gameObject); }
                         }
                         break;
 

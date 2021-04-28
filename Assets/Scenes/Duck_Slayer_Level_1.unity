@@ -5792,6 +5792,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1209641416}
     m_Modifications:
+    - target: {fileID: -750415349601217763, guid: 2b17e159f4f37514dbf312377bf15c2e,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3467567129076637494, guid: 2b17e159f4f37514dbf312377bf15c2e,
         type: 3}
       propertyPath: m_RootOrder
@@ -15780,7 +15785,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1209641416
 Transform:
   m_ObjectHideFlags: 0
@@ -18321,6 +18326,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7319739299606727907, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7319739300141554182, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
         type: 3}
       propertyPath: m_IsActive
@@ -18487,3 +18497,22 @@ MonoBehaviour:
   SlowMotionButton: {fileID: -8270564778575511633, guid: fa9bb3bb80eb242a1bbc7adb422ead58,
     type: 3}
   gameManager: {fileID: 533670092}
+--- !u!1 &7319739301621909540 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7319739299606727905, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7319739301621909537}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7319739301621909541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7319739301621909540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1e2120bf77139b49b9141619aa6040b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
