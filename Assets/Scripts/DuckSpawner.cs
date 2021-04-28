@@ -26,6 +26,9 @@ public class DuckSpawner : MonoBehaviour
     public float DuckMinFlightTime;
     public float DuckMaxFlightTime;
 
+    [Header("Destroy Duck At end of Path")]
+    public bool DestroyAtEndOfPath;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,5 +78,6 @@ public class DuckSpawner : MonoBehaviour
         pathFollowSettings.duration = duckFlightTime;
         pathFollowSettings.lookForward = true;
         pathFollowSettings.mode = PathFollowMode.Once;
+        pathFollowSettings.destroyAtEndOfPath = DestroyAtEndOfPath;
     }
 }

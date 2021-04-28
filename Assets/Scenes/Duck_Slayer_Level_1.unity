@@ -10760,6 +10760,7 @@ MonoBehaviour:
   Timer: 5
   DuckMinFlightTime: 5
   DuckMaxFlightTime: 10
+  DestroyAtEndOfPath: 1
 --- !u!4 &832198382
 Transform:
   m_ObjectHideFlags: 0
@@ -18310,6 +18311,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7319739299606727905, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319739299606727905, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7319739300141554182, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
         type: 3}
       propertyPath: m_IsActive
