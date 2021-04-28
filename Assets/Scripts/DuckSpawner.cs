@@ -42,31 +42,33 @@ public class DuckSpawner : MonoBehaviour
 
         if (Timer <= 0)
         {
+            GameObject D;
+            BezierSpline thisSpline;
 
-            GameObject D = Instantiate(DuckPrefab);
-
-            D.transform.parent = transform;
-
-            BezierSpline thisSpline = null;
-
-            weight = Random.Range(1, AttackWeight + PassiveWeight + 1);
-
-            if (weight <= AttackWeight)
-            {
-                thisSpline = AttackPaths[Random.Range(0, AttackPaths.Length)];
-            }
-            else
-            {
-                thisSpline = PassivePaths[Random.Range(0, AttackPaths.Length)];
-            }
+            SpawnDuck(out D, out thisSpline);
 
             TellDuckToFly(D, thisSpline);
 
             Timer = Random.Range(minSpawnTime, maxSpawnTime);
         }
+    }
 
+    private void SpawnDuck(out GameObject D, out BezierSpline thisSpline)
+    {
+        D = Instantiate(DuckPrefab);
+        D.transform.parent = transform;
 
+        thisSpline = null;
+        weight = Random.Range(1, AttackWeight + PassiveWeight + 1);
 
+        if (weight <= AttackWeight)
+        {
+            thisSpline = AttackPaths[Random.Range(0, AttackPaths.Length - 1)];
+        }
+        else
+        {
+            thisSpline = PassivePaths[Random.Range(0, PassivePaths.Length - 1)];
+        }
     }
 
     private void TellDuckToFly(GameObject D, BezierSpline thisSpline)
