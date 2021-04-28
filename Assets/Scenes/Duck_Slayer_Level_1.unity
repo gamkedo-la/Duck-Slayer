@@ -10753,13 +10753,13 @@ MonoBehaviour:
   - {fileID: 6957421042124377539}
   PassivePaths:
   - {fileID: 4301096767334468282}
-  weight: 0
   AttackWeight: 1
   PassiveWeight: 1
   minSpawnTime: 4
   maxSpawnTime: 7
   Timer: 5
-  DuckFlightTime: 5
+  DuckMinFlightTime: 5
+  DuckMaxFlightTime: 10
 --- !u!4 &832198382
 Transform:
   m_ObjectHideFlags: 0

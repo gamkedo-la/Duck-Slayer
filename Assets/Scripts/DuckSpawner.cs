@@ -23,12 +23,13 @@ public class DuckSpawner : MonoBehaviour
     public float Timer;
 
     [Header("Time it takes for each duck to complete its path")]
-    public float DuckFlightTime;
+    public float DuckMinFlightTime;
+    public float DuckMaxFlightTime;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -36,7 +37,7 @@ public class DuckSpawner : MonoBehaviour
     {
         Timer -= Time.deltaTime;
 
-        if(Timer <= 0)
+        if (Timer <= 0)
         {
 
             GameObject D = Instantiate(DuckPrefab);
@@ -45,7 +46,7 @@ public class DuckSpawner : MonoBehaviour
 
             weight = Random.Range(1, AttackWeight + PassiveWeight + 1);
 
-            if(weight <= AttackWeight)
+            if (weight <= AttackWeight)
             {
                 thisSpline = AttackPaths[Random.Range(0, AttackPaths.Length)];
             }
@@ -54,15 +55,23 @@ public class DuckSpawner : MonoBehaviour
                 thisSpline = PassivePaths[Random.Range(0, AttackPaths.Length)];
             }
 
-            D.GetComponent<PathFollower>().spline = thisSpline;
-            D.GetComponent<PathFollower>().duration = DuckFlightTime;
-            D.GetComponent<PathFollower>().lookForward = true;
-            D.GetComponent<PathFollower>().mode = PathFollowMode.Once;
+            TellDuckToFly(D, thisSpline);
 
             Timer = Random.Range(minSpawnTime, maxSpawnTime);
         }
 
 
 
+    }
+
+    private void TellDuckToFly(GameObject D, BezierSpline thisSpline)
+    {
+        var pathFollowSettings = D.GetComponent<PathFollower>();
+        var duckFlightTime = Random.Range(DuckMinFlightTime, DuckMaxFlightTime);
+
+        pathFollowSettings.spline = thisSpline;
+        pathFollowSettings.duration = duckFlightTime;
+        pathFollowSettings.lookForward = true;
+        pathFollowSettings.mode = PathFollowMode.Once;
     }
 }
