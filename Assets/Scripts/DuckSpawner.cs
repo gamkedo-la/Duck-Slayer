@@ -63,11 +63,11 @@ public class DuckSpawner : MonoBehaviour
 
         if (weight <= AttackWeight)
         {
-            thisSpline = AttackPaths[Random.Range(0, AttackPaths.Length - 1)];
+            thisSpline = AttackPaths[Random.Range(0, AttackPaths.Length)];
         }
         else
         {
-            thisSpline = PassivePaths[Random.Range(0, PassivePaths.Length - 1)];
+            thisSpline = PassivePaths[Random.Range(0, PassivePaths.Length)];
         }
     }
 
