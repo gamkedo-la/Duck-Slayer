@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f8213515d467734bb5427ad067cb9c9, type: 3}
+  m_Name: DuckAudio
+  m_EditorClassIdentifier: 
+  Sounds:
+  - {fileID: 8300000, guid: b1a9ac3dac4098d40b85110eb4119d01, type: 3}
+  - {fileID: 8300000, guid: a79d5fd8ffe6d7142b3428a9347cd7fb, type: 3}
+  - {fileID: 8300000, guid: 3d9c7c2d25bbf914f9052e8ab8285b8f, type: 3}
+  - {fileID: 8300000, guid: 2e053f41d7a27704da93cbbac2144b7a, type: 3}
+  - {fileID: 8300000, guid: 5a327c0487db2944cbbdb1179d1a9284, type: 3}
+  mixer: {fileID: 24100000, guid: 5fb22b80676344753a2f46e2d6494800, type: 2}
+  Loop: 0
+  Volume: 0
+  Pitch: 0
+  SpatialBlend: 0
+  RandomVolume: 0
+  RandomizeVolume: 0
+  RandomPitch: 1.42
+  RandomizePitch: 1
