@@ -74,7 +74,7 @@ Assets/Plugins/FMOD/Resources/FMODStudioCache.asset
 fmod_editor.log
 fmod_editor.log
 Logs
-Assets/StreamingAssets.meta
+
 Assets/dearVR/Scene/Animation.meta
 Assets/dearVR/Scene/dearVRDemoScene.unity
 Assets/dearVR/Scene/dearVRDemoScene.unity.meta
@@ -138,17 +138,3 @@ Assets/dearVR/Scene/Textures/logo_unity_landscape_fill@2x.png
 Assets/dearVR/Scene/Textures/logo_unity_landscape_fill@2x.png.meta
 Assets/Prefabs/TestPath3.prefab
 Assets/Prefabs/TestPath3.prefab.meta
-Assets/StreamingAssets/dearVR.meta
-Assets/StreamingAssets/dearVR/data.meta
-Assets/StreamingAssets/dearVR/data/DVRdata120.dat
-Assets/StreamingAssets/dearVR/data/DVRdata120.dat.meta
-Assets/StreamingAssets/dearVR/data/DVRdata121.dat
-Assets/StreamingAssets/dearVR/data/DVRdata121.dat.meta
-Assets/StreamingAssets/dearVR/data/DVRdata122.dat
-Assets/StreamingAssets/dearVR/data/DVRdata122.dat.meta
-Assets/StreamingAssets/dearVR/data/DVRdata510.dat
-Assets/StreamingAssets/dearVR/data/DVRdata510.dat.meta
-Assets/StreamingAssets/dearVR/data/DVRdata511.dat
-Assets/StreamingAssets/dearVR/data/DVRdata511.dat.meta
-Assets/StreamingAssets/dearVR/data/DVRdata512.dat
-Assets/StreamingAssets/dearVR/data/DVRdata512.dat.meta
