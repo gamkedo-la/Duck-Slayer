@@ -364,49 +364,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7319739301621909537}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &240037414
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 240037416}
-  - component: {fileID: 240037415}
-  m_Layer: 0
-  m_Name: DearVRAudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &240037415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240037414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 497c625f05c190b478129f9cecc739f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &240037416
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240037414}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.52395713, y: 0.70001066, z: 0.6625435}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &273277499
 GameObject:
   m_ObjectHideFlags: 0
@@ -13916,3 +13873,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   display: {fileID: 1554548325}
+--- !u!1 &7319739301621909542 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7319739300586218528, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7319739301621909537}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7319739301621909543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7319739301621909542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113e4aa2cd3db44d1ac0cb7e9794964b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalGainDb: 0
+  occlusionMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  stereoSpeakerModeEnabled: 0
+  recorderSeamless: 0
+  recorderSourceTag: Untagged
+  recorderFoldout: 1

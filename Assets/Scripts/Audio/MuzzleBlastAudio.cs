@@ -23,7 +23,6 @@ public class MuzzleBlastAudio : MonoBehaviour
 
     void Start()
     {
-        var s = GetComponent<DearVR.DearVRSource>();
-        s.DearVRPlay();
+        audioSource.Play();
     }
 }
