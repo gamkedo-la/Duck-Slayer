@@ -8,6 +8,7 @@ public class BulletManager : MonoBehaviour
     public int maxBullets;
     public float reloadSeconds;
     public TextMeshPro bulletDisplay;
+    [SerializeField] GameObject cartridge;
 
     private int currentBullets;
 
@@ -15,22 +16,36 @@ public class BulletManager : MonoBehaviour
     void Start()
     {
         currentBullets = maxBullets;
+        cartridge.SetActive(false);
     }
 
     public void DecreaseBullets()
-	{
+    {
         currentBullets--;
         bulletDisplay.text = "" + currentBullets;
+
+        if (currentBullets <= 0)
+            ShowReloadCartridge();
+    }
+
+    public void ShowReloadCartridge()
+    {
+        cartridge.SetActive(true);
     }
 
     public int GetBulletAmount()
-	{
+    {
         return currentBullets;
     }
 
-    public IEnumerator Reload()
-	{
+    public IEnumerator ReloadCoroutine()
+    {
         yield return new WaitForSeconds(reloadSeconds);
+        Reload();
+    }
+
+    public void Reload()
+    {
         currentBullets = maxBullets;
         bulletDisplay.text = "" + currentBullets;
     }
