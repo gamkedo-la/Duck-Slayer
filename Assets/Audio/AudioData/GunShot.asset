@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: GunShot
   m_EditorClassIdentifier: 
   Sounds:
-  - {fileID: 8300000, guid: 2d9f0198662b2dd4a8d18c8a917a9ed2, type: 3}
-  - {fileID: 8300000, guid: 985871047ca27ff428b277698bd54287, type: 3}
-  - {fileID: 8300000, guid: f615244c67c15f74a84df58381e64e56, type: 3}
-  - {fileID: 8300000, guid: cf2974ebc3997f741921eae0afb63238, type: 3}
-  mixer: {fileID: 24100000, guid: 5fb22b80676344753a2f46e2d6494800, type: 2}
+  - {fileID: 8300000, guid: e6414b78c14b4e34bb6c8027c6bf204f, type: 3}
+  - {fileID: 8300000, guid: 0e0d6a98667241a45aab5f6edcbaa5c3, type: 3}
+  - {fileID: 8300000, guid: 9be74aa2ea76cf54fadfa68d122bb160, type: 3}
+  - {fileID: 8300000, guid: 5f0c50279faa750488a521c2f9f91954, type: 3}
+  mixer: {fileID: 24100000, guid: 248799cb4acba48f7b3ee842a80f788c, type: 2}
   Loop: 0
   Volume: 0
   Pitch: 0
