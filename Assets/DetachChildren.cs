@@ -16,10 +16,10 @@ public class DetachChildren : MonoBehaviour
 
     public void DetachAndInvoke()
     {
+        BroadcastMessage(functionToInvoke);
         foreach (GameObject child in childrenToDetach)
         {
             child.transform.parent = null;
-            child.BroadcastMessage(functionToInvoke);
             Destroy(child, destroyTimer);
         }
     }
