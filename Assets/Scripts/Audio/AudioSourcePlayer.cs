@@ -6,16 +6,22 @@ public class AudioSourcePlayer : MonoBehaviour
 {
     [SerializeField] AudioData audioData;
     [SerializeField] AudioSource audioSource;
-    public bool playOnStart = false;
+    public bool playOnStart;
 
     void Awake()
     {
-        InitializeAudioSource(audioSource);
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        InitializeAudioSource(audioSource);
+
         if (playOnStart)
             PlayAudio();
     }
