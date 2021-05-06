@@ -39,6 +39,6 @@ public class AudioSourcePlayer : MonoBehaviour
     public void PlayAudio()
     {
         audioSource.Play();
-        InitializeAudioSource(audioSource);
+        //InitializeAudioSource(audioSource);
     }
 }
