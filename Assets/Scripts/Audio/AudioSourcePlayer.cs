@@ -20,20 +20,20 @@ public class AudioSourcePlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InitializeAudioSource(audioSource);
+        InitializeAudioSource();
 
         if (playOnStart)
             PlayAudio();
     }
 
-    private void InitializeAudioSource(AudioSource source)
+    private void InitializeAudioSource()
     {
-        if (source == null) { Debug.LogError("No Audio Source on object: " + gameObject.name); return; }
+        if (audioSource == null) { Debug.LogError("No Audio Source on object: " + gameObject.name); return; }
 
-        source.clip = audioData.GetClip(gameObject);
-        source.loop = audioData.IsLooping();
-        source.volume = audioData.GetVol();
-        source.pitch = audioData.GetPitch();
+        audioSource.clip = audioData.GetClip(gameObject);
+        audioSource.loop = audioData.IsLooping();
+        audioSource.volume = audioData.GetVol();
+        audioSource.pitch = audioData.GetPitch();
     }
 
     public void PlayAudio()

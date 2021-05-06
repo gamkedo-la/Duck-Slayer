@@ -8,6 +8,7 @@ public class RaycastShoot : MonoBehaviour
 
     public InputActionReference FireButton;
     public ParticleSystem particlesOnShoot;
+    public GameObject gun;
     public Transform endOfGun;
     public float gunDamage = 100f;
 
@@ -24,8 +25,8 @@ public class RaycastShoot : MonoBehaviour
         int bulletCount = bulletManager.GetBulletAmount();
         if (bulletCount <= 0)
         {
-            StartCoroutine(bulletManager.ReloadCoroutine()); // RELOAD
-            //play empty audio here
+            //StartCoroutine(bulletManager.ReloadCoroutine()); // RELOAD
+            gun.BroadcastMessage("PlayAudio");
             return;
         }
 

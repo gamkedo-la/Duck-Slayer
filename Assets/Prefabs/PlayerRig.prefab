@@ -530,6 +530,7 @@ MonoBehaviour:
   FireButton: {fileID: 2915566457910256351, guid: 91ebc526e060742618648ea5df3b31fe,
     type: 3}
   particlesOnShoot: {fileID: 0}
+  gun: {fileID: 0}
   endOfGun: {fileID: 0}
   gunDamage: 100
 --- !u!33 &7319739301334628497
@@ -1079,6 +1080,7 @@ MonoBehaviour:
   FireButton: {fileID: 83097790271614945, guid: fa9bb3bb80eb242a1bbc7adb422ead58,
     type: 3}
   particlesOnShoot: {fileID: 0}
+  gun: {fileID: 0}
   endOfGun: {fileID: 0}
   gunDamage: 100
 --- !u!1 &7319739301531468112
@@ -1557,6 +1559,7 @@ MonoBehaviour:
   FireButton: {fileID: -5982496924579745919, guid: fa9bb3bb80eb242a1bbc7adb422ead58,
     type: 3}
   particlesOnShoot: {fileID: 0}
+  gun: {fileID: 0}
   endOfGun: {fileID: 0}
   gunDamage: 100
 --- !u!1 &7319739301668396489
