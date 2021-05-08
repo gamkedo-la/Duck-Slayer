@@ -9,14 +9,24 @@ public class MouseLook : MonoBehaviour
     public float mouseSensitivity = 100f;
     float pitch = 0f;
     float yaw = 0f;
-    
-    
+
+    void OnEnable()
+    {
+        horizontalLook.action.performed += HandleHorizontalLook;
+        verticalLook.action.performed += HandleVerticalLook;
+    }
+
+    void OnDisable()
+    {
+        horizontalLook.action.performed -= HandleHorizontalLook;
+        verticalLook.action.performed -= HandleVerticalLook;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
       Cursor.lockState = CursorLockMode.Locked;
-      horizontalLook.action.performed += HandleHorizontalLook;
-      verticalLook.action.performed += HandleVerticalLook;
+      
     }
 
     // Update is called once per frame
