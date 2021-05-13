@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Audio;
 using UnityEngine;
 using TMPro;
 
@@ -31,6 +32,7 @@ public class BulletManager : MonoBehaviour
     public void ShowReloadCartridge()
     {
         cartridge.SetActive(true);
+        cartridge.GetComponent<AudioSourcePlayer>().enabled = true;
     }
 
     public int GetBulletAmount()

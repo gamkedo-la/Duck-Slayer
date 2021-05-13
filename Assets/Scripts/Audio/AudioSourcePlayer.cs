@@ -6,7 +6,7 @@ namespace Audio
     public class AudioSourcePlayer : MonoBehaviour
     {
         [SerializeField] private PoolManager audioPoolManager;
-        internal ObjectPool pool;
+        private ObjectPool pool;
         [SerializeField] AudioData audioData;
         [SerializeField] AudioSource audioSource;
         public bool playOnStart;
@@ -21,7 +21,7 @@ namespace Audio
         {
             if (pool != null)
                 return;
-            
+
             if (audioPoolManager == null)
                 audioPoolManager = PoolManager.instance;
 
@@ -73,6 +73,12 @@ namespace Audio
 
         public void PlayAudio()
         {
+            if (audioSource == null)
+            {
+                Debug.LogError("No AudioSource", gameObject);
+                return;
+            }
+
             audioSource.transform.position = transform.position;
             audioSource.Play();
         }
