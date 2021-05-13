@@ -6,17 +6,12 @@ using UnityEngine;
 public class Cartridge : MonoBehaviour
 {
     public GameEvent reload;
-    // private void OnEnable()
-    // {
-    //     BroadcastMessage("InitializeAudioSource");
-    // }
 
     private void OnTriggerEnter(Collider other)
     {
         var bulletManager = GameManagerSingleton.instance.GetBulletManager();
         bulletManager.Reload();
         reload?.Invoke();
-        //BroadcastMessage("PlayAudio");
         StartCoroutine(DisableAfterDelay());
     }
 
