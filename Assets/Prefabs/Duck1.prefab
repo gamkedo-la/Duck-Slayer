@@ -45,9 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9241232645463468afa39599b28324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioPoolManager: {fileID: 0}
   audioData: {fileID: 11400000, guid: a10e0250f146dcd4892080a4fcd3d8a7, type: 2}
   audioSource: {fileID: 1964738791534447302}
   playOnStart: 0
+  useLocalAudioSource: 0
 --- !u!1 &2553540401222346214
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,9 +214,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9241232645463468afa39599b28324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioPoolManager: {fileID: 0}
   audioData: {fileID: 11400000, guid: eb0e69a7262c35a4eaac637843ce2d2d, type: 2}
   audioSource: {fileID: 2868723717754208498}
   playOnStart: 0
+  useLocalAudioSource: 0
 --- !u!1 &5642516305770464084
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,6 +761,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 82448026576576494, guid: 7649fb0a9057a44d7866d4c957ec7e96,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82448026576576494, guid: 7649fb0a9057a44d7866d4c957ec7e96,
+        type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
@@ -928,6 +937,11 @@ PrefabInstance:
     - target: {fileID: 82448026576576494, guid: 7649fb0a9057a44d7866d4c957ec7e96,
         type: 3}
       propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82448026576576494, guid: 7649fb0a9057a44d7866d4c957ec7e96,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 82448026576576494, guid: 7649fb0a9057a44d7866d4c957ec7e96,

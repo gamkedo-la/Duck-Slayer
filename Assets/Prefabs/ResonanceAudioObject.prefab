@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 4229536467184376101}
   - component: {fileID: 4294254201608466339}
   - component: {fileID: 4263400124636096847}
-  - component: {fileID: 4232446294030725184}
   m_Layer: 0
-  m_Name: ReloadAudio
+  m_Name: ResonanceAudioObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,18 +152,3 @@ MonoBehaviour:
   occlusionEnabled: 0
   occlusionIntensity: 1
   quality: 2
---- !u!114 &4232446294030725184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4231280020746409903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9241232645463468afa39599b28324, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioData: {fileID: 11400000, guid: 722f802a03241104f887762034cfab19, type: 2}
-  audioSource: {fileID: 4294254201608466339}
-  playOnStart: 0

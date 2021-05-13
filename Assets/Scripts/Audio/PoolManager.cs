@@ -16,7 +16,7 @@ namespace Audio
                 Destroy(this);
                 return;
             }
-
+            
             instance = this;
             DontDestroyOnLoad(this);
         }

@@ -1,19 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Events;
 using UnityEngine;
 
 public class Cartridge : MonoBehaviour
 {
-    private void OnEnable()
-    {
-        BroadcastMessage("InitializeAudioSource");
-    }
+    public GameEvent reload;
+    // private void OnEnable()
+    // {
+    //     BroadcastMessage("InitializeAudioSource");
+    // }
 
     private void OnTriggerEnter(Collider other)
     {
         var bulletManager = GameManagerSingleton.instance.GetBulletManager();
         bulletManager.Reload();
-        BroadcastMessage("PlayAudio");
+        reload?.Invoke();
+        //BroadcastMessage("PlayAudio");
         StartCoroutine(DisableAfterDelay());
     }
 

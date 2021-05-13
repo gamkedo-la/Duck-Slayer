@@ -1,44 +1,72 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
-public class AudioSourcePlayer : MonoBehaviour
+namespace Audio
 {
-    [SerializeField] AudioData audioData;
-    [SerializeField] AudioSource audioSource;
-    public bool playOnStart;
-
-    void Awake()
+    public class AudioSourcePlayer : MonoBehaviour
     {
-        if (audioSource == null)
+        [SerializeField] private PoolManager audioPoolManager;
+        [SerializeField] AudioData audioData;
+        [SerializeField] AudioSource audioSource;
+        public bool playOnStart;
+        [SerializeField] bool useLocalAudioSource = true;
+
+        void Awake()
         {
-            audioSource = GetComponent<AudioSource>();
+             if (audioSource == null)
+             {
+                 audioSource = GetComponent<AudioSource>();
+             }
+        
+            audioPoolManager = PoolManager.instance;
         }
 
-    }
+        private void OnEnable()
+        {
+            audioPoolManager = PoolManager.instance;
+            InitializeAudioSource();
+        }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        InitializeAudioSource();
+        void Start()
+        {
+            InitializeAudioSource();
 
-        if (playOnStart)
-            PlayAudio();
-    }
+            if (playOnStart)
+                PlayAudio();
+        }
 
-    private void InitializeAudioSource()
-    {
-        if (audioSource == null) { Debug.LogError("No Audio Source on object: " + gameObject.name); return; }
+        private void InitializeAudioSource()
+        {
+            if (useLocalAudioSource)
+            {
+                if (audioSource == null) { Debug.LogError("No Audio Source on object: " + gameObject.name); return; }
 
-        audioSource.clip = audioData.GetClip(gameObject);
-        audioSource.loop = audioData.IsLooping();
-        audioSource.volume = audioData.GetVol();
-        audioSource.pitch = audioData.GetPitch();
-    }
+                audioSource.clip = audioData.GetClip(gameObject);
+                audioSource.loop = audioData.IsLooping();
+                audioSource.volume = audioData.GetVol();
+                audioSource.pitch = audioData.GetPitch();
+                return;
+            }
 
-    public void PlayAudio()
-    {
-        audioSource.Play();
-        //InitializeAudioSource(audioSource);
+            
+            var pool = audioPoolManager.GetPool();
+            
+            if(pool == null)
+                Debug.LogWarning("No pool!", gameObject);
+
+            audioSource = pool.GetObject().GetComponent<AudioSource>();
+           // audioSource.transform.position = transform.position;
+            audioSource.clip = audioData.GetClip(gameObject);
+            audioSource.loop = audioData.IsLooping();
+            audioSource.volume = audioData.GetVol();
+            audioSource.pitch = audioData.GetPitch();
+        }
+
+        public void PlayAudio()
+        {
+            audioSource.transform.position = transform.position;
+            audioSource.Play();
+            //InitializeAudioSource(audioSource);
+        }
     }
 }

@@ -13286,9 +13286,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9241232645463468afa39599b28324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioPoolManager: {fileID: 0}
   audioData: {fileID: 11400000, guid: 185a6ef2e4164ff469a84eb04e1f1b08, type: 2}
   audioSource: {fileID: 1246032040}
   playOnStart: 0
+  useLocalAudioSource: 1
 --- !u!1001 &1280374425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15197,6 +15199,50 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3312509159909722168}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1828448337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828448336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9241232645463468afa39599b28324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioPoolManager: {fileID: 1087904828}
+  audioData: {fileID: 11400000, guid: 722f802a03241104f887762034cfab19, type: 2}
+  audioSource: {fileID: 0}
+  playOnStart: 0
+  useLocalAudioSource: 0
+--- !u!114 &1828448338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828448336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c708e5f1d2d9420bb0c89ae298c9f2c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: fa026674941111e439ad5501f4514e96, type: 2}
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1828448337}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1828448340 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3312509159166861420, guid: 13782029186911c4f98fd660be8f41af,
@@ -16152,9 +16198,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9241232645463468afa39599b28324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioPoolManager: {fileID: 0}
   audioData: {fileID: 11400000, guid: 185a6ef2e4164ff469a84eb04e1f1b08, type: 2}
   audioSource: {fileID: 2135473687}
   playOnStart: 0
+  useLocalAudioSource: 1
 --- !u!1001 &2139531105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16822,6 +16870,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8647618459767788330, guid: 13782029186911c4f98fd660be8f41af,
+        type: 3}
+      propertyPath: reload
+      value: 
+      objectReference: {fileID: 11400000, guid: fa026674941111e439ad5501f4514e96,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13782029186911c4f98fd660be8f41af, type: 3}
 --- !u!1001 &3658462798514900005
