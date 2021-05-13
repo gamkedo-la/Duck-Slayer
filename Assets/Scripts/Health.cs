@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Events;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -7,7 +8,7 @@ public class Health : MonoBehaviour
     [SerializeField] float health;
     private float MaxHP;
     public HealthDisplay display;
-
+    [SerializeField] GameEvent onPlayerDeath;
 
     private void Start()
     {
@@ -26,6 +27,7 @@ public class Health : MonoBehaviour
 
     public void Death()
     {
+        onPlayerDeath?.Invoke();
         Debug.Log(gameObject.name + " has died.");
     }
 }
