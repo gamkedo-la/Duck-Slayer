@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DuckSpawner : MonoBehaviour
 {
-    public GameObject DuckPrefab;
+    public GameObject[] DuckPrefab;
 
     public BezierSpline[] AttackPaths;
     public BezierSpline[] PassivePaths;
@@ -55,7 +55,8 @@ public class DuckSpawner : MonoBehaviour
 
     private void SpawnDuck(out GameObject D, out BezierSpline thisSpline)
     {
-        D = Instantiate(DuckPrefab);
+        var randomIndex = Random.Range(0, DuckPrefab.Length );
+        D = Instantiate(DuckPrefab[randomIndex]);
         D.transform.parent = transform;
 
         thisSpline = null;

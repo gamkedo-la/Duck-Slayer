@@ -7580,8 +7580,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1411bc250ee15db488e763e1cccbdd65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DuckPrefab: {fileID: 5642516305770464084, guid: 2b17e159f4f37514dbf312377bf15c2e,
-    type: 3}
+  DuckPrefab:
+  - {fileID: 4791767149273642263, guid: 1569b821e8575454aa9f7a76ed658ada, type: 3}
+  - {fileID: 5642516305770464084, guid: 2b17e159f4f37514dbf312377bf15c2e, type: 3}
   AttackPaths:
   - {fileID: 950587029}
   - {fileID: 6957421042124377539}
