@@ -17,7 +17,11 @@ public class BulletManager : MonoBehaviour
     void Start()
     {
         currentBullets = maxBullets;
-        cartridge.SetActive(false);
+        
+        if(cartridge != null)
+        {
+            cartridge.SetActive(false);
+        }
     }
 
     public void DecreaseBullets()
@@ -31,8 +35,11 @@ public class BulletManager : MonoBehaviour
 
     public void ShowReloadCartridge()
     {
-        cartridge.SetActive(true);
-        cartridge.GetComponent<AudioSourcePlayer>().enabled = true;
+        if (cartridge != null)
+        {
+            cartridge.SetActive(true);
+            cartridge.GetComponent<AudioSourcePlayer>().enabled = true;
+        }
     }
 
     public int GetBulletAmount()
