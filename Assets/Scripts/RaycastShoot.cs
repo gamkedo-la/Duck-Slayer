@@ -26,7 +26,7 @@ public class RaycastShoot : MonoBehaviour
         if (bulletCount <= 0)
         {
             //StartCoroutine(bulletManager.ReloadCoroutine()); // RELOAD
-            gun.BroadcastMessage("PlayAudio");
+            //gun.BroadcastMessage("PlayAudio");
             return;
         }
 
