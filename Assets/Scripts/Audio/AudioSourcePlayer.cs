@@ -5,32 +5,17 @@ namespace Audio
 {
     public class AudioSourcePlayer : MonoBehaviour
     {
-        [SerializeField] private PoolManager audioPoolManager;
-        private ObjectPool pool;
+       // [SerializeField] private PoolManager audioPoolManager;
+        [SerializeField] ObjectPool pool;
         [SerializeField] AudioData audioData;
         [SerializeField] AudioSource audioSource;
+        [SerializeField] GameObject controlledObject;
         public bool playOnStart;
         [SerializeField] bool useLocalAudioSource = true;
 
-        void Awake()
-        {
-            InitPool();
-        }
-
-        private void InitPool()
-        {
-            if (pool != null)
-                return;
-
-            if (audioPoolManager == null)
-                audioPoolManager = PoolManager.instance;
-
-            pool = audioPoolManager.GetPool();
-        }
-
         private void OnEnable()
         {
-            InitPool();
+//            GetPooledAudioSource();
             InitializeAudioSource();
         }
 
@@ -48,7 +33,7 @@ namespace Audio
             {
                 if (audioSource == null)
                 {
-                    Debug.LogError("No Audio Source on object: " + gameObject.name);
+                    Debug.LogError("No Audio Source on object: " + controlledObject.name);
                     return;
                 }
 
@@ -57,15 +42,24 @@ namespace Audio
             }
 
             if (pool == null)
-                Debug.LogWarning("No pool!", gameObject);
-
-            audioSource = pool.GetObject().GetComponent<AudioSource>();
+            {
+                Debug.LogWarning("No pool!", controlledObject);
+                return;
+            }
+            
+            GetPooledAudioSource();
             SetAudioSourceProperties();
         }
 
+        private void GetPooledAudioSource()
+        {
+            controlledObject = pool.GetObject();
+            audioSource = controlledObject.GetComponent<AudioSource>();
+        }
+        
         private void SetAudioSourceProperties()
         {
-            audioSource.clip = audioData.GetClip(gameObject);
+            audioSource.clip = audioData.GetClip(controlledObject);
             audioSource.loop = audioData.IsLooping();
             audioSource.volume = audioData.GetVol();
             audioSource.pitch = audioData.GetPitch();
@@ -75,12 +69,18 @@ namespace Audio
         {
             if (audioSource == null)
             {
-                Debug.LogError("No AudioSource", gameObject);
+                Debug.LogError("No AudioSource", controlledObject);
                 return;
             }
 
             audioSource.transform.position = transform.position;
             audioSource.Play();
+        }
+
+        private void OnDisable()
+        {
+            pool.ReturnObject(controlledObject);
+            controlledObject = null;
         }
     }
 }

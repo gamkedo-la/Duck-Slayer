@@ -7,21 +7,9 @@ namespace Audio
 {
     public class PoolManager : MonoBehaviour
     {
-        public static PoolManager instance = null;
+        //public static PoolManager instance = null;
         [SerializeField] private ObjectPool poolType;
         private void Awake()
-        {
-            if (instance != null)
-            {
-                Destroy(this);
-                return;
-            }
-            
-            instance = this;
-            DontDestroyOnLoad(this);
-        }
-
-        private void Start()
         {
             if (poolType == null)
             {
@@ -31,7 +19,5 @@ namespace Audio
             
             poolType.CreatePool(transform);
         }
-
-        public ObjectPool GetPool() => poolType;
     }
 }

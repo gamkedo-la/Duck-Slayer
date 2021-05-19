@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using TMPro.EditorUtilities;
 using UnityEngine;
 
 namespace Audio
@@ -10,11 +9,12 @@ namespace Audio
         [SerializeField] private GameObject poolableObject;
         [SerializeField] private int poolSize;
         [SerializeField] private int maxPoolSize;
-        private List<GameObject> pool;
+        [SerializeField] private List<GameObject> pool;
         private Transform parent;
 
         public void CreatePool(Transform transform)
         {
+            //pool.Clear();
             parent = transform;
             pool = new List<GameObject>();
 
@@ -39,13 +39,25 @@ namespace Audio
 
         public void ReturnObject(GameObject objectToReturn)
         {
+            pool.Add((objectToReturn));
+            
+            Debug.Log("Returning Object: " + objectToReturn.name + " Pool Count: " + pool.Count);
+            
+            
             if (pool.Count >= maxPoolSize)
             {
-                Destroy(objectToReturn);
-                return;
+                Cleanup();
             }
-            
-            pool.Add((objectToReturn));
+        }
+
+        private void Cleanup()
+        {
+            for (int i = pool.Count; i > maxPoolSize; --i)
+            {
+                Destroy( pool[i]);
+                Debug.Log("Destroy Pool index: " + i);
+                pool.RemoveAt(i);
+            }
         }
     }
 }

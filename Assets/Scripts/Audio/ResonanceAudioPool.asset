@@ -16,3 +16,6 @@ MonoBehaviour:
     type: 3}
   poolSize: 10
   maxPoolSize: 20
+  pool:
+  - {fileID: 0}
+  - {fileID: 0}

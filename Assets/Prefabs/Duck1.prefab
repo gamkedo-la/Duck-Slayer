@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9241232645463468afa39599b28324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioPoolManager: {fileID: 0}
+  pool: {fileID: 11400000, guid: 2cc4c3fab3a29b5498c2a538b131eb49, type: 2}
   audioData: {fileID: 11400000, guid: a10e0250f146dcd4892080a4fcd3d8a7, type: 2}
   audioSource: {fileID: 1964738791534447302}
   playOnStart: 0
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9241232645463468afa39599b28324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioPoolManager: {fileID: 0}
+  pool: {fileID: 11400000, guid: 2cc4c3fab3a29b5498c2a538b131eb49, type: 2}
   audioData: {fileID: 11400000, guid: eb0e69a7262c35a4eaac637843ce2d2d, type: 2}
   audioSource: {fileID: 2868723717754208498}
   playOnStart: 0
