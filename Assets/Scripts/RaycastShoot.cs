@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Events;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,7 @@ public class RaycastShoot : MonoBehaviour
     public ParticleSystem particlesOnShoot;
     public GameObject gun;
     public Transform endOfGun;
+    public GameEvent dryFireEvent;
     public float gunDamage = 100f;
 
     private BulletManager bulletManager;
@@ -26,7 +28,9 @@ public class RaycastShoot : MonoBehaviour
         if (bulletCount <= 0)
         {
             //StartCoroutine(bulletManager.ReloadCoroutine()); // RELOAD
-            //gun.BroadcastMessage("PlayAudio");
+            
+            Debug.Log("Out of Ammo");
+            dryFireEvent?.Invoke();
             return;
         }
 
@@ -42,6 +46,9 @@ public class RaycastShoot : MonoBehaviour
         ParticleSystem muzzleBlast;
         RaycastHit hit;
 
+        if (transform == null)
+            return;
+        
         if (Physics.Raycast(transform.position, transform.forward, out hit))
         {
             Target target = hit.transform.GetComponent<Target>();

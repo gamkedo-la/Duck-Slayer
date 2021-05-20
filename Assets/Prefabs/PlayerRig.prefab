@@ -532,6 +532,7 @@ MonoBehaviour:
   particlesOnShoot: {fileID: 0}
   gun: {fileID: 0}
   endOfGun: {fileID: 0}
+  dryFireEvent: {fileID: 0}
   gunDamage: 100
 --- !u!33 &7319739301334628497
 MeshFilter:
@@ -1082,6 +1083,7 @@ MonoBehaviour:
   particlesOnShoot: {fileID: 0}
   gun: {fileID: 0}
   endOfGun: {fileID: 0}
+  dryFireEvent: {fileID: 0}
   gunDamage: 100
 --- !u!1 &7319739301531468112
 GameObject:
@@ -1561,6 +1563,7 @@ MonoBehaviour:
   particlesOnShoot: {fileID: 0}
   gun: {fileID: 0}
   endOfGun: {fileID: 0}
+  dryFireEvent: {fileID: 0}
   gunDamage: 100
 --- !u!1 &7319739301668396489
 GameObject:

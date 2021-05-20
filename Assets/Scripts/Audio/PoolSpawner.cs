@@ -5,10 +5,11 @@ using UnityEngine.Rendering;
 
 namespace Audio
 {
-    public class PoolManager : MonoBehaviour
+    public class PoolSpawner : MonoBehaviour
     {
         //public static PoolManager instance = null;
         [SerializeField] private ObjectPool poolType;
+        [SerializeField] private int poolCount;
         private void Awake()
         {
             if (poolType == null)
@@ -18,6 +19,12 @@ namespace Audio
             }
             
             poolType.CreatePool(transform);
+        }
+
+        private void Update()
+        {
+            var children = GetComponentsInChildren<Transform>();
+            poolCount = children.Length;
         }
     }
 }

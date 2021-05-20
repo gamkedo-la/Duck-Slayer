@@ -13,74 +13,77 @@ namespace Audio
         public bool playOnStart;
         [SerializeField] bool useLocalAudioSource = true;
 
-//         private void OnEnable()
-//         {
-// //            GetPooledAudioSource();
-//             InitializeAudioSource();
-//         }
-//
-//         void Start()
-//         {
-//             InitializeAudioSource();
-//
-//             if (playOnStart)
-//                 PlayAudio();
-//         }
-//
-//         private void InitializeAudioSource()
-//         {
-//             if (useLocalAudioSource)
-//             {
-//                 if (audioSource == null)
-//                 {
-//                     Debug.LogError("No Audio Source on object: " + controlledObject.name);
-//                     return;
-//                 }
-//
-//                 SetAudioSourceProperties();
-//                 return;
-//             }
-//
-//             if (pool == null)
-//             {
-//                 Debug.LogWarning("No pool!", controlledObject);
-//                 return;
-//             }
-//             
-//             GetPooledAudioSource();
-//             SetAudioSourceProperties();
-//         }
-//
-//         private void GetPooledAudioSource()
-//         {
-//             controlledObject = pool.GetObject();
-//             audioSource = controlledObject.GetComponent<AudioSource>();
-//         }
-//         
-//         private void SetAudioSourceProperties()
-//         {
-//             audioSource.clip = audioData.GetClip(controlledObject);
-//             audioSource.loop = audioData.IsLooping();
-//             audioSource.volume = audioData.GetVol();
-//             audioSource.pitch = audioData.GetPitch();
-//         }
-//
-//         public void PlayAudio()
-//         {
-//             if (audioSource == null)
-//             {
-//                 Debug.LogError("No AudioSource", controlledObject);
-//                 return;
-//             }
-//
-//             audioSource.transform.position = transform.position;
-//             audioSource.Play();
-//         }
-//
-//         private void OnDisable()
-//         {
-//             pool.ReturnObject(controlledObject);
-//             controlledObject = null;
-//         }
+        private void OnEnable() => InitializeAudioSource();
+        private void Awake() => InitializeAudioSource();
+
+        void Start()
+        {
+            if (playOnStart)
+                PlayAudio();
+        }
+
+        private void InitializeAudioSource()
+        {
+            if (useLocalAudioSource)
+            {
+                if (audioSource == null)
+                {
+                    Debug.LogError("No Audio Source on object: " + controlledObject.name);
+                    return;
+                }
+
+                SetAudioSourceProperties();
+                return;
+            }
+
+            if (pool == null)
+            {
+                Debug.LogWarning("No pool!", controlledObject);
+                return;
+            }
+            
+            GetPooledAudioSource();
+            SetAudioSourceProperties();
+        }
+
+        private void GetPooledAudioSource()
+        {
+            controlledObject = pool.GetObject();
+            audioSource = controlledObject.GetComponent<AudioSource>();
+        }
+        
+        private void SetAudioSourceProperties()
+        {
+            if (audioSource == null)
+            {
+                Debug.LogError("No audiosource.", gameObject);
+                return;
+            }
+
+            audioSource.clip = audioData.GetClip(controlledObject);
+            audioSource.loop = audioData.IsLooping();
+            audioSource.volume = audioData.GetVol();
+            audioSource.pitch = audioData.GetPitch();
+        }
+
+        public void PlayAudio()
+        {
+            if (audioSource == null)
+            {
+                Debug.LogError("No AudioSource", controlledObject);
+                return;
+            }
+
+            audioSource.transform.position = transform.position;
+            audioSource.Play();
+        }
+
+        // private void OnDestroy()
+        // {
+        //     if (controlledObject == null) return;
+        //     
+        //     pool.ReturnObject(controlledObject);
+        //     controlledObject = null;
+        // }
      }
 }
