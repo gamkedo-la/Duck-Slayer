@@ -35,7 +35,11 @@ namespace Audio
                 return poolObject;
             }
 
-            return Instantiate(poolableObject, parent);
+            var newObject = Instantiate(poolableObject, parent);
+            
+            if(pool != null)
+                pool.Enqueue(newObject);
+            return newObject;
         }
 
         public void ReturnObject(GameObject objectToReturn)
@@ -44,10 +48,20 @@ namespace Audio
             
             Debug.Log("Returning Object: " + objectToReturn.name + " Pool Count: " + pool.Count);
             
-            if (pool.Count >= maxPoolSize)
+            // if (pool.Count >= maxPoolSize)
+            // {
+            //     pool.TrimExcess();
+            //     Debug.Log("Trimming Excess from Queue");
+            // }
+        }
+
+        private void Cleanup()
+        {
+            while (pool.Count > maxPoolSize)
             {
-                pool.TrimExcess();
-                Debug.Log("Trimming Excess from Queue");
+                var excessObject = pool.Dequeue();
+                Destroy(excessObject);
+                Debug.LogWarning(("destroyed excess object"));
             }
         }
     }

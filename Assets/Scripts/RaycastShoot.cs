@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Events;
 using UnityEngine;
@@ -47,9 +48,6 @@ public class RaycastShoot : MonoBehaviour
         ParticleSystem muzzleBlast;
         RaycastHit hit;
 
-        if (transform == null)
-            return;
-
         if (Physics.Raycast(transform.position, transform.forward, out hit))
         {
             Target target = hit.transform.GetComponent<Target>();
@@ -61,5 +59,10 @@ public class RaycastShoot : MonoBehaviour
 
         muzzleBlast = Instantiate(particlesOnShoot, endOfGun.position, endOfGun.rotation);
         Destroy(muzzleBlast, 2f);
+    }
+
+    private void OnDestroy()
+    {
+        FireButton.action.performed -= HandleFireButtonPress;
     }
 } // end class
