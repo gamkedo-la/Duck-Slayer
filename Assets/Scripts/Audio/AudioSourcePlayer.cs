@@ -14,10 +14,11 @@ namespace Audio
         [SerializeField] bool useLocalAudioSource = true;
 
         private void OnEnable() => InitializeAudioSource();
-        private void Awake() => InitializeAudioSource();
+        //private void Awake() => InitializeAudioSource();
 
         void Start()
         {
+            InitializeAudioSource();
             if (playOnStart)
                 PlayAudio();
         }
@@ -43,6 +44,7 @@ namespace Audio
             }
             
             GetPooledAudioSource();
+            
             SetAudioSourceProperties();
         }
 
@@ -50,6 +52,7 @@ namespace Audio
         {
             controlledObject = pool.GetObject();
             audioSource = controlledObject.GetComponent<AudioSource>();
+
         }
         
         private void SetAudioSourceProperties()
@@ -77,13 +80,5 @@ namespace Audio
             audioSource.transform.position = transform.position;
             audioSource.Play();
         }
-
-        // private void OnDestroy()
-        // {
-        //     if (controlledObject == null) return;
-        //     
-        //     pool.ReturnObject(controlledObject);
-        //     controlledObject = null;
-        // }
      }
 }

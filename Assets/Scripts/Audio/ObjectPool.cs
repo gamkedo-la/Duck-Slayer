@@ -9,18 +9,18 @@ namespace Audio
         [SerializeField] private GameObject poolableObject;
         [SerializeField] private int poolSize;
         [SerializeField] private int maxPoolSize;
-        private Queue<GameObject> pool;
+        private Queue<GameObject> pool = new Queue<GameObject>();
         private Transform parent;
 
         public void CreatePool(Transform transform)
         {
             //pool.Clear();
             parent = transform;
-            pool = new Queue<GameObject>(poolSize);
+            pool = new Queue<GameObject>();
 
-           while(pool.Count < poolSize)
-           {
-               var newObject = Instantiate(poolableObject, parent);
+            while (pool.Count < poolSize)
+            {
+                var newObject = Instantiate(poolableObject, parent);
                 pool.Enqueue(newObject);
             }
         }
@@ -36,23 +36,22 @@ namespace Audio
             }
 
             var newObject = Instantiate(poolableObject, parent);
-            
-            if(pool != null)
-                pool.Enqueue(newObject);
+
+            if (pool != null)
+                ReturnObject(newObject);
             return newObject;
         }
 
         public void ReturnObject(GameObject objectToReturn)
         {
             pool.Enqueue(objectToReturn);
-            
+
             Debug.Log("Returning Object: " + objectToReturn.name + " Pool Count: " + pool.Count);
-            
-            // if (pool.Count >= maxPoolSize)
-            // {
-            //     pool.TrimExcess();
-            //     Debug.Log("Trimming Excess from Queue");
-            // }
+
+            if (pool.Count < maxPoolSize)
+                return;
+
+            Cleanup();
         }
 
         private void Cleanup()

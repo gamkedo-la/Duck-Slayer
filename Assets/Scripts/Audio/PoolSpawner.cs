@@ -10,6 +10,7 @@ namespace Audio
         //public static PoolManager instance = null;
         [SerializeField] private ObjectPool poolType;
         [SerializeField] private int poolCount;
+
         private void Awake()
         {
             if (poolType == null)
@@ -17,7 +18,7 @@ namespace Audio
                 Debug.LogWarning("No pooltype set", gameObject);
                 return;
             }
-            
+
             poolType.CreatePool(transform);
         }
 
