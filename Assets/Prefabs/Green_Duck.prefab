@@ -345,6 +345,7 @@ MonoBehaviour:
   pool: {fileID: 11400000, guid: 2cc4c3fab3a29b5498c2a538b131eb49, type: 2}
   audioData: {fileID: 11400000, guid: eb0e69a7262c35a4eaac637843ce2d2d, type: 2}
   audioSource: {fileID: 3473673255755804719}
+  controlledObject: {fileID: 0}
   playOnStart: 0
   useLocalAudioSource: 0
 --- !u!114 &4469524944408671094
@@ -362,6 +363,7 @@ MonoBehaviour:
   pool: {fileID: 11400000, guid: 2cc4c3fab3a29b5498c2a538b131eb49, type: 2}
   audioData: {fileID: 11400000, guid: a10e0250f146dcd4892080a4fcd3d8a7, type: 2}
   audioSource: {fileID: 4543989975081890580}
+  controlledObject: {fileID: 0}
   playOnStart: 0
   useLocalAudioSource: 0
 --- !u!1 &4791767149273642263
@@ -690,6 +692,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestroyParticles: {fileID: 1955533477162177923, guid: 2cce83d11dae94c13a13c9e3a5bf8b2d,
     type: 3}
+  duckDeath: {fileID: 0}
 --- !u!114 &3807138749042705111
 MonoBehaviour:
   m_ObjectHideFlags: 0

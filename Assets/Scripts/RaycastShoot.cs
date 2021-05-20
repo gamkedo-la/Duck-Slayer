@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 
 public class RaycastShoot : MonoBehaviour
 {
-
     public InputActionReference FireButton;
     public ParticleSystem particlesOnShoot;
     public GameObject gun;
@@ -15,6 +14,7 @@ public class RaycastShoot : MonoBehaviour
     public float gunDamage = 100f;
 
     private BulletManager bulletManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,9 +28,10 @@ public class RaycastShoot : MonoBehaviour
         if (bulletCount <= 0)
         {
             //StartCoroutine(bulletManager.ReloadCoroutine()); // RELOAD
-            
-            Debug.Log("Out of Ammo");
+
+            //Debug.Log("Out of Ammo");
             dryFireEvent?.Invoke();
+
             return;
         }
 
@@ -48,7 +49,7 @@ public class RaycastShoot : MonoBehaviour
 
         if (transform == null)
             return;
-        
+
         if (Physics.Raycast(transform.position, transform.forward, out hit))
         {
             Target target = hit.transform.GetComponent<Target>();
@@ -57,6 +58,7 @@ public class RaycastShoot : MonoBehaviour
                 target.TakeDamage(gunDamage);
             }
         }
+
         muzzleBlast = Instantiate(particlesOnShoot, endOfGun.position, endOfGun.rotation);
         Destroy(muzzleBlast, 2f);
     }
