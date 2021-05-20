@@ -17478,6 +17478,12 @@ PrefabInstance:
       objectReference: {fileID: 1612839800}
     - target: {fileID: 7319739301334628498, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
         type: 3}
+      propertyPath: dryFireEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: fbbe723db6640404a9b9ad26748bacc2,
+        type: 2}
+    - target: {fileID: 7319739301334628498, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
+        type: 3}
       propertyPath: particlesOnShoot
       value: 
       objectReference: {fileID: 2784046928455900030, guid: 37055c9271226473a85ee3feeaa307a5,
