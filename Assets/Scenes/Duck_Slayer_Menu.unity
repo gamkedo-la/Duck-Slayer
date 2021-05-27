@@ -1262,6 +1262,7 @@ MonoBehaviour:
   particlesOnShoot: {fileID: 0}
   gun: {fileID: 0}
   endOfGun: {fileID: 0}
+  dryFireEvent: {fileID: 0}
   gunDamage: 100
 --- !u!1 &264630489
 GameObject:
@@ -1900,6 +1901,7 @@ MonoBehaviour:
     type: 3}
   gun: {fileID: 1337566958}
   endOfGun: {fileID: 1742668627}
+  dryFireEvent: {fileID: 0}
   gunDamage: 100
 --- !u!1 &285269520
 GameObject:
@@ -6829,6 +6831,7 @@ MonoBehaviour:
     type: 3}
   gun: {fileID: 684431893}
   endOfGun: {fileID: 1612839800}
+  dryFireEvent: {fileID: 0}
   gunDamage: 100
 --- !u!114 &287830196
 MonoBehaviour:
@@ -6946,6 +6949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5f9160b1222a0049a9bb3fac0178b38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneBuildIndex: {fileID: 11400000, guid: 2a76f4fcb77b3764b89ad17473635518, type: 2}
 --- !u!4 &338191267
 Transform:
   m_ObjectHideFlags: 0
@@ -15453,9 +15457,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9241232645463468afa39599b28324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioPoolManager: {fileID: 0}
+  pool: {fileID: 0}
   audioData: {fileID: 11400000, guid: 185a6ef2e4164ff469a84eb04e1f1b08, type: 2}
   audioSource: {fileID: 1246032040}
+  controlledObject: {fileID: 0}
   playOnStart: 0
   useLocalAudioSource: 1
 --- !u!1001 &1280374425
@@ -18757,9 +18762,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9241232645463468afa39599b28324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioPoolManager: {fileID: 0}
+  pool: {fileID: 0}
   audioData: {fileID: 11400000, guid: 185a6ef2e4164ff469a84eb04e1f1b08, type: 2}
   audioSource: {fileID: 2135473687}
+  controlledObject: {fileID: 0}
   playOnStart: 0
   useLocalAudioSource: 1
 --- !u!1001 &2139531105
