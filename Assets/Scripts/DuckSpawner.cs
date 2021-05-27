@@ -29,6 +29,9 @@ public class DuckSpawner : MonoBehaviour
     [Header("Destroy Duck At end of Path")]
     public bool DestroyAtEndOfPath;
 
+    [Header("Destroy Duck At end of Path")]
+    [SerializeField] IntVariable DucksSpawned;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,7 +58,10 @@ public class DuckSpawner : MonoBehaviour
 
     private void SpawnDuck(out GameObject D, out BezierSpline thisSpline)
     {
-        var randomIndex = Random.Range(0, DuckPrefab.Length );
+        var randomIndex = Random.Range(0, DuckPrefab.Length);
+
+        IncrementSpawnCounter();
+
         D = Instantiate(DuckPrefab[randomIndex]);
         D.transform.parent = transform;
 
@@ -72,6 +78,12 @@ public class DuckSpawner : MonoBehaviour
         }
     }
 
+    private void IncrementSpawnCounter()
+    {
+        if (DucksSpawned != null)
+            ++DucksSpawned.value;
+    }
+
     private void TellDuckToFly(GameObject D, BezierSpline thisSpline)
     {
         var pathFollowSettings = D.GetComponent<PathFollower>();
@@ -82,5 +94,11 @@ public class DuckSpawner : MonoBehaviour
         pathFollowSettings.lookForward = true;
         pathFollowSettings.mode = PathFollowMode.Once;
         pathFollowSettings.destroyAtEndOfPath = DestroyAtEndOfPath;
+    }
+
+    private void OnDestroy()
+    {
+        if (DucksSpawned != null)
+            DucksSpawned.Reset();
     }
 }

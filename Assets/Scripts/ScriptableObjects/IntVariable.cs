@@ -6,6 +6,12 @@ using UnityEngine;
 public class IntVariable : ScriptableObject
 {
     public int value;
+    [SerializeField] int defaultValue;
+
+    public void Reset()
+    {
+        value = defaultValue;
+    }
 
     //public static bool operator ==(int a, IntVariable b)
     //{

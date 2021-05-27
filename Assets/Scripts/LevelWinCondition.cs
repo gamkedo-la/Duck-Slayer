@@ -21,7 +21,7 @@ public class LevelWinCondition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (objective.value >= trackedVariable.value)
+        if (trackedVariable.value >= objective.value)
             objectiveComplete?.Invoke();
     }
 }
