@@ -135,7 +135,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1193341
 Transform:
@@ -171,7 +171,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &35527659
 Transform:
@@ -280,6 +280,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -294,6 +299,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -474,6 +484,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -488,6 +503,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -584,6 +604,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -598,6 +623,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -694,6 +724,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -708,6 +743,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -804,6 +844,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -818,6 +863,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -914,6 +964,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -928,6 +983,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -1030,6 +1090,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1044,6 +1109,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -1232,6 +1302,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1246,6 +1321,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -1342,6 +1422,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1356,6 +1441,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -1555,6 +1645,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1569,6 +1664,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -1665,6 +1765,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1679,6 +1784,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -1775,6 +1885,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1789,6 +1904,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -1979,6 +2099,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1993,6 +2118,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -2016,7 +2146,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &608645461
 Transform:
@@ -2125,6 +2255,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2139,6 +2274,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -2162,7 +2302,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &713392701
 Transform:
@@ -2271,6 +2411,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2285,6 +2430,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -2407,6 +2557,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2421,6 +2576,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -2517,6 +2677,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2531,6 +2696,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -2627,6 +2797,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2641,6 +2816,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -2737,6 +2917,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2751,6 +2936,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -3126,6 +3316,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3140,6 +3335,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -3236,6 +3436,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3250,6 +3455,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -3346,6 +3556,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3360,6 +3575,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -3456,6 +3676,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3470,6 +3695,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -3641,6 +3871,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3655,6 +3890,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -3844,6 +4084,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3858,6 +4103,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -3954,6 +4204,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3968,6 +4223,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -4064,6 +4324,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4078,6 +4343,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -4174,6 +4444,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4188,6 +4463,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -4377,6 +4657,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4391,6 +4676,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -4487,6 +4777,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4501,6 +4796,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -4524,7 +4824,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1548759080
 Transform:
@@ -4637,6 +4937,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4651,6 +4956,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -4753,6 +5063,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4767,6 +5082,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -4790,7 +5110,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1796645706
 Transform:
@@ -5076,6 +5396,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5090,6 +5415,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -5186,6 +5516,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5200,6 +5535,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -5296,6 +5636,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5310,6 +5655,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -5406,6 +5756,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5420,6 +5775,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -5516,6 +5876,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5530,6 +5895,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -5626,6 +5996,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5640,6 +6015,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -5736,6 +6116,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5750,6 +6135,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
@@ -5846,6 +6236,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_2_Guard_Rail.vox (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a2137a36af2ac4e378167560b2a21c71,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5860,6 +6255,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a2137a36af2ac4e378167560b2a21c71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2137a36af2ac4e378167560b2a21c71, type: 3}
