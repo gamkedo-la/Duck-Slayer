@@ -29,14 +29,10 @@ public class DuckSpawner : MonoBehaviour
     [Header("Destroy Duck At end of Path")]
     public bool DestroyAtEndOfPath;
 
-    [Header("Destroy Duck At end of Path")]
+    [Header("Game Variables")]
     [SerializeField] IntVariable DucksSpawned;
+    [SerializeField] Transform PlayerTransform;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -75,6 +71,13 @@ public class DuckSpawner : MonoBehaviour
         else
         {
             thisSpline = PassivePaths[Random.Range(0, PassivePaths.Length)];
+        }
+
+        var isDiveBomber = D.GetComponent<DiveBomber>();
+
+        if (isDiveBomber)
+        {
+            isDiveBomber.SetPlayerTarget(PlayerTransform.position);
         }
     }
 

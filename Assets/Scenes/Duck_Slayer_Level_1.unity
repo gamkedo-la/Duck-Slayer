@@ -8225,6 +8225,7 @@ MonoBehaviour:
   DuckMaxFlightTime: 10
   DestroyAtEndOfPath: 1
   DucksSpawned: {fileID: 11400000, guid: 8fcf81466c153a94d978e0fd0ff2ba5d, type: 2}
+  PlayerTransform: {fileID: 2033380269}
 --- !u!4 &832198382
 Transform:
   m_ObjectHideFlags: 0
@@ -18766,6 +18767,12 @@ Transform:
 --- !u!1 &2033380268 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7319739300493422274, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7319739301621909537}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2033380269 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7319739300493422277, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
     type: 3}
   m_PrefabInstance: {fileID: 7319739301621909537}
   m_PrefabAsset: {fileID: 0}

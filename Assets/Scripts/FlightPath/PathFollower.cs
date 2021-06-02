@@ -15,10 +15,17 @@ public class PathFollower : MonoBehaviour
     public bool destroyAtEndOfPath;
 
     private float progress;
+    private bool stop = false;
 
+    public void StopFollowingPath()
+    {
+        stop = true;
+    }
 
     private void Update()
     {
+        if (stop) return;
+
         if (goingForward)
         {
 
