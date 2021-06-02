@@ -4,11 +4,14 @@ using UnityEngine.InputSystem;
 public class MouseLook : MonoBehaviour
 {
     public InputActionReference horizontalLook;
-    public InputActionReference verticalLook; 
+    public InputActionReference verticalLook;
     public Transform playerBody;
     public float mouseSensitivity = 100f;
     float pitch = 0f;
     float yaw = 0f;
+
+    [SerializeField] float maxPitch = -55f;
+    [SerializeField] float minPitch = 30f;
 
     void OnEnable()
     {
@@ -25,8 +28,8 @@ public class MouseLook : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      Cursor.lockState = CursorLockMode.Locked;
-      
+        Cursor.lockState = CursorLockMode.Locked;
+
     }
 
     // Update is called once per frame
@@ -36,16 +39,18 @@ public class MouseLook : MonoBehaviour
 
     void HandleHorizontalLook(InputAction.CallbackContext obj)
     {
-      yaw += obj.ReadValue<float>();
-      playerBody.localRotation = Quaternion.AngleAxis(yaw, Vector3.up);
+        yaw += obj.ReadValue<float>();
+        playerBody.localRotation = Quaternion.AngleAxis(yaw, Vector3.up);
 
     }
 
     void HandleVerticalLook(InputAction.CallbackContext obj)
     {
-      pitch -= obj.ReadValue<float>();
-      transform.localRotation = Quaternion.AngleAxis(pitch, Vector3.right);
+        pitch -= obj.ReadValue<float>();
+
+        transform.localRotation = Quaternion.AngleAxis(Mathf.Clamp(pitch, maxPitch, minPitch),
+                                                       Vector3.right);
     }
 
-    
+
 }
