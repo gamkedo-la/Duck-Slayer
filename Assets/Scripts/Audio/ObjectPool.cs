@@ -46,7 +46,7 @@ namespace Audio
         {
             pool.Enqueue(objectToReturn);
 
-            Debug.Log("Returning Object: " + objectToReturn.name + " Pool Count: " + pool.Count);
+            //Debug.Log("Returning Object: " + objectToReturn.name + " Pool Count: " + pool.Count);
 
             if (pool.Count < maxPoolSize)
                 return;
