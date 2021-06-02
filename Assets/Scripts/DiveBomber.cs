@@ -10,6 +10,7 @@ public class DiveBomber : MonoBehaviour
     [SerializeField] float maxSpeed = 5f;
 
     private float diveBombTimer;
+    [SerializeField] bool shouldDiveBomb = false;
 
     [SerializeField] Vector3 playerPosition;
 
@@ -20,6 +21,8 @@ public class DiveBomber : MonoBehaviour
 
     void Update()
     {
+        if (!shouldDiveBomb) return;
+
         CountDown();
 
         if (diveBombTimer <= 0)
@@ -36,6 +39,7 @@ public class DiveBomber : MonoBehaviour
         var speed = Random.Range(minSpeed, maxSpeed) * Time.deltaTime;
 
         transform.position = Vector3.MoveTowards(transform.position, playerPosition, speed);
+        transform.LookAt(playerPosition);
     }
 
     private void CountDown()
@@ -46,5 +50,15 @@ public class DiveBomber : MonoBehaviour
     public void SetPlayerTarget(Vector3 playerPos)
     {
         playerPosition = playerPos;
+    }
+
+    public void RollForDiveBomb(float probability)
+    {
+        var roll = (Random.value * 100);
+
+        if (roll > probability) return;
+
+        Debug.LogWarning("I'm a divebomber!", gameObject);
+        shouldDiveBomb = true;
     }
 }

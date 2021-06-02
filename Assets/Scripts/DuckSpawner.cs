@@ -32,7 +32,7 @@ public class DuckSpawner : MonoBehaviour
     [Header("Game Variables")]
     [SerializeField] IntVariable DucksSpawned;
     [SerializeField] Transform PlayerTransform;
-
+    [SerializeField] [Range(0, 100)] float DiveBombProbability;
 
     // Update is called once per frame
     void Update()
@@ -77,6 +77,7 @@ public class DuckSpawner : MonoBehaviour
 
         if (isDiveBomber)
         {
+            isDiveBomber.RollForDiveBomb(DiveBombProbability);
             isDiveBomber.SetPlayerTarget(PlayerTransform.position);
         }
     }

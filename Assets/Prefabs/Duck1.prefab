@@ -635,7 +635,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minTimeToDive: 1.5
-  maxTimeToDive: 1.5
+  maxTimeToDive: 3
+  minSpeed: 1
+  maxSpeed: 5
+  playerPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &466132673020134225
 PrefabInstance:
   m_ObjectHideFlags: 0
