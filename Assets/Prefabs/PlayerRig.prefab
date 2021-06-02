@@ -1669,3 +1669,5 @@ MonoBehaviour:
     type: 3}
   playerBody: {fileID: 7319739299606727904}
   mouseSensitivity: 100
+  maxPitch: -55
+  minPitch: 30
