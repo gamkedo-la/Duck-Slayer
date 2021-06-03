@@ -5,7 +5,7 @@ namespace Audio
 {
     public class AudioSourcePlayer : MonoBehaviour
     {
-       // [SerializeField] private PoolManager audioPoolManager;
+        // [SerializeField] private PoolManager audioPoolManager;
         [SerializeField] ObjectPool pool;
         [SerializeField] AudioData audioData;
         [SerializeField] AudioSource audioSource;
@@ -42,9 +42,9 @@ namespace Audio
                 Debug.LogWarning("No pool!", controlledObject);
                 return;
             }
-            
+
             GetPooledAudioSource();
-            
+
             SetAudioSourceProperties();
         }
 
@@ -54,7 +54,7 @@ namespace Audio
             audioSource = controlledObject.GetComponent<AudioSource>();
 
         }
-        
+
         private void SetAudioSourceProperties()
         {
             if (audioSource == null)
@@ -71,6 +71,9 @@ namespace Audio
 
         public void PlayAudio()
         {
+            GetPooledAudioSource();
+            SetAudioSourceProperties();
+
             if (audioSource == null)
             {
                 Debug.LogError("No AudioSource", controlledObject);
@@ -80,5 +83,5 @@ namespace Audio
             audioSource.transform.position = transform.position;
             audioSource.Play();
         }
-     }
+    }
 }
