@@ -20135,6 +20135,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 570965909, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
+      propertyPath: m_Name
+      value: BulletDisplay
+      objectReference: {fileID: 0}
     - target: {fileID: 1404370686, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
       propertyPath: gameManager
       value: 
@@ -20147,6 +20151,11 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 533670092}
+    - target: {fileID: 2135473688, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
+      propertyPath: pool
+      value: 
+      objectReference: {fileID: 11400000, guid: 2cc4c3fab3a29b5498c2a538b131eb49,
+        type: 2}
     - target: {fileID: 7047857845547607286, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
         type: 3}
       propertyPath: gameManager

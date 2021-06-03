@@ -50,8 +50,11 @@ namespace Audio
 
         private void GetPooledAudioSource()
         {
-            controlledObject = pool.GetObject();
-            audioSource = controlledObject.GetComponent<AudioSource>();
+            if(pool != null)
+            {
+              controlledObject = pool.GetObject();
+              audioSource = controlledObject.GetComponent<AudioSource>();
+            }
 
         }
 

@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Duck_Slayer_Menu.unity
     guid: 0c57015d964451f4e9d53fa0e3046224
   - enabled: 1
     path: Assets/Scenes/Duck_Slayer_Level_1.unity
     guid: cb3450f6775874f9ead9cabb6414746d
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Duck_Slayer_City_Level.unity
     guid: f14e03407c0674964b1632415bb51950
   m_configObjects:
