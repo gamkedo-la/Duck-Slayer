@@ -112,6 +112,7 @@ MonoBehaviour:
   PlayerPosition: {fileID: 11400000, guid: 9d5706f5f6d9f8840a30ad98fd960463, type: 2}
   minSpeed: 1
   maxSpeed: 5
+  heightAtWhichWillSelfDestructWhenSpawned: 1.5
 --- !u!114 &4349822508532319342
 MonoBehaviour:
   m_ObjectHideFlags: 0

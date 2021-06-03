@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9205971880944179241}
   - component: {fileID: 4864905396909963849}
   - component: {fileID: -7655814305235671491}
+  - component: {fileID: 6254650533616553847}
   m_Layer: 0
   m_Name: EggParticles
   m_TagString: Untagged
@@ -4768,3 +4769,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DurationInSeconds: 1
+--- !u!114 &6254650533616553847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6947431929549208293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9241232645463468afa39599b28324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool: {fileID: 11400000, guid: 2cc4c3fab3a29b5498c2a538b131eb49, type: 2}
+  audioData: {fileID: 11400000, guid: a10e0250f146dcd4892080a4fcd3d8a7, type: 2}
+  audioSource: {fileID: 0}
+  controlledObject: {fileID: 0}
+  playOnStart: 1
+  useLocalAudioSource: 0
