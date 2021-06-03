@@ -38,7 +38,7 @@ public class RaycastShoot : MonoBehaviour
 
         bulletManager.DecreaseBullets();
 
-        Debug.Log(bulletCount);
+        //Debug.Log(bulletCount);
 
         FireGun();
     } // end HandleFireButtonPress

@@ -9,10 +9,10 @@ public class Score : MonoBehaviour
     public TextMeshPro Display;
 
     public void IncreaseScore()
-	{
-		score++;
-		Debug.Log("Your score is " + score);
+    {
+        score++;
+        Debug.Log("Your score is " + score);
 
         Display.text = "Score: " + score;
-	}
+    }
 }

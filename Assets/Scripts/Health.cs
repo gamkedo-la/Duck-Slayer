@@ -28,6 +28,6 @@ public class Health : MonoBehaviour
     public void Death()
     {
         onPlayerDeath?.Invoke();
-        Debug.Log(gameObject.name + " has died.");
+        //Debug.Log(gameObject.name + " has died.");
     }
 }
