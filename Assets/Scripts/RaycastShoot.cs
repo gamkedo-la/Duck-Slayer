@@ -19,7 +19,11 @@ public class RaycastShoot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bulletManager = GameManagerSingleton.instance.GetBulletManager();
+        bulletManager = GetComponent<BulletManager>();
+        if(bulletManager == null)
+        {
+          Debug.Log("no bullet manager found", gameObject);
+        }
         FireButton.action.performed += HandleFireButtonPress;
     }
 
