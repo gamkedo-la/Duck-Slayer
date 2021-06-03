@@ -17056,10 +17056,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1901727489}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c20ae34987b558048bec253b2c582748, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b9241232645463468afa39599b28324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: fa026674941111e439ad5501f4514e96, type: 2}
+  pool: {fileID: 11400000, guid: 2cc4c3fab3a29b5498c2a538b131eb49, type: 2}
+  audioData: {fileID: 11400000, guid: 722f802a03241104f887762034cfab19, type: 2}
+  audioSource: {fileID: 0}
+  controlledObject: {fileID: 0}
+  playOnStart: 0
+  useLocalAudioSource: 0
 --- !u!114 &1901727491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17069,11 +17074,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1901727489}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 555443898a7f39e4081f67ef885ac8cd, type: 3}
+  m_Script: {fileID: 11500000, guid: c708e5f1d2d9420bb0c89ae298c9f2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reloadTrigger: {fileID: 1901727490}
-  reloadKey: 114
+  gameEvent: {fileID: 11400000, guid: fa026674941111e439ad5501f4514e96, type: 2}
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1901727490}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1922334025
 PrefabInstance:
   m_ObjectHideFlags: 0
