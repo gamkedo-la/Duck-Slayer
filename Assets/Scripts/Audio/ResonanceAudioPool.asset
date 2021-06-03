@@ -14,8 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolableObject: {fileID: 4231280020746409903, guid: 976dab9599ec61643b33705b18d50a4d,
     type: 3}
-  poolSize: 10
-  maxPoolSize: 20
-  pool:
-  - {fileID: 0}
-  - {fileID: 0}
+  poolSize: 20
+  maxPoolSize: 30

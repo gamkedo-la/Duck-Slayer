@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2572660013340147194}
   - component: {fileID: 9205971880944179241}
   - component: {fileID: 4864905396909963849}
+  - component: {fileID: -7655814305235671491}
   m_Layer: 0
   m_Name: EggParticles
   m_TagString: Untagged
@@ -4754,3 +4755,16 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &-7655814305235671491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6947431929549208293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4343fb3db2b904ac9a4e903366df4524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DurationInSeconds: 1

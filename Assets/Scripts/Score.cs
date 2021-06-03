@@ -10,10 +10,9 @@ public class Score : MonoBehaviour
 
     public void IncreaseScore(float multiplier)
     {
+        score += Mathf.RoundToInt(multiplier);
 
         //Debug.Log("Target Score: " + multiplier);
-
-        score += Mathf.RoundToInt(multiplier);
         //Debug.Log("Your score is " + score);
 
         Display.text = "Score: " + score;
