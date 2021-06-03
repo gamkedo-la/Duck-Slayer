@@ -139,6 +139,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestroyParticles: {fileID: 9205971880944179241, guid: d5de4362ad8b4f148b52d936a666659c,
     type: 3}
+  health: 100
+  scoreBonusMultiplier: 5
+  distanceWhereBonusNoLongerApplies: 8
+  PlayerPosition: {fileID: 11400000, guid: 9d5706f5f6d9f8840a30ad98fd960463, type: 2}
+  isBoss: 0
 --- !u!54 &3611297960208411447
 Rigidbody:
   m_ObjectHideFlags: 0

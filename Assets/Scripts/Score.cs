@@ -8,10 +8,13 @@ public class Score : MonoBehaviour
     private int score;
     public TextMeshPro Display;
 
-    public void IncreaseScore()
+    public void IncreaseScore(float multiplier)
     {
-        score++;
-        Debug.Log("Your score is " + score);
+
+        //Debug.Log("Target Score: " + multiplier);
+
+        score += Mathf.RoundToInt(multiplier);
+        //Debug.Log("Your score is " + score);
 
         Display.text = "Score: " + score;
     }

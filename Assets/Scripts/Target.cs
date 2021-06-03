@@ -3,12 +3,25 @@ using Events;
 public class Target : MonoBehaviour
 {
     public ParticleSystem onDestroyParticles;
-    float health = 100f;
+    [SerializeField] float health = 100f;
+    [SerializeField] [Range(2, 10)] float scoreBonusMultiplier = 2f;
+    [SerializeField] float distanceWhereBonusNoLongerApplies = 5f;
+    [SerializeField] TransformRef PlayerPosition;
+    public bool isBoss = false;
+    private Vector3 playerPosition;
     private DetachChildren detacher;
 
     private void Start()
     {
         detacher = GetComponent<DetachChildren>();
+
+        if (PlayerPosition == null)
+        {
+            playerPosition = Vector3.zero;
+            return;
+        }
+
+        playerPosition = PlayerPosition.value.position;
     }
 
     public void TakeDamage(float amount)
@@ -16,7 +29,15 @@ public class Target : MonoBehaviour
         health -= amount;
         if (health <= 0)
         {
-            GameManagerSingleton.instance.GetScore().IncreaseScore();
+            var distanceMultiplier = Vector3.Distance(transform.position, playerPosition);
+
+            var multiplier = distanceMultiplier > distanceWhereBonusNoLongerApplies ? Mathf.RoundToInt(distanceMultiplier) : scoreBonusMultiplier * distanceMultiplier;
+
+            if (isBoss)
+                multiplier *= scoreBonusMultiplier;
+
+            GameManagerSingleton.instance.GetScore().IncreaseScore(multiplier);
+
             Die();
         }
     }

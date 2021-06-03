@@ -693,7 +693,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestroyParticles: {fileID: 1955533477162177923, guid: 2cce83d11dae94c13a13c9e3a5bf8b2d,
     type: 3}
-  duckDeath: {fileID: 0}
+  health: 100
+  scoreBonusMultiplier: 2
+  PlayerPosition: {fileID: 11400000, guid: 9d5706f5f6d9f8840a30ad98fd960463, type: 2}
+  isBoss: 0
 --- !u!114 &3807138749042705111
 MonoBehaviour:
   m_ObjectHideFlags: 0
