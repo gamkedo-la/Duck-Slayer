@@ -9,10 +9,7 @@ public class Cartridge : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //var bulletManager = GameManagerSingleton.instance.GetBulletManager();
-        //bulletManager.Reload();
         reload?.Invoke();
-        //StartCoroutine(DisableAfterDelay());
     }
 
     private IEnumerator DisableAfterDelay()
