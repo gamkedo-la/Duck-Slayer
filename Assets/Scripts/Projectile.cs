@@ -30,7 +30,10 @@ public class Projectile : MonoBehaviour
     private void SelfDestructIfSpawnedTooLow()
     {
         if (transform.position.y < heightAtWhichWillSelfDestructWhenSpawned)
+        {
             Destroy(this);
+            Debug.LogWarning("Projectile self-destruct");
+        }
     }
 
     void Update()

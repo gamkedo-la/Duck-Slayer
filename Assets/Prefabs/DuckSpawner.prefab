@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7257985734690603375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7257985734690603373}
+  - component: {fileID: 7257985734690603374}
+  m_Layer: 0
+  m_Name: DuckSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7257985734690603373
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7257985734690603375}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.099999905, y: -7.78, z: 51.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7257985734690603374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7257985734690603375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1411bc250ee15db488e763e1cccbdd65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DuckPrefab:
+  - {fileID: 4791767149273642263, guid: 1569b821e8575454aa9f7a76ed658ada, type: 3}
+  - {fileID: 5642516305770464084, guid: 2b17e159f4f37514dbf312377bf15c2e, type: 3}
+  AttackPaths:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  PassivePaths:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  AttackWeight: 1
+  PassiveWeight: 1
+  minSpawnTime: 4
+  maxSpawnTime: 7
+  Timer: 5
+  DuckMinFlightTime: 5
+  DuckMaxFlightTime: 10
+  DestroyAtEndOfPath: 1
+  DucksSpawned: {fileID: 11400000, guid: 8fcf81466c153a94d978e0fd0ff2ba5d, type: 2}
+  PlayerTransform: {fileID: 0}
+  DiveBombProbability: 35.8
