@@ -19,13 +19,13 @@ public class UIInteraction : MonoBehaviour
     }
 
     void HandleFireButtonPress(InputAction.CallbackContext obj)
-    {        
+    {
         UIFire();
     }
 
     private void UIFire()
     {
-        Debug.Log("Fire");
+        // Debug.Log("Fire");
         RaycastHit hit;
 
         if (Physics.Raycast(transform.position, transform.forward, out hit, 300))

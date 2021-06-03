@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2187382326045226518}
-  - component: {fileID: 7824648248396462464}
+  - component: {fileID: 9040004180485233207}
   m_Layer: 0
   m_Name: AttackPath3
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &7824648248396462464
+--- !u!114 &9040004180485233207
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,14 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points:
   - {x: 1, y: 0, z: 0}
-  - {x: 2, y: 3.2234383, z: 0}
-  - {x: 8.255013, y: 6.065797, z: 0}
-  - {x: 11.201833, y: 6.2339325, z: 0}
-  - {x: 14.29447, y: 6.410388, z: 0}
-  - {x: 19.414015, y: 8.629069, z: 4.6074276}
-  - {x: 22.492962, y: 6.2339325, z: 7.5173264}
-  - {x: 25.628191, y: 3.795013, z: 10.480417}
-  - {x: 16.381653, y: -3.5671806, z: 21.92443}
-  - {x: 17.381653, y: -3.5671806, z: 21.92443}
-  modes: 00000000010000000100000001000000
+  - {x: 2, y: 0, z: 0}
+  - {x: 3, y: 0, z: 0}
+  - {x: 4, y: 0, z: 0}
+  modes: 0000000000000000
   loop: 0
