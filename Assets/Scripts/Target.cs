@@ -5,7 +5,6 @@ public class Target : MonoBehaviour
     public ParticleSystem onDestroyParticles;
     float health = 100f;
     private DetachChildren detacher;
-    public GameEvent duckDeath;
 
     private void Start()
     {
@@ -26,7 +25,7 @@ public class Target : MonoBehaviour
     {
         if (detacher != null)
             detacher.DetachAndInvoke();
-        
+
         Destroy(gameObject);
         ParticleSystem particles = Instantiate(onDestroyParticles, transform.position, transform.rotation);
         Color cubeColor = GetComponentInChildren<MeshRenderer>().material.color;
