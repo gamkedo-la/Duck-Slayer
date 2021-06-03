@@ -474,6 +474,7 @@ MonoBehaviour:
   pool: {fileID: 11400000, guid: 2cc4c3fab3a29b5498c2a538b131eb49, type: 2}
   audioData: {fileID: 11400000, guid: 722f802a03241104f887762034cfab19, type: 2}
   audioSource: {fileID: 0}
+  controlledObject: {fileID: 0}
   playOnStart: 0
   useLocalAudioSource: 0
 --- !u!114 &1828448338
@@ -492,9 +493,9 @@ MonoBehaviour:
   unityEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1828448337}
-        m_MethodName: PlayAudio
-        m_Mode: 1
+      - m_Target: {fileID: 3312509159166861416}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
