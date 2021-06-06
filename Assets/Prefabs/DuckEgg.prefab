@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4349822508532319342}
   - component: {fileID: 7804499630769386910}
   - component: {fileID: 3611297960208411447}
-  - component: {fileID: 1311678881}
   m_Layer: 0
   m_Name: DuckEgg
   m_TagString: Untagged
@@ -114,13 +113,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1311678881
+--- !u!114 &1711219521
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 526559472100634537}
+  m_GameObject: {fileID: 8929772926839386582}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4784b008b5c34e459dea4b6eba5f4d3, type: 3}
@@ -201,6 +200,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c290d080cc81f90479784b4b9dc1d5c9, type: 3}
+--- !u!1 &8929772926839386582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c290d080cc81f90479784b4b9dc1d5c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 8587666281680096391}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8117524501905353580 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c290d080cc81f90479784b4b9dc1d5c9,
