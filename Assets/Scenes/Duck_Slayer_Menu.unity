@@ -382,6 +382,8 @@ MonoBehaviour:
     type: 3}
   playerBody: {fileID: 2015708353}
   mouseSensitivity: 100
+  maxPitch: -55
+  minPitch: 30
 --- !u!1 &106173270
 GameObject:
   m_ObjectHideFlags: 0
@@ -6761,7 +6763,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 287830189}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -6949,7 +6951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5f9160b1222a0049a9bb3fac0178b38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIndex: {fileID: 11400000, guid: 2a76f4fcb77b3764b89ad17473635518, type: 2}
+  sceneBuildIndex: 0
 --- !u!4 &338191267
 Transform:
   m_ObjectHideFlags: 0
