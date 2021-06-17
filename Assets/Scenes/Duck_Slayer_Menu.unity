@@ -1437,6 +1437,7 @@ GameObject:
   - component: {fileID: 274803081}
   - component: {fileID: 274803085}
   - component: {fileID: 7319739301621909539}
+  - component: {fileID: 274803086}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -1905,6 +1906,20 @@ MonoBehaviour:
   endOfGun: {fileID: 1742668627}
   dryFireEvent: {fileID: 0}
   gunDamage: 100
+--- !u!114 &274803086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274803079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69f0a14d950940438c6dcbb82e72fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FireButton: {fileID: 83097790271614945, guid: fa9bb3bb80eb242a1bbc7adb422ead58,
+    type: 3}
 --- !u!1 &285269520
 GameObject:
   m_ObjectHideFlags: 0
@@ -18456,7 +18471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c55db099b06142d8a496d08ccebb79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceVR: 0
+  forceVR: 1
   webController: {fileID: 1489277479}
   vrController: {fileID: 1166848215}
   postProcessingVolume: {fileID: 0}
