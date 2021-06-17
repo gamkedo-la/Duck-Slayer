@@ -18471,7 +18471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c55db099b06142d8a496d08ccebb79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceVR: 1
+  forceVR: 0
   webController: {fileID: 1489277479}
   vrController: {fileID: 1166848215}
   postProcessingVolume: {fileID: 0}
