@@ -2331,6 +2331,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d3c22b4885e44995bc18a6f649e6a61, type: 3}
+--- !u!1 &264111703 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2431924432383333336, guid: d371eec58aafa4776bf83046062a3ae3,
+    type: 3}
+  m_PrefabInstance: {fileID: 181960096}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &264111704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264111703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c708e5f1d2d9420bb0c89ae298c9f2c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: ea68aeacda24b415fa0240eaf414f420, type: 2}
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2431924432534302704, guid: d371eec58aafa4776bf83046062a3ae3,
+          type: 3}
+        m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &272195158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2718,12 +2752,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &321327285 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7319739300141554182, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
-    type: 3}
-  m_PrefabInstance: {fileID: 61517299}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &321748117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6197,17 +6225,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 786154610}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c55db099b06142d8a496d08ccebb79e, type: 3}
+  m_Script: {fileID: 11500000, guid: cd91aba4f094c4fb89a71f029c8d33de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceVR: 0
-  webController: {fileID: 321327285}
-  vrController: {fileID: 1550230309}
-  postProcessingVolume: {fileID: 0}
-  disablePostProcessinginVR: 0
-  eventCamToChange: {fileID: 0}
-  eventCamNonVR: {fileID: 0}
-  eventCamIfVR: {fileID: 0}
+  InputButtons:
+  - {fileID: 7565988097227151467, guid: 91ebc526e060742618648ea5df3b31fe, type: 3}
+  - {fileID: -4084014799535200556, guid: fa9bb3bb80eb242a1bbc7adb422ead58, type: 3}
+  gameEvent: {fileID: 11400000, guid: ea68aeacda24b415fa0240eaf414f420, type: 2}
 --- !u!1001 &786192921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11060,12 +11084,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a2137a36af2ac4e378167560b2a21c71,
     type: 3}
   m_PrefabInstance: {fileID: 1549023577}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1550230309 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7319739300590876918, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
-    type: 3}
-  m_PrefabInstance: {fileID: 61517299}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1551789447
 PrefabInstance:

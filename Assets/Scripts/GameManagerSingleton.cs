@@ -37,6 +37,26 @@ public class GameManagerSingleton : MonoBehaviour
       return slowMotion;
     }
 
+    public void Pause() 
+    {
+      Debug.Log("Paused Called");
+      Time.timeScale = 0;
+    }
+
+    public void Resume() 
+    {
+      Time.timeScale = 1;
+    }
+
+    public bool IsPaused() 
+    {
+      if(gameState == GameState.Pause)
+      {
+        return true;
+      }
+      return false;
+    }
+
     public BulletManager GetBulletManager()
 	{
       return bulletManager;
