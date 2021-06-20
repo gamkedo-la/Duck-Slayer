@@ -894,6 +894,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1849209605}
+    - target: {fileID: 2114183136, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2135473688, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
       propertyPath: pool
       value: 
@@ -10110,6 +10114,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cartridge
+      objectReference: {fileID: 0}
+    - target: {fileID: 3312509159166861416, guid: 13782029186911c4f98fd660be8f41af,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3312509159166861420, guid: 13782029186911c4f98fd660be8f41af,
         type: 3}
