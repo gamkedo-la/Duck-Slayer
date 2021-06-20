@@ -7,7 +7,7 @@ using Events;
 public class ButtonAction : MonoBehaviour
 {
     public InputActionReference[] InputButtons;
-    [SerializeField] GameEvent gameEvent;
+    [SerializeField] protected GameEvent gameEvent;
 
     void OnEnable()
     {

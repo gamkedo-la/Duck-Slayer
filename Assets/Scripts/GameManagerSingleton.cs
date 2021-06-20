@@ -41,11 +41,13 @@ public class GameManagerSingleton : MonoBehaviour
     {
       Debug.Log("Paused Called");
       Time.timeScale = 0;
+      gameState = GameState.Pause;
     }
 
     public void Resume() 
     {
       Time.timeScale = 1;
+      gameState = GameState.Play;
     }
 
     public bool IsPaused() 
