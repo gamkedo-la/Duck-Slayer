@@ -40,9 +40,7 @@ public class RaycastShoot : MonoBehaviour
             return;
         }
 
-        Debug.Log("DecreaseBullets called", gameObject);
         bulletManager.DecreaseBullets();
-        Debug.Log(bulletCount);
 
         FireGun();
     } // end HandleFireButtonPress

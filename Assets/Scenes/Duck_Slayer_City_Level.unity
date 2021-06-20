@@ -1066,6 +1066,18 @@ MonoBehaviour:
   endOfGun: {fileID: 61517306}
   dryFireEvent: {fileID: 11400000, guid: fbbe723db6640404a9b9ad26748bacc2, type: 2}
   gunDamage: 100
+--- !u!114 &61517313 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1901727496, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
+    type: 3}
+  m_PrefabInstance: {fileID: 61517299}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbe57916128620489c0ea45fe4ed2be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &69835451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1767,7 +1779,7 @@ PrefabInstance:
       objectReference: {fileID: 1633364384}
     - target: {fileID: 790376334, guid: d371eec58aafa4776bf83046062a3ae3, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 790376334, guid: d371eec58aafa4776bf83046062a3ae3, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -1780,18 +1792,18 @@ PrefabInstance:
     - target: {fileID: 790376334, guid: d371eec58aafa4776bf83046062a3ae3, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1849209607}
+      objectReference: {fileID: 61517310}
     - target: {fileID: 790376334, guid: d371eec58aafa4776bf83046062a3ae3, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 61517310}
+      objectReference: {fileID: 61517313}
     - target: {fileID: 790376334, guid: d371eec58aafa4776bf83046062a3ae3, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 790376334, guid: d371eec58aafa4776bf83046062a3ae3, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 790376334, guid: d371eec58aafa4776bf83046062a3ae3, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -12612,18 +12624,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 181960096}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1849209607 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2431924432534302705, guid: d371eec58aafa4776bf83046062a3ae3,
-    type: 3}
-  m_PrefabInstance: {fileID: 181960096}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1849209605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dbe57916128620489c0ea45fe4ed2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1857544347 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e77a4d39d12b449918af5457b2516112,
