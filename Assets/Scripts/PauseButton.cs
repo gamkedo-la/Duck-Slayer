@@ -6,22 +6,26 @@ using Events;
 
 public class PauseButton : ButtonAction
 {
-  public GameEvent unPause;
-  private bool isPaused; 
+    public GameEvent unPause;
+    private bool isPaused;
 
-  private void Start() 
-  {
-    isPaused = GameManagerSingleton.instance.IsPaused();
-  }
-
-  override public void HandleButtonPress(InputAction.CallbackContext obj)
-  {
-    isPaused = GameManagerSingleton.instance.IsPaused();
-    if(isPaused)
+    private void Start()
     {
-      unPause?.Invoke();
-      return;
+        isPaused = GameManagerSingleton.instance.IsPaused();
     }
-    gameEvent?.Invoke();
-  }
+
+    override public void HandleButtonPress(InputAction.CallbackContext obj)
+    {
+        isPaused = GameManagerSingleton.instance.IsPaused();
+
+        Debug.Log(isPaused, gameObject);
+
+        if (isPaused)
+        {
+            unPause?.Invoke();
+            return;
+        }
+
+        gameEvent?.Invoke();
+    }
 }

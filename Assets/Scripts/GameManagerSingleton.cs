@@ -13,54 +13,57 @@ public class GameManagerSingleton : MonoBehaviour
     private BulletManager bulletManager;
     [SerializeField] private GameState gameState;
     [SerializeField] private GameEvent gameStartEvent;
-    
-    void Awake() {
-      instance = this;
-      scoreKeeper = GetComponent<Score>();
-      slowMotion = GetComponent<SlowMotion>();
-      bulletManager = GetComponent<BulletManager>();
+
+    void Awake()
+    {
+        instance = this;
+        scoreKeeper = GetComponent<Score>();
+        slowMotion = GetComponent<SlowMotion>();
+        bulletManager = GetComponent<BulletManager>();
     }
 
     private void Start()
     {
-      gameState = GameState.Play;
-      gameStartEvent?.Invoke();
+        gameState = GameState.Play;
+        gameStartEvent?.Invoke();
     }
 
     public Score GetScore()
     {
-      return scoreKeeper;
+        return scoreKeeper;
     }
 
     public SlowMotion GetSlowMotion()
     {
-      return slowMotion;
+        return slowMotion;
     }
 
-    public void Pause() 
+    public void Pause()
     {
-      Debug.Log("Paused Called");
-      Time.timeScale = 0;
-      gameState = GameState.Pause;
+        instance.gameState = GameState.Pause;
+        Debug.Log("Paused Called");
+        Time.timeScale = 0;
     }
 
-    public void Resume() 
+    public void Resume()
     {
-      Time.timeScale = 1;
-      gameState = GameState.Play;
+        //Debug.Log("Resume Game");
+
+        instance.gameState = GameState.Play;
+        Time.timeScale = 1;
     }
 
-    public bool IsPaused() 
+    public bool IsPaused()
     {
-      if(gameState == GameState.Pause)
-      {
-        return true;
-      }
-      return false;
+        if (gameState == GameState.Pause)
+        {
+            return true;
+        }
+        return false;
     }
 
     public BulletManager GetBulletManager()
-	{
-      return bulletManager;
+    {
+        return bulletManager;
     }
 }
