@@ -14,8 +14,10 @@ GameObject:
   - component: {fileID: 5097103679733941206}
   - component: {fileID: 5097103679733941202}
   - component: {fileID: 5097103679733941213}
+  - component: {fileID: 4551349165455887836}
+  - component: {fileID: 4165964976526931451}
   m_Layer: 5
-  m_Name: PauseMenu
+  m_Name: PauseMenuScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +30,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5097103679733941207}
-  m_LocalRotation: {x: -0, y: 0.5367391, z: -0, w: 0.84374833}
+  m_LocalRotation: {x: 0, y: 0.5367402, z: 0, w: 0.84374756}
   m_LocalPosition: {x: 0, y: 0, z: -10.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -135,6 +137,60 @@ MonoBehaviour:
   pauseGameEvent: {fileID: 11400000, guid: ea68aeacda24b415fa0240eaf414f420, type: 2}
   unpauseGameEvent: {fileID: 11400000, guid: 772a4936141074b2faaa8766d5facdc0, type: 2}
   uiScreen: {fileID: 6057635384868005466}
+--- !u!114 &4551349165455887836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5097103679733941207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c708e5f1d2d9420bb0c89ae298c9f2c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: ea68aeacda24b415fa0240eaf414f420, type: 2}
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5097103679733941213}
+        m_MethodName: HandlePauseGameEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4165964976526931451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5097103679733941207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c708e5f1d2d9420bb0c89ae298c9f2c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 772a4936141074b2faaa8766d5facdc0, type: 2}
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5097103679733941213}
+        m_MethodName: HandleUnpauseGameEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5097103680607897230
 GameObject:
   m_ObjectHideFlags: 0

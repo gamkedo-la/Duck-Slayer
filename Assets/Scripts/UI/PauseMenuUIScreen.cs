@@ -6,7 +6,6 @@ public class PauseMenuUIScreen : MonoBehaviour
     [SerializeField] private GameEvent pauseGameEvent;
     [SerializeField] private GameEvent unpauseGameEvent;
     [SerializeField] private GameObject uiScreen;
-    private bool lastIsPausedValue;
 
     public void Start()
     {
@@ -15,15 +14,16 @@ public class PauseMenuUIScreen : MonoBehaviour
         uiScreen.SetActive(false); 
     }
 
-    public void Update()
+    // this method is meant to be connected via the GameListener setup in the inspector
+    public void HandlePauseGameEvent()
     {
-        // this logic could be replaced by hooking into state changes
-        // of the GameEvent scriptable objects.
-        if(lastIsPausedValue != GameManagerSingleton.instance.IsPaused())
-        {
-            lastIsPausedValue = GameManagerSingleton.instance.IsPaused();
-            ToggleScreen(showScreen: lastIsPausedValue, invokeEvent: false);
-        }
+        ToggleScreen(showScreen: true, invokeEvent: false);
+    }
+
+    // this method is meant to be connected via the GameListener setup in the inspector
+    public void HandleUnpauseGameEvent()
+    {
+        ToggleScreen(showScreen: false, invokeEvent: false);
     }
 
     // this method is meant to be connected to the UI button onClick action via the inspector
