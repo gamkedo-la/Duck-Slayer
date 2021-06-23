@@ -19092,6 +19092,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 533670093, guid: d371eec58aafa4776bf83046062a3ae3, type: 3}
+      propertyPath: objective
+      value: 
+      objectReference: {fileID: 11400000, guid: 34f96545b29774cdf89d058ace113f00,
+        type: 2}
     - target: {fileID: 790376333, guid: d371eec58aafa4776bf83046062a3ae3, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

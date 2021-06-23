@@ -52,6 +52,7 @@ namespace Audio
         {
             if(pool != null)
             {
+              Debug.Log(pool.GetObject());
               controlledObject = pool.GetObject();
               audioSource = controlledObject.GetComponent<AudioSource>();
             }
