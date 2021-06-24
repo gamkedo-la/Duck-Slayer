@@ -13,6 +13,7 @@ public class RaycastShoot : MonoBehaviour
     public Transform endOfGun;
     public GameEvent dryFireEvent;
     public float gunDamage = 100f;
+    [SerializeField] float gunShotRadius = 0.1f;
 
     private BulletManager bulletManager;
 
@@ -20,9 +21,9 @@ public class RaycastShoot : MonoBehaviour
     void Start()
     {
         bulletManager = GetComponent<BulletManager>();
-        if(bulletManager == null)
+        if (bulletManager == null)
         {
-          Debug.Log("no bullet manager found", gameObject);
+            Debug.Log("no bullet manager found", gameObject);
         }
         FireButton.action.performed += HandleFireButtonPress;
     }
@@ -50,7 +51,7 @@ public class RaycastShoot : MonoBehaviour
         ParticleSystem muzzleBlast;
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, transform.forward, out hit))
+        if (Physics.SphereCast(transform.position, gunShotRadius, transform.forward, out hit))
         {
             Target target = hit.transform.GetComponent<Target>();
             if (target != null)
