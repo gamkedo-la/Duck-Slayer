@@ -285,6 +285,7 @@ MonoBehaviour:
     type: 3}
   health: 100
   scoreBonusMultiplier: 2
+  distanceWhereBonusNoLongerApplies: 5
   PlayerPosition: {fileID: 11400000, guid: 9d5706f5f6d9f8840a30ad98fd960463, type: 2}
   isBoss: 0
 --- !u!65 &7176343762786340136
@@ -298,8 +299,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.90481055, y: 1.4750855, z: 1}
-  m_Center: {x: 0.04759474, y: 0.7324573, z: 0}
+  m_Size: {x: 0.74023306, y: 1.1861153, z: 0.81553054}
+  m_Center: {x: -0.034694016, y: 0.90514493, z: -0.09223473}
 --- !u!54 &-750415349601217763
 Rigidbody:
   m_ObjectHideFlags: 0
