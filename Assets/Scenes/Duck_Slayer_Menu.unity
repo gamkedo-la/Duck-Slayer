@@ -803,7 +803,7 @@ GameObject:
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1266,6 +1266,7 @@ MonoBehaviour:
   endOfGun: {fileID: 0}
   dryFireEvent: {fileID: 0}
   gunDamage: 100
+  gunShotRadius: 0.1
 --- !u!1 &264630489
 GameObject:
   m_ObjectHideFlags: 0
@@ -1906,6 +1907,7 @@ MonoBehaviour:
   endOfGun: {fileID: 1742668627}
   dryFireEvent: {fileID: 0}
   gunDamage: 100
+  gunShotRadius: 0.1
 --- !u!114 &274803086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6850,6 +6852,7 @@ MonoBehaviour:
   endOfGun: {fileID: 1612839800}
   dryFireEvent: {fileID: 0}
   gunDamage: 100
+  gunShotRadius: 0.1
 --- !u!114 &287830196
 MonoBehaviour:
   m_ObjectHideFlags: 0
