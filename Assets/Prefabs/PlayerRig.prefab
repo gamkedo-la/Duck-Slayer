@@ -418,22 +418,6 @@ MonoBehaviour:
   dryFireEvent: {fileID: 11400000, guid: fbbe723db6640404a9b9ad26748bacc2, type: 2}
   gunDamage: 100
   gunShotRadius: 0.1
---- !u!114 &2072506159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7138426422624836172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dbe57916128620489c0ea45fe4ed2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxBullets: 6
-  reloadSeconds: 2
-  bulletDisplay: {fileID: 2114183137}
-  cartridge: {fileID: 0}
 --- !u!114 &2565995714477072583
 MonoBehaviour:
   m_ObjectHideFlags: 0
