@@ -17798,18 +17798,6 @@ Transform:
   m_Father: {fileID: 2109586183}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2072506159 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2072506159, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
-    type: 3}
-  m_PrefabInstance: {fileID: 7319739301621909537}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dbe57916128620489c0ea45fe4ed2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2088902656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19124,7 +19112,7 @@ PrefabInstance:
     - target: {fileID: 790376334, guid: d371eec58aafa4776bf83046062a3ae3, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 2072506159}
+      objectReference: {fileID: 0}
     - target: {fileID: 790376334, guid: d371eec58aafa4776bf83046062a3ae3, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 0
@@ -19351,6 +19339,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 7319739301621909544}
+    - target: {fileID: 860405522, guid: 13782029186911c4f98fd660be8f41af, type: 3}
+      propertyPath: m_text
+      value: Reload! (r)
+      objectReference: {fileID: 0}
     - target: {fileID: 3312509159166861416, guid: 13782029186911c4f98fd660be8f41af,
         type: 3}
       propertyPath: m_Name
@@ -20181,7 +20173,39 @@ PrefabInstance:
     - target: {fileID: 1404370691, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9b42255068e1f4c11adc945a869f2c59, type: 2}
+      objectReference: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 1404370691, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
+      propertyPath: m_Parameters.numCapVertices
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1404370691, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0.3066038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1404370691, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0.3066038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1404370691, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1404370691, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
+      propertyPath: m_Parameters.colorGradient.m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1404370691, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1404370691, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1404370691, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1901727496, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
       propertyPath: cartridge
       value: 
@@ -20296,14 +20320,15 @@ PrefabInstance:
     - target: {fileID: 7319739301334628501, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7319739301621909541, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
         type: 3}
       propertyPath: display
       value: 
       objectReference: {fileID: 1554548325}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7319739301334628496, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
 --- !u!1 &7319739301621909538 stripped
 GameObject:
@@ -20414,6 +20439,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CrossHairCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428799143934870037, guid: 0bb232e75142fbb49a2fe05320f131e8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428799143934870038, guid: 0bb232e75142fbb49a2fe05320f131e8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7428799143934870041, guid: 0bb232e75142fbb49a2fe05320f131e8,
         type: 3}
