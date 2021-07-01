@@ -32,7 +32,6 @@ namespace Audio
                     Debug.LogError("No Audio Source on object: " + controlledObject.name);
                     return;
                 }
-
                 SetAudioSourceProperties();
                 return;
             }
@@ -44,7 +43,6 @@ namespace Audio
             }
 
             GetPooledAudioSource();
-
             SetAudioSourceProperties();
         }
 
@@ -52,11 +50,16 @@ namespace Audio
         {
             if(pool != null)
             {
-              Debug.Log(pool.GetObject());
-              controlledObject = pool.GetObject();
-              audioSource = controlledObject.GetComponent<AudioSource>();
+              //Debug.Log(pool.GetObject());
+              LoadAudioSource();
             }
+        }
 
+        private void LoadAudioSource()
+        {  
+          if(audioSource == null) return;
+          controlledObject = pool.GetObject();
+          audioSource = controlledObject.GetComponent<AudioSource>();
         }
 
         private void SetAudioSourceProperties()
