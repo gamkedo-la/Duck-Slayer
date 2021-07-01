@@ -11,55 +11,19 @@ namespace Audio
         [SerializeField] AudioSource audioSource;
         [SerializeField] GameObject controlledObject;
         public bool playOnStart;
-        [SerializeField] bool useLocalAudioSource = true;
-
-        private void OnEnable() => InitializeAudioSource();
-        //private void Awake() => InitializeAudioSource();
-
-        void Start()
-        {
-            InitializeAudioSource();
-            if (playOnStart)
-                PlayAudio();
-        }
-
-        private void InitializeAudioSource()
-        {
-            if (useLocalAudioSource)
-            {
-                if (audioSource == null)
-                {
-                    Debug.LogError("No Audio Source on object: " + controlledObject.name);
-                    return;
-                }
-                SetAudioSourceProperties();
-                return;
-            }
-
-            if (pool == null)
-            {
-                Debug.LogWarning("No pool!", controlledObject);
-                return;
-            }
-
-            GetPooledAudioSource();
-            SetAudioSourceProperties();
-        }
 
         private void GetPooledAudioSource()
         {
-            if(pool != null)
+            if (pool != null)
             {
-              //Debug.Log(pool.GetObject());
-              LoadAudioSource();
+                LoadAudioSource();
             }
         }
 
         private void LoadAudioSource()
-        {  
-          if(audioSource == null) return;
-          controlledObject = pool.GetObject();
-          audioSource = controlledObject.GetComponent<AudioSource>();
+        {
+            controlledObject = pool.GetObject();
+            audioSource = controlledObject.GetComponent<AudioSource>();
         }
 
         private void SetAudioSourceProperties()
