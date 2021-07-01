@@ -10,6 +10,12 @@ public class Health : MonoBehaviour
     public HealthDisplay display;
     [SerializeField] GameEvent onPlayerDeath;
 
+    private void Awake()
+    {
+        if (display == null)
+            display = FindObjectOfType<HealthDisplay>();
+    }
+
     private void Start()
     {
         MaxHP = health;
