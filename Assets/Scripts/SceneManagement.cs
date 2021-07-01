@@ -11,6 +11,10 @@ public class SceneManagement : MonoBehaviour
         sceneBuildIndex = SceneManager.sceneCountInBuildSettings - 1;
     }
 
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.J))
