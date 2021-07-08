@@ -99,7 +99,7 @@ public class UIInteraction : MonoBehaviour
 
         if (lastHighlightedButton != null)
         {
-            lastHighlightedButton.OnPointerExit(null);
+            lastHighlightedButton.OnPointerExit(new PointerEventData(EventSystem.current));
             lastHighlightedButton = null;
         }
     }
