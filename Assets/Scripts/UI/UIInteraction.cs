@@ -101,6 +101,7 @@ public class UIInteraction : MonoBehaviour
         {
             lastHighlightedButton.OnPointerExit(new PointerEventData(EventSystem.current));
             lastHighlightedButton = null;
+            Debug.Log("Exit");
         }
     }
 
