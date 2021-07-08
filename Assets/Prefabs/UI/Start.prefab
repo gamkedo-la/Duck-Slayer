@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 6159701208667636195}
   - component: {fileID: 6159701208667636194}
   - component: {fileID: 6159701208667636221}
+  - component: {fileID: 2023148452451332589}
+  - component: {fileID: 7646066889544334268}
+  - component: {fileID: 7477583531963946473}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -131,6 +134,17 @@ MonoBehaviour:
           m_StringArgument: Duck_Slayer_Level_1
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2023148452451332589}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Duck_Slayer_Level_1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &6159701208667636221
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -144,6 +158,94 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 14.040905, y: 4.9948688, z: 1}
   m_Center: {x: -0.01333046, y: 0.006430626, z: 0}
+--- !u!114 &2023148452451332589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6159701208667636192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9241232645463468afa39599b28324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool: {fileID: 11400000, guid: 2cc4c3fab3a29b5498c2a538b131eb49, type: 2}
+  audioData: {fileID: 11400000, guid: 0c1156af2f2517d4c81faffabd37f9da, type: 2}
+  audioSource: {fileID: 0}
+  controlledObject: {fileID: 0}
+  playOnStart: 0
+--- !u!114 &7646066889544334268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6159701208667636192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6159701209316356674}
+          m_MethodName: set_enableVertexGradient
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 2023148452451332589}
+          m_MethodName: PlayAudio
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6159701209316356674}
+          m_MethodName: set_enableVertexGradient
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &7477583531963946473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6159701208667636192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9241232645463468afa39599b28324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool: {fileID: 11400000, guid: 2cc4c3fab3a29b5498c2a538b131eb49, type: 2}
+  audioData: {fileID: 11400000, guid: 3bf33784660ac54409a2981ae642b85f, type: 2}
+  audioSource: {fileID: 0}
+  controlledObject: {fileID: 0}
+  playOnStart: 0
 --- !u!1 &6159701209316356672
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,14 +322,14 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4281124585
   m_fontColor: {r: 0.9137255, g: 0.7764706, b: 0.17254902, a: 1}
-  m_enableVertexGradient: 1
+  m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 11400000, guid: 54c92974b855d6b408f35d5c80e2a474,
+  m_fontColorGradientPreset: {fileID: 11400000, guid: 1e281ad0539bd894fb7ec53e10c74b84,
     type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
