@@ -74,13 +74,27 @@ public class UIInteraction : MonoBehaviour
             var gameObj = hit.collider.gameObject;
             var button = gameObj.GetComponent<Button>();
 
+            PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
+
             if (button != null)
             {
-                button.OnPointerEnter(new PointerEventData(EventSystem.current));
+
+                button.OnPointerEnter(pointerEventData);
+
+                if (lastHighlightedButton == null)
+                {
+                    var eventTrigger = gameObj.GetComponent<EventTrigger>();
+
+                    if (eventTrigger == null)
+                        Debug.LogError("No Event Trigger on this button: " + hit.collider.name);
+                    else
+                        eventTrigger.OnPointerEnter(pointerEventData);
+                }
 
                 lastHighlightedButton = button;
                 return;
             }
+
         }
 
         if (lastHighlightedButton != null)
