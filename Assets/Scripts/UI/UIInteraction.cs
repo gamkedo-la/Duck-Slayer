@@ -107,7 +107,7 @@ public class UIInteraction : MonoBehaviour
     {
         if (lastHighlightedButton != null)
         {
-            Debug.Log(lastHighlightedButton.name);
+            //Debug.Log(lastHighlightedButton.name);
 
             var eventTrigger = lastHighlightedButton.GetComponent<EventTrigger>();
 
@@ -122,7 +122,7 @@ public class UIInteraction : MonoBehaviour
             }
 
             lastHighlightedButton = null;
-            Debug.Log("Exit");
+            //Debug.Log("Exit");
         }
     }
 
