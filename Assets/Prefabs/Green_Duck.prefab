@@ -347,7 +347,6 @@ MonoBehaviour:
   audioSource: {fileID: 3473673255755804719}
   controlledObject: {fileID: 0}
   playOnStart: 0
-  useLocalAudioSource: 0
 --- !u!114 &4469524944408671094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,7 +364,6 @@ MonoBehaviour:
   audioSource: {fileID: 4543989975081890580}
   controlledObject: {fileID: 0}
   playOnStart: 0
-  useLocalAudioSource: 0
 --- !u!1 &4791767149273642263
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,6 +384,7 @@ GameObject:
   - component: {fileID: 4252899355137912315}
   - component: {fileID: 4627564373657675060}
   - component: {fileID: 5149661605534308604}
+  - component: {fileID: 9125434184391832087}
   m_Layer: 0
   m_Name: Green_Duck
   m_TagString: Untagged
@@ -761,6 +760,24 @@ MonoBehaviour:
   minAttackTime: 1
   maxAttackTime: 5
   PlayerPositionRef: {fileID: 11400000, guid: 9d5706f5f6d9f8840a30ad98fd960463, type: 2}
+  audio: {fileID: 9125434184391832087}
+--- !u!114 &9125434184391832087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4791767149273642263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9241232645463468afa39599b28324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool: {fileID: 11400000, guid: 2cc4c3fab3a29b5498c2a538b131eb49, type: 2}
+  audioData: {fileID: 11400000, guid: 1951ca55e46c9144ebd0aca91e1bab37, type: 2}
+  audioSource: {fileID: 0}
+  controlledObject: {fileID: 0}
+  playOnStart: 0
 --- !u!1 &6223681771810774410
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,12 +1049,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7649fb0a9057a44d7866d4c957ec7e96, type: 3}
---- !u!1 &4481004104342358808 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1176170004654050, guid: 7649fb0a9057a44d7866d4c957ec7e96,
-    type: 3}
-  m_PrefabInstance: {fileID: 4479837831387573498}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4478102766127744402 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4220444740381032, guid: 7649fb0a9057a44d7866d4c957ec7e96,
@@ -1047,6 +1058,12 @@ Transform:
 --- !u!82 &4543989975081890580 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 82448026576576494, guid: 7649fb0a9057a44d7866d4c957ec7e96,
+    type: 3}
+  m_PrefabInstance: {fileID: 4479837831387573498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4481004104342358808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1176170004654050, guid: 7649fb0a9057a44d7866d4c957ec7e96,
     type: 3}
   m_PrefabInstance: {fileID: 4479837831387573498}
   m_PrefabAsset: {fileID: 0}

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Audio;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class Attacker : MonoBehaviour
     [SerializeField] float minAttackTime = 1f;
     [SerializeField] float maxAttackTime = 5f;
     [SerializeField] TransformRef PlayerPositionRef;
+    [SerializeField] AudioSourcePlayer audio;
     private Transform target;
     private float timer;
 
@@ -49,6 +51,9 @@ public class Attacker : MonoBehaviour
     {
         GameObject shot = Instantiate(projectile, transform.position, Quaternion.identity);
         shot.transform.LookAt(target);
+
+        if (audio != null)
+            audio.PlayAudio();
 
         ResetTimer();
     }
