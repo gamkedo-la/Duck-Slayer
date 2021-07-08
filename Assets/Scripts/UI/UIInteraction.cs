@@ -111,11 +111,14 @@ public class UIInteraction : MonoBehaviour
 
             var eventTrigger = lastHighlightedButton.GetComponent<EventTrigger>();
 
+            if (eventTrigger == null)
             {
-                if (eventTrigger == null)
-                    Debug.LogError("No Event Trigger on this button: " + lastHighlightedButton.name);
-                else
-                    eventTrigger.OnPointerExit(null);
+                Debug.LogError("No Event Trigger on this button: " + lastHighlightedButton.name);
+            }
+            else
+            {
+                eventTrigger.OnPointerExit(new PointerEventData(EventSystem.current));
+                lastHighlightedButton.OnPointerExit(null);
             }
 
             lastHighlightedButton = null;
