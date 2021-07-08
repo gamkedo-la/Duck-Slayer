@@ -91,15 +91,33 @@ public class UIInteraction : MonoBehaviour
                         eventTrigger.OnPointerEnter(pointerEventData);
                 }
 
+                if (lastHighlightedButton != button)
+                    HandlePointerExit();
+
                 lastHighlightedButton = button;
                 return;
             }
 
         }
 
+        HandlePointerExit();
+    }
+
+    private void HandlePointerExit()
+    {
         if (lastHighlightedButton != null)
         {
-            lastHighlightedButton.OnPointerExit(new PointerEventData(EventSystem.current));
+            Debug.Log(lastHighlightedButton.name);
+
+            var eventTrigger = lastHighlightedButton.GetComponent<EventTrigger>();
+
+            {
+                if (eventTrigger == null)
+                    Debug.LogError("No Event Trigger on this button: " + lastHighlightedButton.name);
+                else
+                    eventTrigger.OnPointerExit(null);
+            }
+
             lastHighlightedButton = null;
             Debug.Log("Exit");
         }
