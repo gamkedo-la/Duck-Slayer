@@ -68,4 +68,14 @@ public class RaycastShoot : MonoBehaviour
     {
         FireButton.action.performed -= HandleFireButtonPress;
     }
+
+    public void ResetInputReference(InputActionReference newInputAction)
+    {
+        FireButton.action.performed -= HandleFireButtonPress;
+
+        FireButton = newInputAction;
+
+        FireButton.action.performed += HandleFireButtonPress;
+    }
+
 } // end class

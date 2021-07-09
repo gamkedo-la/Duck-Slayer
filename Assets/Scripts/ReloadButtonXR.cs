@@ -23,4 +23,13 @@ public class ReloadButtonXR : MonoBehaviour
     {
         gameEvent?.Invoke();
     }
+
+    public void ResetInputReference(InputActionReference newInputAction)
+    {
+        ReloadButton.action.performed -= HandleReloadButtonPress;
+
+        ReloadButton = newInputAction;
+
+        ReloadButton.action.performed += HandleReloadButtonPress;
+    }
 }

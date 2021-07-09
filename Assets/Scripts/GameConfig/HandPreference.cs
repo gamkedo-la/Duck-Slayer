@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class HandPreference : MonoBehaviour
 {
@@ -11,6 +12,12 @@ public class HandPreference : MonoBehaviour
     [SerializeField] Transform webLeftHand;
 
     [SerializeField] Transform gunPrefab;
+    RaycastShoot gunshotTrigger;
+
+    [SerializeField] InputActionReference webGLgun;
+    [SerializeField] InputActionReference vrRightTrigger;
+    [SerializeField] InputActionReference vrLeftTrigger;
+
 
     private bool isRightHand = true;
     private SetVROrNot vrstate;
@@ -18,6 +25,7 @@ public class HandPreference : MonoBehaviour
     private void Awake()
     {
         vrstate = GetComponent<SetVROrNot>();
+        gunshotTrigger = gunPrefab.GetComponent<RaycastShoot>();
     }
 
     void Start()
@@ -53,6 +61,12 @@ public class HandPreference : MonoBehaviour
             gunPrefab.localPosition = Vector3.zero;
             gunPrefab.localScale = Vector3.one;
             gunPrefab.localEulerAngles = Vector3.zero;
+
+            gunshotTrigger.ResetInputReference(isRightHand ? vrRightTrigger : vrLeftTrigger);
+
+            var reloadTrigger = GetComponent<ReloadButtonXR>();
+            reloadTrigger.ResetInputReference(isRightHand ? vrLeftTrigger : vrRightTrigger);
+
             return;
         }
 
@@ -60,5 +74,7 @@ public class HandPreference : MonoBehaviour
         gunPrefab.parent = isRightHand ? webRightHand : webLeftHand;
         gunPrefab.localPosition = Vector3.zero;
         gunPrefab.localScale = Vector3.one;
+
+        gunshotTrigger.ResetInputReference(webGLgun);
     }
 }
