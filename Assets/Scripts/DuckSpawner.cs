@@ -46,8 +46,8 @@ public class DuckSpawner : MonoBehaviour
     }
 
     void Start() {
-      InitalizeDuckSpawner(DefaultConfiguration);   
-      SetIsGameStarted(true);
+      // InitalizeDuckSpawner(DefaultConfiguration);   
+      // SetIsGameStarted(true);
     }
 
     // Update is called once per frame
@@ -72,6 +72,7 @@ public class DuckSpawner : MonoBehaviour
 
     public void InitalizeDuckSpawner(LevelConfiguration LevelConfig)
     {
+      DucksSpawned.Reset(); 
       if(LevelConfig == null)
       {
         Debug.LogError("LevelConfig == null");

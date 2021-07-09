@@ -9,4 +9,14 @@ public class DifficultyProgression : MonoBehaviour
 
    public int GetCurrentIndex() => CurrentIndex;
    public void SetCurrentIndex(int newIndex) => CurrentIndex = newIndex;
+   public bool HasNextLevel(int index, out LevelConfiguration level)
+   {
+     if(index > ProgressionList.Length || index < 0)
+     {
+       level = null;
+       return false;
+     }
+     level = ProgressionList[index];
+     return true;
+   }
 }
