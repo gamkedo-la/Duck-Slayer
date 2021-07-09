@@ -11,7 +11,8 @@ public class DifficultyProgression : MonoBehaviour
    public void SetCurrentIndex(int newIndex) => CurrentIndex = newIndex;
    public bool HasNextLevel(int index, out LevelConfiguration level)
    {
-     if(index > ProgressionList.Length || index < 0)
+     Debug.Log("ProgressionList.Length: " + ProgressionList.Length);
+     if(index >= ProgressionList.Length || index < 0)
      {
        level = null;
        return false;

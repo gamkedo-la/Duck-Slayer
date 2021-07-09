@@ -5747,6 +5747,44 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2431924432470787872}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &299198286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299198285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c708e5f1d2d9420bb0c89ae298c9f2c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 25311c27b3a2d4009bfd39e23d32606a, type: 2}
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2431924432470787873}
+        m_MethodName: LoadNextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &299198296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5763,8 +5801,7 @@ MonoBehaviour:
   unityEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7257985734690603374, guid: ec461727d47840c45928475382557c6c,
-          type: 3}
+      - m_Target: {fileID: 832198381}
         m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
@@ -5786,8 +5823,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2431924432470787873}
-        m_MethodName: LoadNextScene
+      - m_Target: {fileID: 533670095}
+        m_MethodName: LoadNextDifficultyLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6677,6 +6714,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2431924432470787872}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &533670095 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2431924432534302704, guid: d371eec58aafa4776bf83046062a3ae3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2431924432470787872}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533670092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f1acbb1e1dc34eeda6e72604a2ac5da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &546926299
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18260,6 +18309,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 1345880860455784204, guid: 62d8cd67a766ad04bb9dfd9a4eeb9f65,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1345880861327641168, guid: 62d8cd67a766ad04bb9dfd9a4eeb9f65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -19200,6 +19254,12 @@ PrefabInstance:
       propertyPath: Display
       value: 
       objectReference: {fileID: 1470538213}
+    - target: {fileID: 2431924432534302704, guid: d371eec58aafa4776bf83046062a3ae3,
+        type: 3}
+      propertyPath: worldCompleteEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 25311c27b3a2d4009bfd39e23d32606a,
+        type: 2}
     - target: {fileID: 2431924432534302705, guid: d371eec58aafa4776bf83046062a3ae3,
         type: 3}
       propertyPath: cartridge

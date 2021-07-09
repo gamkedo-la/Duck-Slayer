@@ -19,6 +19,7 @@ public class GameManagerSingleton : MonoBehaviour
 
     [SerializeField] private GameState gameState;
     [SerializeField] private GameEvent gameStartEvent;
+    [SerializeField] private GameEvent worldCompleteEvent;
 
     void Awake()
     {
@@ -57,9 +58,11 @@ public class GameManagerSingleton : MonoBehaviour
       {
         GM.instance.difficultyProgression.SetCurrentIndex(currentDifficultyIndex + 1);
         GM.instance.duckSpawner.InitalizeDuckSpawner(level);
+        GM.instance.duckSpawner.SetIsGameStarted(true);
+        return;
       }
 
-      GM.instance.duckSpawner.SetIsGameStarted(true);
+      worldCompleteEvent?.Invoke();
     }
 
     private void Start()
