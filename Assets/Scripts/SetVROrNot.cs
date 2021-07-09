@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SetVROrNot : MonoBehaviour {
+public class SetVROrNot : MonoBehaviour
+{
     public bool forceVR = false;
 
     public GameObject webController;
@@ -15,17 +16,29 @@ public class SetVROrNot : MonoBehaviour {
     public Camera eventCamNonVR;
     public Camera eventCamIfVR;
 
-    void Awake() {
-        if (Application.platform == RuntimePlatform.WebGLPlayer) {
+    public bool IsPlayerVR() => forceVR;
+
+    public bool SetVRState(bool vrState) => forceVR = vrState;
+
+    void Awake()
+    {
+        if (Application.platform == RuntimePlatform.WebGLPlayer)
+        {
             forceVR = false;
-        } else if (Application.platform == RuntimePlatform.Android) {
+        }
+        else if (Application.platform == RuntimePlatform.Android)
+        {
             forceVR = true;
         }
 
-        if(eventCamToChange != null) {
-            if(forceVR) {
+        if (eventCamToChange != null)
+        {
+            if (forceVR)
+            {
                 eventCamToChange.worldCamera = eventCamIfVR;
-            } else {
+            }
+            else
+            {
                 eventCamToChange.worldCamera = eventCamNonVR;
             }
         }

@@ -144,6 +144,6 @@ public class UIInteraction : MonoBehaviour
             }
         }
 
-        Debug.Log("Hit Not UI");
+        //Debug.Log("Hit Not UI");
     }
 }

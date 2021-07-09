@@ -8074,6 +8074,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1411bc250ee15db488e763e1cccbdd65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &846400566 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 890192235595558079, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7319739301621909537}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &846400569 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2756689479714030759, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7319739301621909537}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbe57916128620489c0ea45fe4ed2be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &854761035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19167,7 +19185,7 @@ PrefabInstance:
     - target: {fileID: 790376334, guid: d371eec58aafa4776bf83046062a3ae3, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 846400569}
     - target: {fileID: 790376334, guid: d371eec58aafa4776bf83046062a3ae3, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 0
@@ -20277,7 +20295,21 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 533670092}
+    - target: {fileID: 2033380270, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
+      propertyPath: forceVR
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2072506159, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
+      propertyPath: cartridge
+      value: 
+      objectReference: {fileID: 1828448336}
+    - target: {fileID: 2236504235842800194, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
+        type: 3}
+      propertyPath: gunPrefab
+      value: 
+      objectReference: {fileID: 846400566}
+    - target: {fileID: 2756689479714030759, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
+        type: 3}
       propertyPath: cartridge
       value: 
       objectReference: {fileID: 1828448336}
