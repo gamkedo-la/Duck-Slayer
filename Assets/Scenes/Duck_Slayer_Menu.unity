@@ -17088,6 +17088,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6948557130399922495, guid: e96d958362f77c940bf36068bfe3f701,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6948557130408760038, guid: e96d958362f77c940bf36068bfe3f701,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -17401,6 +17406,78 @@ PrefabInstance:
     - target: {fileID: 6948557131493114525, guid: e96d958362f77c940bf36068bfe3f701,
         type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948557131726400880, guid: e96d958362f77c940bf36068bfe3f701,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948557131726400880, guid: e96d958362f77c940bf36068bfe3f701,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948557131726400883, guid: e96d958362f77c940bf36068bfe3f701,
+        type: 3}
+      propertyPath: m_text
+      value: 'Ryan Cahela: Project co-lead, core gameplay, VR optimizations, VR &
+        webGL control methods, crosshair, target launcher, city scape ambient sounds,
+        explosions, laser sight, assorted models (core/initial city buildings, bush,
+        clouds, tree wall, guard rail, streets, office, shop, cars), base slow motion
+        support, muzzle flash update, VR reload tweak, assorted bug fixing, road
+        traffic, level tuning, green duck
+
+
+        Roc Lee: Project co-lead, models
+        (animated duck, gun), cloud placement, base muzzle flash, spline bird paths,
+        audio system, main audio (spatialized quacks, flaps, gunshots, duck death,
+        nature, wind, reload, space ambiance, egg attack), adjustable flight time,
+        collision adjustment, basic health system, cartridge reload system, game
+        event system, object pooling, dry fire, level win/lose manager, duck dive
+        bombing attacks, egg destruction, distance-based scoring, purple duck, shot
+        spread, moon level
+
+
+        Philip Greene: Art (additional city buildings,
+        truck, balcony, grass model, duck egg, mothership egg, earth and moon), grass
+        system, core UI, mouse input fix, fonts selection and integration, main menu,
+        lose screen UI
+
+
+        Filipe Dottori: Menu music, slow motion score event,
+        gun reload, scoring fix, minor bug fix
+
+
+        Will McKay: Player score
+        sign, flight paths, duck spawn script, health bar
+
+
+        tiago.dev: Pause
+        menu
+
+
+        Chris DeLeon: Compiled credits'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948557131726400883, guid: e96d958362f77c940bf36068bfe3f701,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948557131726400883, guid: e96d958362f77c940bf36068bfe3f701,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
+    - target: {fileID: 6948557131726400883, guid: e96d958362f77c940bf36068bfe3f701,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 6948557131726400883, guid: e96d958362f77c940bf36068bfe3f701,
+        type: 3}
+      propertyPath: m_enableAutoSizing
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6948557131794896640, guid: e96d958362f77c940bf36068bfe3f701,
