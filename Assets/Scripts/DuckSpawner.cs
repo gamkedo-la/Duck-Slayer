@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class DuckSpawner : MonoBehaviour
 {
+    [SerializeField] LevelConfiguration DefaultConfiguration;
     public GameObject[] DuckPrefab;
 
     public BezierSpline[] AttackPaths;
     public BezierSpline[] PassivePaths;
+
+    private int AttackPathIndexLimit;
+    private int PassivePathIndexLimit;
 
     private int weight;
 
@@ -34,9 +38,23 @@ public class DuckSpawner : MonoBehaviour
     [SerializeField] TransformRef PlayerTransform;
     [SerializeField] [Range(0, 100)] float DiveBombProbability;
 
+    private bool isGameStarted = false;
+
+    public void SetIsGameStarted(bool IsStarted)
+    {
+      isGameStarted = IsStarted;
+    }
+
+    void Start() {
+      InitalizeDuckSpawner(DefaultConfiguration);   
+      SetIsGameStarted(true);
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if (isGameStarted == false) return;
+
         Timer -= Time.deltaTime;
 
         if (Timer <= 0)
@@ -50,6 +68,26 @@ public class DuckSpawner : MonoBehaviour
 
             Timer = Random.Range(minSpawnTime, maxSpawnTime);
         }
+    }
+
+    public void InitalizeDuckSpawner(LevelConfiguration LevelConfig)
+    {
+      if(LevelConfig == null)
+      {
+        Debug.LogError("LevelConfig == null");
+        return;
+      }
+      DuckPrefab = LevelConfig.DuckPrefab;
+      AttackPathIndexLimit = LevelConfig.AttackPathIndexLimit;
+      PassivePathIndexLimit = LevelConfig.PassivePathIndexLimit;
+      AttackWeight = LevelConfig.AttackWeight;
+      PassiveWeight = LevelConfig.PassiveWeight;
+      minSpawnTime = LevelConfig.minSpawnTime;
+      maxSpawnTime = LevelConfig.maxSpawnTime;
+      Timer = LevelConfig.Timer;
+      DuckMinFlightTime = LevelConfig.DuckMinFlightTime;
+      DuckMaxFlightTime = LevelConfig.DuckMaxFlightTime;
+      DiveBombProbability = LevelConfig.DiveBombProbability;
     }
 
     private void SpawnDuck(out GameObject D, out BezierSpline thisSpline)
@@ -66,7 +104,8 @@ public class DuckSpawner : MonoBehaviour
 
         if (weight <= AttackWeight)
         {
-            thisSpline = AttackPaths[Random.Range(0, AttackPaths.Length)];
+            thisSpline = AttackPaths[Random.Range(0, AttackPathIndexLimit)];
+            //thisSpline = AttackPaths[Random.Range(0, AttackPaths.Length)];
         }
         else
         {

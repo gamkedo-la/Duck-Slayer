@@ -11,6 +11,7 @@ public class GameManagerSingleton : MonoBehaviour
     private Score scoreKeeper;
     private SlowMotion slowMotion;
     private BulletManager bulletManager;
+    private DuckSpawner duckSpawner;
     [SerializeField] private GameState gameState;
     [SerializeField] private GameEvent gameStartEvent;
 
