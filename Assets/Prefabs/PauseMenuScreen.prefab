@@ -41,7 +41,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.017008603, y: -1.8000269}
+  m_AnchoredPosition: {x: -0.017008603, y: -2.21}
   m_SizeDelta: {x: 35, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2675893485086495643
@@ -157,8 +157,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 35, y: 9.948961, z: 4.1324835}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 35, y: 9.948961, z: 0.5620488}
+  m_Center: {x: 0.000000010730329, y: 0, z: -0.19402458}
 --- !u!114 &6798956683368624832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,7 +483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.017008603, y: -0.65}
+  m_AnchoredPosition: {x: -0.017008603, y: -0.88}
   m_SizeDelta: {x: 35, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3255615220359859418
@@ -610,8 +610,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 35, y: 9.948961, z: 4.1324835}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 35, y: 9.948961, z: 0.32420847}
+  m_Center: {x: 0.0000000021488153, y: 0, z: -0.07378857}
 --- !u!114 &8851008580890118911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -944,7 +944,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.017008603, y: 0.49999762}
+  m_AnchoredPosition: {x: -0.017008603, y: 0.47}
   m_SizeDelta: {x: 35, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5097103680607897221
@@ -1060,8 +1060,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 35, y: 9.948961, z: 4.1324835}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 35, y: 9.948961, z: 0.29458925}
+  m_Center: {x: -0.0000000022361757, y: 0, z: 0.118271634}
 --- !u!114 &1210100003458364078
 MonoBehaviour:
   m_ObjectHideFlags: 0
