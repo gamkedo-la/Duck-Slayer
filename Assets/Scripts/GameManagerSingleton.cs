@@ -75,6 +75,7 @@ public class GameManagerSingleton : MonoBehaviour
     {
       if(Input.GetKeyDown(KeyCode.L))
       {
+        Debug.Log("L key pressed");
         GM.instance.WorldSetup();
       }
     }
