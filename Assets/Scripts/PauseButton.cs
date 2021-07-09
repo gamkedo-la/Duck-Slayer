@@ -18,7 +18,7 @@ public class PauseButton : ButtonAction
     {
         isPaused = GameManagerSingleton.instance.IsPaused();
 
-        Debug.Log(isPaused, gameObject);
+        Debug.Log("Game paused: " + isPaused, gameObject);
 
         if (isPaused)
         {

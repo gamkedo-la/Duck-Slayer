@@ -70,7 +70,7 @@ public class HandPreference : MonoBehaviour
             return;
         }
 
-        Debug.Log("Toggle Hand " + isRightHand);
+        //Debug.Log("Toggle Hand " + isRightHand);
         gunPrefab.parent = isRightHand ? webRightHand : webLeftHand;
         gunPrefab.localPosition = Vector3.zero;
         gunPrefab.localScale = Vector3.one;
