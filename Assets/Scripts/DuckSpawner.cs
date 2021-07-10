@@ -49,8 +49,12 @@ public class DuckSpawner : MonoBehaviour
     }
 
     void Start() {
-      // InitalizeDuckSpawner(DefaultConfiguration);   
-      // SetIsGameStarted(true);
+      // InitalizeDuckSpawner(DefaultConfiguration);
+      if(SpawnerType == PrefabType.Car)
+      {
+        Debug.Log($"Spawner type is [{SpawnerType}], calling SetIsGameStarted function from Start function in [{this.name}] in gameobject [{this.gameObject.name}]");
+        SetIsGameStarted(true);
+      }
     }
 
     // Update is called once per frame
