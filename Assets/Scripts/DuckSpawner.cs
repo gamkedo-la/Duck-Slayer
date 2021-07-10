@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DuckSpawner : MonoBehaviour
 {
+    public enum PrefabType { Duck, Car };
+    [SerializeField] PrefabType _spawnerType = PrefabType.Duck;
     [SerializeField] LevelConfiguration DefaultConfiguration;
     public GameObject[] DuckPrefab;
 
@@ -39,6 +41,7 @@ public class DuckSpawner : MonoBehaviour
     [SerializeField] [Range(0, 100)] float DiveBombProbability;
 
     private bool isGameStarted = false;
+    public PrefabType SpawnerType => _spawnerType;
 
     public void SetIsGameStarted(bool IsStarted)
     {
@@ -72,6 +75,11 @@ public class DuckSpawner : MonoBehaviour
 
     public void InitalizeDuckSpawner(LevelConfiguration LevelConfig)
     {
+      if(DucksSpawned == null)
+      {
+          Debug.Log($"not assignment to [{this.gameObject.name}]");
+      }
+
       DucksSpawned.Reset(); 
       if(LevelConfig == null)
       {

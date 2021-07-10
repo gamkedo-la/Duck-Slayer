@@ -32,7 +32,12 @@ public class GameManagerSingleton : MonoBehaviour
 
     public void WorldSetup()
     {
-        GM.instance.duckSpawner = GameObject.FindObjectOfType<DuckSpawner>();
+        GM.instance.duckSpawner = GetDuckSpawner();
+        if(GM.instance.duckSpawner == null)
+        {
+          Debug.LogError($"No Duck Spawner found at [{this.gameObject.name}]");
+        }
+
         GM.instance.difficultyProgression = GameObject.FindObjectOfType<DifficultyProgression>();
         LoadNextDifficultyLevel();
     }
@@ -56,6 +61,7 @@ public class GameManagerSingleton : MonoBehaviour
       int currentDifficultyIndex = GM.instance.difficultyProgression.GetCurrentIndex();
       if (GM.instance.difficultyProgression.HasNextLevel(currentDifficultyIndex, out level))
       {
+        Debug.Log($"Setting difficulty level to : [{level.name}]");
         GM.instance.difficultyProgression.SetCurrentIndex(currentDifficultyIndex + 1);
         GM.instance.duckSpawner.InitalizeDuckSpawner(level);
         GM.instance.duckSpawner.SetIsGameStarted(true);
@@ -117,5 +123,19 @@ public class GameManagerSingleton : MonoBehaviour
     public BulletManager GetBulletManager()
     {
         return bulletManager;
+    }
+
+    private DuckSpawner GetDuckSpawner()
+    {
+        var allDuckSpawners = GameObject.FindObjectsOfType<DuckSpawner>();
+        foreach(var spawner in allDuckSpawners)
+        {
+          if(spawner.SpawnerType == DuckSpawner.PrefabType.Duck)
+          {
+            return spawner;
+          }
+        }
+
+        return null;
     }
 }
