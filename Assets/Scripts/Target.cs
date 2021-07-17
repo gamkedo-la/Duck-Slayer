@@ -34,7 +34,9 @@ public class Target : MonoBehaviour
             var multiplier = distanceMultiplier > distanceWhereBonusNoLongerApplies ? Mathf.RoundToInt(distanceMultiplier) : scoreBonusMultiplier * distanceMultiplier;
 
             if (isBoss)
+            {
                 multiplier *= scoreBonusMultiplier;
+            }
 
             GameManagerSingleton.instance.GetScore().IncreaseScore(multiplier);
 

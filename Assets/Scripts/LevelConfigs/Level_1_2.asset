@@ -24,3 +24,4 @@ MonoBehaviour:
   DuckMinFlightTime: 10
   DuckMaxFlightTime: 10
   DiveBombProbability: 0
+  WinScore: 100

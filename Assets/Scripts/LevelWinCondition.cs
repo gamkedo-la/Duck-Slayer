@@ -5,31 +5,46 @@ using UnityEngine;
 
 public class LevelWinCondition : MonoBehaviour
 {
-    [SerializeField] IntVariable objective;
-    [SerializeField] IntVariable trackedVariable;
     [SerializeField] GameEvent objectiveComplete;
 
     [SerializeField] bool hasCalledObjectiveCompleted = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        if (objective == null)
-        {
-            Debug.LogError("No objective set for this level, Disabling LevelWinCondition!", gameObject);
-            enabled = false;
-        }
+    private Score scoreKeeper;
+    private LevelConfiguration currentConfiguration;
 
+    private void Start()
+    {
         hasCalledObjectiveCompleted = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (hasCalledObjectiveCompleted == false && trackedVariable.value >= objective.value)
+        if(scoreKeeper == null || currentConfiguration == null)
         {
+            return;
+        }
+
+        if (hasCalledObjectiveCompleted == false && scoreKeeper.CurrentScore >= currentConfiguration.WinScore)
+        {
+            Debug.Log($"Objective Completed! trackedVar:[{scoreKeeper.CurrentScore}] objective:[{currentConfiguration.WinScore}]");
             objectiveComplete?.Invoke();
             hasCalledObjectiveCompleted = true;
         }
+    }
+
+    public void ResetWinCondition()
+    {
+        Debug.Log("Resetting Win Condition");
+        hasCalledObjectiveCompleted = false;
+    }
+
+    public void SetScoreKeeper(Score value)
+    {
+        this.scoreKeeper = value;
+    }
+
+    public void SetLevelConfiguration(LevelConfiguration levelConfig)
+    {
+        this.currentConfiguration = levelConfig;
     }
 }

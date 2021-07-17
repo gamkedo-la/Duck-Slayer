@@ -19228,7 +19228,12 @@ PrefabInstance:
     - target: {fileID: 533670093, guid: d371eec58aafa4776bf83046062a3ae3, type: 3}
       propertyPath: objective
       value: 
-      objectReference: {fileID: 11400000, guid: 34f96545b29774cdf89d058ace113f00,
+      objectReference: {fileID: 11400000, guid: e4cd7671b801def47ac334c3fb2830ff,
+        type: 2}
+    - target: {fileID: 533670093, guid: d371eec58aafa4776bf83046062a3ae3, type: 3}
+      propertyPath: trackedVariable
+      value: 
+      objectReference: {fileID: 11400000, guid: f1440025c0b514b49b63c8897c7f24ed,
         type: 2}
     - target: {fileID: 790376333, guid: d371eec58aafa4776bf83046062a3ae3, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.size
@@ -19434,6 +19439,12 @@ PrefabInstance:
       propertyPath: Display
       value: 
       objectReference: {fileID: 1470538213}
+    - target: {fileID: 2431924432534302703, guid: d371eec58aafa4776bf83046062a3ae3,
+        type: 3}
+      propertyPath: TrackedScore
+      value: 
+      objectReference: {fileID: 11400000, guid: f1440025c0b514b49b63c8897c7f24ed,
+        type: 2}
     - target: {fileID: 2431924432534302704, guid: d371eec58aafa4776bf83046062a3ae3,
         type: 3}
       propertyPath: worldCompleteEvent

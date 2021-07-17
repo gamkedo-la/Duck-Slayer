@@ -5,16 +5,24 @@ using TMPro;
 
 public class Score : MonoBehaviour
 {
-    private int score;
     public TextMeshPro Display;
+    [SerializeField] private IntVariable TrackedScore;
+    public int CurrentScore => TrackedScore.value;
 
     public void IncreaseScore(float multiplier)
     {
-        score += Mathf.RoundToInt(multiplier);
+        SetScore(TrackedScore.value + Mathf.RoundToInt(multiplier));
+    }
 
-        //Debug.Log("Target Score: " + multiplier);
-        //Debug.Log("Your score is " + score);
+    public void Reset()
+    {
+        SetScore(0);
+    }
 
-        Display.text = "Score: " + score;
+    public void SetScore(int value)
+    {
+        TrackedScore.value = value;
+        Debug.Log($"adding [{value}] total score[{TrackedScore.value}]");
+        Display.text = "Score: " + value;
     }
 }

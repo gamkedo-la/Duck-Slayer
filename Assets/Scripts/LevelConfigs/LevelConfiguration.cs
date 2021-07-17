@@ -26,4 +26,7 @@ public class LevelConfiguration : ScriptableObject
 
     [Header("Game Variables")]
     [Range(0, 100)] public float DiveBombProbability;
+
+    [Header("Win Score")]
+    public float WinScore;
 }

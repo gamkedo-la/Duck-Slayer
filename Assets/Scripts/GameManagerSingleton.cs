@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 using GM = GameManagerSingleton;
 
 public enum GameState { Start, Pause, Play, GameOver }
+[RequireComponent(typeof(LevelWinCondition))]
 public class GameManagerSingleton : MonoBehaviour
 {
 
@@ -16,6 +17,8 @@ public class GameManagerSingleton : MonoBehaviour
     private BulletManager bulletManager;
     private DuckSpawner duckSpawner;
     private DifficultyProgression difficultyProgression;
+
+    private LevelWinCondition levelWinCondition;
 
     [SerializeField] private GameState gameState;
     [SerializeField] private GameEvent gameStartEvent;
@@ -28,6 +31,14 @@ public class GameManagerSingleton : MonoBehaviour
         slowMotion = GetComponent<SlowMotion>();
         bulletManager = GetComponent<BulletManager>();
         //WorldSetup();
+        GetScore().Reset(); // resets score when game restarts
+
+
+        levelWinCondition = GetComponent<LevelWinCondition>();
+        if(levelWinCondition == null)
+        {
+          Debug.LogError($"The gameobject [{this.gameObject.name}] does not have a level win condition");
+        }
     }
 
     public void WorldSetup()
@@ -39,11 +50,21 @@ public class GameManagerSingleton : MonoBehaviour
         }
 
         GM.instance.difficultyProgression = GameObject.FindObjectOfType<DifficultyProgression>();
+
         LoadNextDifficultyLevel();
+        levelWinCondition.SetScoreKeeper(GetScore());
     }
 
     public void LoadNextDifficultyLevel()
     {
+        // resets score before moving onto next difficulty or level/scene
+        // so that we can track the score and move to the next level
+        GetScore().SetScore(0); 
+
+        // since there are multiple difficulties in one level, we must reset the win condition
+        // after resetting the score
+        levelWinCondition.ResetWinCondition();
+
       if(GM.instance.duckSpawner == null)
       {
         Debug.LogError("duckSpawner == null");
@@ -61,10 +82,11 @@ public class GameManagerSingleton : MonoBehaviour
       int currentDifficultyIndex = GM.instance.difficultyProgression.GetCurrentIndex();
       if (GM.instance.difficultyProgression.HasNextLevel(currentDifficultyIndex, out level))
       {
-        Debug.Log($"Setting difficulty level to : [{level.name}]");
+        Debug.Log($"Setting difficulty level to : [{level.name}] and current score is [{GetScore().CurrentScore}]");
         GM.instance.difficultyProgression.SetCurrentIndex(currentDifficultyIndex + 1);
         GM.instance.duckSpawner.InitalizeDuckSpawner(level);
         GM.instance.duckSpawner.SetIsGameStarted(true);
+        levelWinCondition.SetLevelConfiguration(level);
         return;
       }
 
