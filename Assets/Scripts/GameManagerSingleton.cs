@@ -57,14 +57,6 @@ public class GameManagerSingleton : MonoBehaviour
 
     public void LoadNextDifficultyLevel()
     {
-        // resets score before moving onto next difficulty or level/scene
-        // so that we can track the score and move to the next level
-        GetScore().SetScore(0); 
-
-        // since there are multiple difficulties in one level, we must reset the win condition
-        // after resetting the score
-        levelWinCondition.ResetWinCondition();
-
       if(GM.instance.duckSpawner == null)
       {
         Debug.LogError("duckSpawner == null");
@@ -77,8 +69,16 @@ public class GameManagerSingleton : MonoBehaviour
         return;
       }
 
-      LevelConfiguration level;
 
+      // resets score before moving onto next difficulty or level/scene
+      // so that we can track the score and move to the next level
+      GetScore().SetScore(0); 
+
+      // since there are multiple difficulties in one level, we must reset the win condition
+      // after resetting the score
+      levelWinCondition.ResetWinCondition();
+
+      LevelConfiguration level;
       int currentDifficultyIndex = GM.instance.difficultyProgression.GetCurrentIndex();
       if (GM.instance.difficultyProgression.HasNextLevel(currentDifficultyIndex, out level))
       {
