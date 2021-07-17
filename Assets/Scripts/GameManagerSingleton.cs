@@ -23,6 +23,7 @@ public class GameManagerSingleton : MonoBehaviour
     [SerializeField] private GameState gameState;
     [SerializeField] private GameEvent gameStartEvent;
     [SerializeField] private GameEvent worldCompleteEvent;
+    [SerializeField] private GameObject damageTextPrefab;
 
     void Awake()
     {
@@ -145,6 +146,11 @@ public class GameManagerSingleton : MonoBehaviour
     public BulletManager GetBulletManager()
     {
         return bulletManager;
+    }
+
+    public GameObject GetDamageScoreTextPrefab()
+    {
+      return damageTextPrefab;
     }
 
     private DuckSpawner GetDuckSpawner()

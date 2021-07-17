@@ -19447,6 +19447,12 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 2431924432534302704, guid: d371eec58aafa4776bf83046062a3ae3,
         type: 3}
+      propertyPath: damageTextPrefab
+      value: 
+      objectReference: {fileID: 6010625102365797061, guid: 18f6ea0e87ea6064186e1d384915a37b,
+        type: 3}
+    - target: {fileID: 2431924432534302704, guid: d371eec58aafa4776bf83046062a3ae3,
+        type: 3}
       propertyPath: worldCompleteEvent
       value: 
       objectReference: {fileID: 11400000, guid: 25311c27b3a2d4009bfd39e23d32606a,

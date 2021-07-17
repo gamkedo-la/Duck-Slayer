@@ -39,9 +39,43 @@ public class Target : MonoBehaviour
             }
 
             GameManagerSingleton.instance.GetScore().IncreaseScore(multiplier);
+            TryInstantiateDamageText(Mathf.RoundToInt(multiplier), distanceMultiplier);
 
             Die();
         }
+    }
+
+    private void TryInstantiateDamageText(int damageValue, float distance)
+    {
+        var prefab = GameManagerSingleton.instance.GetDamageScoreTextPrefab();
+        if(prefab == null)
+        {
+            Debug.LogError("no damange text prefab found in game manager");
+        }
+
+        var facePlayer = Quaternion.Euler((this.transform.position - playerPosition).normalized);
+        var instance = Instantiate(prefab, this.transform.position, facePlayer);
+
+        var setTextScript = instance.GetComponent<SetUIText>();
+        if(setTextScript == null)
+        {
+            Debug.LogError($"the game object [{instance.gameObject.name}] does not have the SetTextUI script.");
+        }
+        else
+        {
+            setTextScript.SetLabel($"{damageValue}");
+        }
+
+        var resizeScript = instance.GetComponent<DistanceResize>();
+        if(resizeScript == null)
+        {
+            Debug.LogError($"the game object [{instance.gameObject.name}] does not have the DistanceResize script.");
+        }
+        else
+        {
+            resizeScript.Scale(distance);
+        }
+
     }
 
     public void Die()
