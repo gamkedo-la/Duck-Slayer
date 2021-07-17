@@ -6,4 +6,6 @@ using UnityEngine;
 public class TransformRef : ScriptableObject
 {
     public Transform value;
+
+    public Vector3 GetPosition() => value.position;
 }

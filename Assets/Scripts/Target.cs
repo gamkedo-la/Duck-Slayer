@@ -7,6 +7,7 @@ public class Target : MonoBehaviour
     [SerializeField] [Range(2, 10)] float scoreBonusMultiplier = 2f;
     [SerializeField] float distanceWhereBonusNoLongerApplies = 5f;
     [SerializeField] TransformRef PlayerPosition;
+    [SerializeField] GameObject damageTextPrefab;
     public bool isBoss = false;
     private Vector3 playerPosition;
     private DetachChildren detacher;
@@ -47,18 +48,17 @@ public class Target : MonoBehaviour
 
     private void TryInstantiateDamageText(int damageValue, float distance)
     {
-        var prefab = GameManagerSingleton.instance.GetDamageScoreTextPrefab();
-        if(prefab == null)
+        if (damageTextPrefab == null)
         {
-            Debug.LogError("no damange text prefab found in game manager");
+            Debug.LogError("no damange text prefab found.");
+            return;
         }
 
-        var playerTransformPosition = GameManagerSingleton.instance.GetPlayerPosition();
-        var facePlayer = Quaternion.Euler((this.transform.position - playerTransformPosition).normalized);
-        var instance = Instantiate(prefab, this.transform.position, facePlayer);
+        var facePlayer = Quaternion.Euler((transform.position - PlayerPosition.GetPosition()).normalized);
+        var instance = Instantiate(damageTextPrefab, this.transform.position, facePlayer);
 
         var setTextScript = instance.GetComponent<SetUIText>();
-        if(setTextScript == null)
+        if (setTextScript == null)
         {
             Debug.LogError($"the game object [{instance.gameObject.name}] does not have the SetTextUI script.");
         }
@@ -68,7 +68,7 @@ public class Target : MonoBehaviour
         }
 
         var resizeScript = instance.GetComponent<DistanceResize>();
-        if(resizeScript == null)
+        if (resizeScript == null)
         {
             Debug.LogError($"the game object [{instance.gameObject.name}] does not have the DistanceResize script.");
         }

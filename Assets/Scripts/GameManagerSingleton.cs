@@ -23,7 +23,7 @@ public class GameManagerSingleton : MonoBehaviour
     [SerializeField] private GameState gameState;
     [SerializeField] private GameEvent gameStartEvent;
     [SerializeField] private GameEvent worldCompleteEvent;
-    [SerializeField] private GameObject damageTextPrefab;
+    //[SerializeField] private GameObject damageTextPrefab;
     void Awake()
     {
         instance = this;
@@ -35,18 +35,18 @@ public class GameManagerSingleton : MonoBehaviour
 
 
         levelWinCondition = GetComponent<LevelWinCondition>();
-        if(levelWinCondition == null)
+        if (levelWinCondition == null)
         {
-          Debug.LogError($"The gameobject [{this.gameObject.name}] does not have a level win condition");
+            Debug.LogError($"The gameobject [{this.gameObject.name}] does not have a level win condition");
         }
     }
 
     public void WorldSetup()
     {
         GM.instance.duckSpawner = GetDuckSpawner();
-        if(GM.instance.duckSpawner == null)
+        if (GM.instance.duckSpawner == null)
         {
-          Debug.LogError($"No Duck Spawner found at [{this.gameObject.name}]");
+            Debug.LogError($"No Duck Spawner found at [{this.gameObject.name}]");
         }
 
         GM.instance.difficultyProgression = GameObject.FindObjectOfType<DifficultyProgression>();
@@ -57,40 +57,40 @@ public class GameManagerSingleton : MonoBehaviour
 
     public void LoadNextDifficultyLevel()
     {
-      if(GM.instance.duckSpawner == null)
-      {
-        Debug.LogError("duckSpawner == null");
-        return;
-      }
+        if (GM.instance.duckSpawner == null)
+        {
+            Debug.LogError("duckSpawner == null");
+            return;
+        }
 
-      if(GM.instance.difficultyProgression == null)
-      {
-        Debug.LogError("difficultyProgression == null");
-        return;
-      }
+        if (GM.instance.difficultyProgression == null)
+        {
+            Debug.LogError("difficultyProgression == null");
+            return;
+        }
 
 
-      // resets score before moving onto next difficulty or level/scene
-      // so that we can track the score and move to the next level
-      GetScore().SetScore(0); 
+        // resets score before moving onto next difficulty or level/scene
+        // so that we can track the score and move to the next level
+        GetScore().SetScore(0);
 
-      // since there are multiple difficulties in one level, we must reset the win condition
-      // after resetting the score
-      levelWinCondition.ResetWinCondition();
+        // since there are multiple difficulties in one level, we must reset the win condition
+        // after resetting the score
+        levelWinCondition.ResetWinCondition();
 
-      LevelConfiguration level;
-      int currentDifficultyIndex = GM.instance.difficultyProgression.GetCurrentIndex();
-      if (GM.instance.difficultyProgression.HasNextLevel(currentDifficultyIndex, out level))
-      {
-        Debug.Log($"Setting difficulty level to : [{level.name}] and current score is [{GetScore().CurrentScore}]");
-        GM.instance.difficultyProgression.SetCurrentIndex(currentDifficultyIndex + 1);
-        GM.instance.duckSpawner.InitalizeDuckSpawner(level);
-        GM.instance.duckSpawner.SetIsGameStarted(true);
-        levelWinCondition.SetLevelConfiguration(level);
-        return;
-      }
+        LevelConfiguration level;
+        int currentDifficultyIndex = GM.instance.difficultyProgression.GetCurrentIndex();
+        if (GM.instance.difficultyProgression.HasNextLevel(currentDifficultyIndex, out level))
+        {
+            Debug.Log($"Setting difficulty level to : [{level.name}] and current score is [{GetScore().CurrentScore}]");
+            GM.instance.difficultyProgression.SetCurrentIndex(currentDifficultyIndex + 1);
+            GM.instance.duckSpawner.InitalizeDuckSpawner(level);
+            GM.instance.duckSpawner.SetIsGameStarted(true);
+            levelWinCondition.SetLevelConfiguration(level);
+            return;
+        }
 
-      worldCompleteEvent?.Invoke();
+        worldCompleteEvent?.Invoke();
     }
 
     private void Start()
@@ -101,11 +101,11 @@ public class GameManagerSingleton : MonoBehaviour
 
     private void Update()
     {
-      if(Input.GetKeyDown(KeyCode.L))
-      {
-        Debug.Log("L key pressed");
-        GM.instance.WorldSetup();
-      }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Debug.Log("L key pressed");
+            GM.instance.WorldSetup();
+        }
     }
 
     public Score GetScore()
@@ -147,30 +147,30 @@ public class GameManagerSingleton : MonoBehaviour
         return bulletManager;
     }
 
-    public GameObject GetDamageScoreTextPrefab()
-    {
-      return damageTextPrefab;
-    }
+    //public GameObject GetDamageScoreTextPrefab()
+    //{
+    //    return damageTextPrefab;
+    //}
 
     public Vector3 GetPlayerPosition()
     {
-      return playerTransform.position;
+        return playerTransform.position;
     }
 
     public void SetPlayerTransform(Transform value)
     {
-      this.playerTransform = value;
+        this.playerTransform = value;
     }
 
     private DuckSpawner GetDuckSpawner()
     {
         var allDuckSpawners = GameObject.FindObjectsOfType<DuckSpawner>();
-        foreach(var spawner in allDuckSpawners)
+        foreach (var spawner in allDuckSpawners)
         {
-          if(spawner.SpawnerType == DuckSpawner.PrefabType.Duck)
-          {
-            return spawner;
-          }
+            if (spawner.SpawnerType == DuckSpawner.PrefabType.Duck)
+            {
+                return spawner;
+            }
         }
 
         return null;

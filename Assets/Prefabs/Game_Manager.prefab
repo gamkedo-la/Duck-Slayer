@@ -490,6 +490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Display: {fileID: 0}
+  TrackedScore: {fileID: 0}
 --- !u!114 &2431924432534302704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,7 +505,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameState: 0
   gameStartEvent: {fileID: 11400000, guid: 075882a43d880b94c825b6b43ac69255, type: 2}
-  worldCompleteEvent: {fileID: 0}
+  worldCompleteEvent: {fileID: 11400000, guid: 25311c27b3a2d4009bfd39e23d32606a, type: 2}
+  damageTextPrefab: {fileID: 6010625102365797061, guid: 18f6ea0e87ea6064186e1d384915a37b,
+    type: 3}
 --- !u!114 &2431924432534302705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,6 +549,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4783e9faf31fd840a73cc06c5d073d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objective: {fileID: 11400000, guid: 4f4433df3ebc2fb4aab99a8a39dbe2a7, type: 2}
-  trackedVariable: {fileID: 11400000, guid: 8fcf81466c153a94d978e0fd0ff2ba5d, type: 2}
   objectiveComplete: {fileID: 11400000, guid: 0f56239da7ddfa84da53e4e2aa35115d, type: 2}
+  hasCalledObjectiveCompleted: 0
