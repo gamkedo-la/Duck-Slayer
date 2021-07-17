@@ -20530,6 +20530,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7565988097227151467, guid: 91ebc526e060742618648ea5df3b31fe,
         type: 3}
+    - target: {fileID: 4439212657936126153, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
+        type: 3}
+      propertyPath: m_DebounceTime
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 7047857845547607286, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
         type: 3}
       propertyPath: gameManager
