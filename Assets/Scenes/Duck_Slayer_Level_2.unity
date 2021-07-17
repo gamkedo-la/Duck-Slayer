@@ -1981,6 +1981,12 @@ PrefabInstance:
       propertyPath: Display
       value: 
       objectReference: {fileID: 1233548379329764946}
+    - target: {fileID: 2431924432534302703, guid: d371eec58aafa4776bf83046062a3ae3,
+        type: 3}
+      propertyPath: TrackedScore
+      value: 
+      objectReference: {fileID: 11400000, guid: f1440025c0b514b49b63c8897c7f24ed,
+        type: 2}
     - target: {fileID: 2431924432534302705, guid: d371eec58aafa4776bf83046062a3ae3,
         type: 3}
       propertyPath: cartridge
