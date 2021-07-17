@@ -1065,7 +1065,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 61517299}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786154610}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9f3cde74549bda408a43577072e5fcb, type: 3}
@@ -6222,29 +6222,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb58485cc62ea0a42b406c416b4317ef, type: 3}
---- !u!1 &786154610 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7319739300493422274, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
-    type: 3}
-  m_PrefabInstance: {fileID: 61517299}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &786154611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786154610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e7aa26a955c0440580c7fb7543414d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InputButtons:
-  - {fileID: -4084014799535200556, guid: fa9bb3bb80eb242a1bbc7adb422ead58, type: 3}
-  - {fileID: 7565988097227151467, guid: 91ebc526e060742618648ea5df3b31fe, type: 3}
-  gameEvent: {fileID: 11400000, guid: ea68aeacda24b415fa0240eaf414f420, type: 2}
-  unPause: {fileID: 11400000, guid: 772a4936141074b2faaa8766d5facdc0, type: 2}
 --- !u!1001 &786192921
 PrefabInstance:
   m_ObjectHideFlags: 0
