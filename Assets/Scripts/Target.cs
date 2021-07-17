@@ -53,7 +53,8 @@ public class Target : MonoBehaviour
             Debug.LogError("no damange text prefab found in game manager");
         }
 
-        var facePlayer = Quaternion.Euler((this.transform.position - playerPosition).normalized);
+        var playerTransformPosition = GameManagerSingleton.instance.GetPlayerPosition();
+        var facePlayer = Quaternion.Euler((this.transform.position - playerTransformPosition).normalized);
         var instance = Instantiate(prefab, this.transform.position, facePlayer);
 
         var setTextScript = instance.GetComponent<SetUIText>();

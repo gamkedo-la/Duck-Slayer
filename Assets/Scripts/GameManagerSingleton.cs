@@ -17,14 +17,13 @@ public class GameManagerSingleton : MonoBehaviour
     private BulletManager bulletManager;
     private DuckSpawner duckSpawner;
     private DifficultyProgression difficultyProgression;
-
     private LevelWinCondition levelWinCondition;
+    private Transform playerTransform;
 
     [SerializeField] private GameState gameState;
     [SerializeField] private GameEvent gameStartEvent;
     [SerializeField] private GameEvent worldCompleteEvent;
     [SerializeField] private GameObject damageTextPrefab;
-
     void Awake()
     {
         instance = this;
@@ -151,6 +150,16 @@ public class GameManagerSingleton : MonoBehaviour
     public GameObject GetDamageScoreTextPrefab()
     {
       return damageTextPrefab;
+    }
+
+    public Vector3 GetPlayerPosition()
+    {
+      return playerTransform.position;
+    }
+
+    public void SetPlayerTransform(Transform value)
+    {
+      this.playerTransform = value;
     }
 
     private DuckSpawner GetDuckSpawner()

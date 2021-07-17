@@ -8,6 +8,7 @@ public class AnimateDamageScore : MonoBehaviour
     public TMP_Text label;
     public Color startColor;
     public Color endColor;
+    public float rotationSpeed = 500f;
 
     void Start()
     {
@@ -19,7 +20,7 @@ public class AnimateDamageScore : MonoBehaviour
         Vector3 startPosition = this.transform.position;
         Vector3 finalPosition = this.transform.position + new Vector3(0,1,0);
         label.color = startColor;
-        
+
         float percentage = 0.0f;
         while(percentage < 1.0f)
         {
@@ -31,6 +32,10 @@ public class AnimateDamageScore : MonoBehaviour
 
             // fade label color
             label.color = Color.Lerp(startColor, endColor, percentage);
+
+            var currentRotation = this.transform.rotation.eulerAngles;
+            currentRotation.y += Time.deltaTime*rotationSpeed;
+            this.transform.rotation = Quaternion.Euler(currentRotation);
         }
     }
 }
