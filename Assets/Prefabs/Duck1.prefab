@@ -285,7 +285,7 @@ MonoBehaviour:
   scoreBonusMultiplier: 2
   distanceWhereBonusNoLongerApplies: 5
   PlayerPosition: {fileID: 11400000, guid: 9d5706f5f6d9f8840a30ad98fd960463, type: 2}
-  damageTextPrefab: {fileID: 6010625102365797061, guid: 18f6ea0e87ea6064186e1d384915a37b,
+  damageTextPrefab: {fileID: 6036640550224427238, guid: ce36c9092275a35429a03a5461f787f6,
     type: 3}
   isBoss: 0
 --- !u!65 &7176343762786340136
