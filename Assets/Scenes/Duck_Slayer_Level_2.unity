@@ -10061,6 +10061,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PowerUp Mechanic
       objectReference: {fileID: 0}
+    - target: {fileID: 8863210254179565514, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8863210254179565515, guid: dbec099dfdd004a41944c08e1e97f313,
         type: 3}
       propertyPath: m_RootOrder
