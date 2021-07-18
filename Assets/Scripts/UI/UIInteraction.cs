@@ -14,6 +14,14 @@ public class UIInteraction : MonoBehaviour
     Vector3 lastPosition;
     Button lastHighlightedButton;
 
+    [Header("Debug")]
+    [SerializeField] private bool logDebug = false;
+
+    private void Awake()
+    {
+        Debug.Log($"Debug Log value is [{logDebug}] in [{this.gameObject.name}:{this.GetType().Name}]]");
+    }
+
     void OnEnable()
     {
         FireButton.action.performed += HandleFireButtonPress;
@@ -107,7 +115,7 @@ public class UIInteraction : MonoBehaviour
     {
         if (lastHighlightedButton != null)
         {
-            //Debug.Log(lastHighlightedButton.name);
+            if(logDebug) Debug.Log(lastHighlightedButton.name);
 
             var eventTrigger = lastHighlightedButton.GetComponent<EventTrigger>();
 
@@ -122,7 +130,7 @@ public class UIInteraction : MonoBehaviour
             }
 
             lastHighlightedButton = null;
-            //Debug.Log("Exit");
+            if(logDebug) Debug.Log("Exit");
         }
     }
 
@@ -138,12 +146,12 @@ public class UIInteraction : MonoBehaviour
             if (clickHandler != null)
             {
                 PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
-                Debug.Log("hit " + hit.collider.gameObject.name);
+                if(logDebug) Debug.Log("hit " + hit.collider.gameObject.name);
                 clickHandler.OnPointerClick(pointerEventData);
                 return;
             }
         }
 
-        //Debug.Log("Hit Not UI");
+        if(logDebug) Debug.Log("Hit Not UI");
     }
 }

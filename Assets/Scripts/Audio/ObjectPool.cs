@@ -12,9 +12,16 @@ namespace Audio
         private Queue<GameObject> pool = new Queue<GameObject>();
         private Transform parent;
 
+        [Header("Debug")]
+        [SerializeField] private bool logDebug = false;
+
+        private void Awake()
+        {
+            Debug.Log($"Debug Log value is [{logDebug}] in [{this.name}:{this.GetType().Name}]]");
+        }
+
         public void CreatePool(Transform transform)
         {
-            //pool.Clear();
             parent = transform;
             pool = new Queue<GameObject>();
 
@@ -46,7 +53,7 @@ namespace Audio
         {
             pool.Enqueue(objectToReturn);
 
-            //Debug.Log("Returning Object: " + objectToReturn.name + " Pool Count: " + pool.Count);
+            if(logDebug) Debug.Log("Returning Object: " + objectToReturn.name + " Pool Count: " + pool.Count);
 
             if (pool.Count < maxPoolSize)
                 return;

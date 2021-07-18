@@ -40,25 +40,32 @@ public class DuckSpawner : MonoBehaviour
     [SerializeField] TransformRef PlayerTransform;
     [SerializeField] [Range(0, 100)] float DiveBombProbability;
 
+    [Header("Debug")]
+    [SerializeField] private bool logDebug = false;
+
     private bool isGameStarted = false;
     public PrefabType SpawnerType => _spawnerType;
+
+    private void Awake()
+    {
+        Debug.Log($"Debug Log value is [{logDebug}] in [{this.gameObject.name}:{this.GetType().Name}]]");
+    }
+
+    private void Start()
+    {
+      if(SpawnerType == PrefabType.Car)
+      {
+        if(logDebug) Debug.Log($"Spawner type is [{SpawnerType}], calling SetIsGameStarted function from Start function in [{this.name}] in gameobject [{this.gameObject.name}]");
+        SetIsGameStarted(true);
+      }
+    }
 
     public void SetIsGameStarted(bool IsStarted)
     {
       isGameStarted = IsStarted;
     }
 
-    void Start() {
-      // InitalizeDuckSpawner(DefaultConfiguration);
-      if(SpawnerType == PrefabType.Car)
-      {
-        Debug.Log($"Spawner type is [{SpawnerType}], calling SetIsGameStarted function from Start function in [{this.name}] in gameobject [{this.gameObject.name}]");
-        SetIsGameStarted(true);
-      }
-    }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (isGameStarted == false) return;
 
@@ -81,13 +88,13 @@ public class DuckSpawner : MonoBehaviour
     {
       if(DucksSpawned == null)
       {
-          Debug.Log($"not assignment to [{this.gameObject.name}]");
+          if(logDebug) Debug.Log($"not assignment to [{this.gameObject.name}]");
       }
 
       DucksSpawned.Reset(); 
       if(LevelConfig == null)
       {
-        Debug.LogError("LevelConfig == null");
+        if(logDebug) Debug.LogError("LevelConfig == null");
         return;
       }
       DuckPrefab = LevelConfig.DuckPrefab;

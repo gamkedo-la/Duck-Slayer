@@ -11,7 +11,14 @@ public class LevelWinCondition : MonoBehaviour
 
     private Score scoreKeeper;
     private LevelConfiguration currentConfiguration;
+    [Header("Debug")]
+    [SerializeField] private bool logDebug = false;
 
+    private void Awake()
+    {
+        Debug.Log($"Debug Log value is [{logDebug}] in [{this.gameObject.name}:{this.GetType().Name}]]");
+    }
+    
     private void Start()
     {
         hasCalledObjectiveCompleted = false;
@@ -26,7 +33,7 @@ public class LevelWinCondition : MonoBehaviour
 
         if (hasCalledObjectiveCompleted == false && scoreKeeper.CurrentScore >= currentConfiguration.WinScore)
         {
-            Debug.Log($"Objective Completed! trackedVar:[{scoreKeeper.CurrentScore}] objective:[{currentConfiguration.WinScore}]");
+            if(logDebug) Debug.Log($"Objective Completed! trackedVar:[{scoreKeeper.CurrentScore}] objective:[{currentConfiguration.WinScore}]");
             objectiveComplete?.Invoke();
             hasCalledObjectiveCompleted = true;
         }
@@ -34,7 +41,7 @@ public class LevelWinCondition : MonoBehaviour
 
     public void ResetWinCondition()
     {
-        Debug.Log("Resetting Win Condition");
+        if(logDebug) Debug.Log("Resetting Win Condition");
         hasCalledObjectiveCompleted = false;
     }
 

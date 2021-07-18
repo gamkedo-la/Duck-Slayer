@@ -16,26 +16,29 @@ public class RaycastShoot : MonoBehaviour
     [SerializeField] float gunShotRadius = 0.1f;
 
     private BulletManager bulletManager;
+    [Header("Debug")]
+    [SerializeField] private bool logDebug = false;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
+    {
+        Debug.Log($"Debug Log value is [{logDebug}] in [{this.gameObject.name}:{this.GetType().Name}]]");
+    }
+
+    private void Start()
     {
         bulletManager = GetComponent<BulletManager>();
         if (bulletManager == null)
         {
-            Debug.Log("no bullet manager found", gameObject);
+            if(logDebug) Debug.Log("no bullet manager found", gameObject);
         }
-        //FireButton.action.performed += HandleFireButtonPress;
     }
 
-    void HandleFireButtonPress(InputAction.CallbackContext obj)
+    private void HandleFireButtonPress(InputAction.CallbackContext obj)
     {
         int bulletCount = bulletManager.GetBulletAmount();
         if (bulletCount <= 0)
         {
-            //StartCoroutine(bulletManager.ReloadCoroutine()); // RELOAD
-
-            //Debug.Log("Out of Ammo");
+            if(logDebug) Debug.Log("Out of Ammo");
             dryFireEvent?.Invoke();
 
             return;

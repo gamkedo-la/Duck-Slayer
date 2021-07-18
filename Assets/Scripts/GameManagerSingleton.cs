@@ -26,9 +26,13 @@ public class GameManagerSingleton : MonoBehaviour
     [Header("Score Range Config")]
     [SerializeField] private float midRangeStartDistance;
     [SerializeField] private float midRangeEndDistance;
+    [Header("Debug")]
+    [SerializeField] private bool logDebug = false;
 
     void Awake()
     {
+        Debug.Log($"Debug Log value is [{logDebug}] in [{this.gameObject.name}:{this.GetType().Name}]]");
+    
         instance = this;
         scoreKeeper = GetComponent<Score>();
         slowMotion = GetComponent<SlowMotion>();
@@ -85,7 +89,7 @@ public class GameManagerSingleton : MonoBehaviour
         int currentDifficultyIndex = GM.instance.difficultyProgression.GetCurrentIndex();
         if (GM.instance.difficultyProgression.HasNextLevel(currentDifficultyIndex, out level))
         {
-            Debug.Log($"Setting difficulty level to : [{level.name}] and current score is [{GetScore().CurrentScore}]");
+            if(logDebug) Debug.Log($"Setting difficulty level to : [{level.name}] and current score is [{GetScore().CurrentScore}]");
             GM.instance.difficultyProgression.SetCurrentIndex(currentDifficultyIndex + 1);
             GM.instance.duckSpawner.InitalizeDuckSpawner(level);
             GM.instance.duckSpawner.SetIsGameStarted(true);
@@ -106,7 +110,7 @@ public class GameManagerSingleton : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            Debug.Log("L key pressed");
+            if(logDebug) Debug.Log("L key pressed");
             GM.instance.WorldSetup();
         }
     }
@@ -124,13 +128,13 @@ public class GameManagerSingleton : MonoBehaviour
     public void Pause()
     {
         instance.gameState = GameState.Pause;
-        Debug.Log("Paused Called");
+        if(logDebug) Debug.Log("Paused Called");
         Time.timeScale = 0;
     }
 
     public void Resume()
     {
-        //Debug.Log("Resume Game");
+        if(logDebug) Debug.Log("Resume Game");
 
         instance.gameState = GameState.Play;
         Time.timeScale = 1;

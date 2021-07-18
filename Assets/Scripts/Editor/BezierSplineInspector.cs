@@ -8,7 +8,6 @@ using System;
 
 public class BezierSplineInspector : Editor
 {
-
     private BezierSpline spline;
     private Transform handleTransform;
     private Quaternion handleRotation;
@@ -19,6 +18,12 @@ public class BezierSplineInspector : Editor
     private const float handleSize = 0.1f;
     private const float pickSize = 0.15f;
 
+    [Header("Debug")]
+    [SerializeField] private bool logDebug = false;
+    private void Awake()
+    {
+        Debug.Log($"Debug Log value is [{logDebug}] in [{this.name}:{this.GetType().Name}]]");
+    }
 
     private void OnSceneGUI()
     {
@@ -52,7 +57,9 @@ public class BezierSplineInspector : Editor
         int index = spline.GetSelectedIndex();
 
         if (index >= 0 && index < spline.ControlPointCount)
-        { DrawSelectedPointInspector(index); Debug.Log("After Draw Call" + index); }
+        { 
+            DrawSelectedPointInspector(index); Debug.Log("After Draw Call" + index);
+        }
 
         EditorGUI.BeginChangeCheck();
         bool loop = EditorGUILayout.Toggle("Loop", spline.Loop);
@@ -130,7 +137,7 @@ public class BezierSplineInspector : Editor
         {
             spline.SetSelectedIndex(index);
             Repaint();
-            Debug.Log("PRess" + spline.GetSelectedIndex());
+            if(logDebug) Debug.Log("Pressed" + spline.GetSelectedIndex());
         }
 
 

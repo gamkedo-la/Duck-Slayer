@@ -8,7 +8,10 @@ public class SlowMotionOnActionInput : MonoBehaviour
     public InputActionReference SlowMotionButton;
     public GameObject gameManager;
     private SlowMotion slowMotionScript;
-    // Start is called before the first frame update
+
+    [Header("Debug")]
+    [SerializeField] private bool logDebug = false;
+
     void Start()
     {
         SlowMotionButton.action.performed += HandleSlowMotionButtonPress;
@@ -18,6 +21,6 @@ public class SlowMotionOnActionInput : MonoBehaviour
     void HandleSlowMotionButtonPress(InputAction.CallbackContext obj)
     {
         slowMotionScript.SlowDown();
-        Debug.Log("SlowMo Button Pressed!");
+        if(logDebug) Debug.Log("SlowMo Button Pressed!");
     }
 }

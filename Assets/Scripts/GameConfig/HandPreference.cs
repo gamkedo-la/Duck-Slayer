@@ -17,13 +17,15 @@ public class HandPreference : MonoBehaviour
     [SerializeField] InputActionReference webGLgun;
     [SerializeField] InputActionReference vrRightTrigger;
     [SerializeField] InputActionReference vrLeftTrigger;
-
-
     private bool isRightHand = true;
     private SetVROrNot vrstate;
+    [Header("Debug")]
+    [SerializeField] private bool logDebug = false;
 
     private void Awake()
     {
+        Debug.Log($"Debug Log value is [{logDebug}] in [{this.gameObject.name}:{this.GetType().Name}]]");
+    
         vrstate = GetComponent<SetVROrNot>();
         gunshotTrigger = gunPrefab.GetComponent<RaycastShoot>();
     }
@@ -70,7 +72,7 @@ public class HandPreference : MonoBehaviour
             return;
         }
 
-        //Debug.Log("Toggle Hand " + isRightHand);
+        if(logDebug) Debug.Log("Toggle Hand " + isRightHand);
         gunPrefab.parent = isRightHand ? webRightHand : webLeftHand;
         gunPrefab.localPosition = Vector3.zero;
         gunPrefab.localScale = Vector3.one;

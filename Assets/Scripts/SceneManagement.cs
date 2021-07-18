@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 public class SceneManagement : MonoBehaviour
 {
     [SerializeField] int sceneBuildIndex;
+    [Header("Debug")]
+    [SerializeField] private bool logDebug = false;
 
     private void Awake()
     {
@@ -32,11 +34,11 @@ public class SceneManagement : MonoBehaviour
 
         if (nextIndex > sceneBuildIndex)
         {
-            Debug.LogWarning("No more scenes!");
+            if(logDebug) Debug.LogWarning("No more scenes!");
             return;
         }
 
-        Debug.Log("Loading Scene: " + SceneManager.GetSceneByBuildIndex(nextIndex).name);
+        if(logDebug) Debug.Log("Loading Scene: " + SceneManager.GetSceneByBuildIndex(nextIndex).name);
         SceneManager.LoadScene(nextIndex);
     }
 }

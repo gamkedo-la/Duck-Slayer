@@ -6,9 +6,16 @@ using TMPro;
 public class Score : MonoBehaviour
 {
     public TextMeshPro Display;
-    [SerializeField] private IntVariable TrackedScore;
     public int CurrentScore => TrackedScore.value;
+    [SerializeField] private IntVariable TrackedScore;
 
+    [Header("Debug")]
+    [SerializeField] private bool logDebug = false;
+
+    private void Awake()
+    {
+        Debug.Log($"Debug Log value is [{logDebug}] in [{this.gameObject.name}:{this.GetType().Name}]]");
+    }
     public void IncreaseScore(float multiplier)
     {
         SetScore(TrackedScore.value + Mathf.RoundToInt(multiplier));
@@ -22,7 +29,7 @@ public class Score : MonoBehaviour
     public void SetScore(int value)
     {
         TrackedScore.value = value;
-        Debug.Log($"adding [{value}] total score[{TrackedScore.value}]");
         Display.text = "Score: " + value;
+        if(logDebug) Debug.Log($"adding [{value}] total score[{TrackedScore.value}]");
     }
 }
