@@ -77,6 +77,15 @@ public class Target : MonoBehaviour
             resizeScript.Scale(distance);
         }
 
+        var animateDmgScore = instance.GetComponent<AnimateDamageScore>();
+        if (animateDmgScore == null)
+        {
+            Debug.LogError($"the game object [{instance.gameObject.name}] does not have the aniamteDmgScore script.");
+        }
+        else
+        {
+            animateDmgScore.SetColorRange(GameManagerSingleton.instance.GetHitRangeEnum(distance));
+        }
     }
 
     public void Die()

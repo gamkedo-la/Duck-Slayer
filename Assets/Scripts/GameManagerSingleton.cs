@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Events;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using GM = GameManagerSingleton;
 
 public enum GameState { Start, Pause, Play, GameOver }
@@ -23,6 +22,10 @@ public class GameManagerSingleton : MonoBehaviour
     [SerializeField] private GameState gameState;
     [SerializeField] private GameEvent gameStartEvent;
     [SerializeField] private GameEvent worldCompleteEvent;
+
+    [Header("Score Range Config")]
+    [SerializeField] private float midRangeStartDistance;
+    [SerializeField] private float midRangeEndDistance;
 
     void Awake()
     {
@@ -157,6 +160,21 @@ public class GameManagerSingleton : MonoBehaviour
         this.playerTransform = value;
     }
 
+    public HitRangeEnum GetHitRangeEnum(float distanceFromPlayer)
+    {
+        if(distanceFromPlayer < midRangeStartDistance)
+        {
+            return HitRangeEnum.Short;
+        }
+
+        if(distanceFromPlayer < midRangeEndDistance)
+        {
+            return HitRangeEnum.Mid;
+        }
+
+        return HitRangeEnum.Long;
+    }
+
     private DuckSpawner GetDuckSpawner()
     {
         var allDuckSpawners = GameObject.FindObjectsOfType<DuckSpawner>();
@@ -170,4 +188,6 @@ public class GameManagerSingleton : MonoBehaviour
 
         return null;
     }
+
+
 }
