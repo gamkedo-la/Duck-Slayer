@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Level_1_2
   m_EditorClassIdentifier: 
   DuckPrefab:
-  - {fileID: 4791767149273642263, guid: 1569b821e8575454aa9f7a76ed658ada, type: 3}
-  AttackPathIndexLimit: 1
-  PassivePathIndexLimit: 1
+  - {fileID: 4791767149273642263, guid: 36fb994de6e1247628659e704a3535c8, type: 3}
+  AttackPathIndexLimit: 2
+  PassivePathIndexLimit: 5
   AttackWeight: 1
   PassiveWeight: 1
-  minSpawnTime: 1
-  maxSpawnTime: 1
+  minSpawnTime: 2
+  maxSpawnTime: 3
   Timer: 1
-  DuckMinFlightTime: 10
+  DuckMinFlightTime: 8
   DuckMaxFlightTime: 10
-  DiveBombProbability: 0
-  WinScore: 100
+  DiveBombProbability: 20
+  WinScore: 500

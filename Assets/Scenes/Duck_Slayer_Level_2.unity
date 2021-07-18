@@ -10660,6 +10660,7 @@ MonoBehaviour:
   ProgressionList:
   - {fileID: 11400000, guid: de8bbad8d5ba4cd418d76c2d312d4f9e, type: 2}
   - {fileID: 11400000, guid: 6511c8f3fe71e6d45890ed3ae4522ffc, type: 2}
+  - {fileID: 11400000, guid: 87bc679934854497a804ffb633e9a5bf, type: 2}
   CurrentIndex: 0
 --- !u!4 &1539341536
 Transform:

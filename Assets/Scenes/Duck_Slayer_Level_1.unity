@@ -17057,6 +17057,7 @@ MonoBehaviour:
   ProgressionList:
   - {fileID: 11400000, guid: cd1bcf2230aaa48a7a712b9ee7a1c880, type: 2}
   - {fileID: 11400000, guid: 05716b7d7832e4e6792567849bb1e6b1, type: 2}
+  - {fileID: 11400000, guid: 8e18982be8c1b4a4e98cc791093283d0, type: 2}
   CurrentIndex: 0
 --- !u!1001 &1922334025
 PrefabInstance:
