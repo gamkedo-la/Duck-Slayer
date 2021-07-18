@@ -36,4 +36,9 @@ public class Health : MonoBehaviour
         onPlayerDeath?.Invoke();
         //Debug.Log(gameObject.name + " has died.");
     }
+
+    public void Heal()
+    {
+        health = MaxHP;
+    }
 }
