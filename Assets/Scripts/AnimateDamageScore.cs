@@ -6,17 +6,39 @@ using TMPro;
 public class AnimateDamageScore : MonoBehaviour
 {
     public TMP_Text label;
-    public Color startColor;
-    public Color endColor;
-    public float rotationSpeed = 500f;
-    [SerializeField] TransformRef playerPosition;
 
-    void Start()
+    [Header("Color Range")]
+    [SerializeField] private Color shortRange;
+    [SerializeField] private Color midRange;
+    [SerializeField] private Color longRange;
+
+    [Header("Fade To Color")]
+    [SerializeField] private Color endColor;
+    [SerializeField] TransformRef playerPosition;
+    private Color startColor;
+
+    private void Start()
     {
         StartCoroutine(Animate());
     }
 
-    public IEnumerator Animate()
+    public void SetColorRange(HitRangeEnum value)
+    {
+        switch(value)
+        {
+            case HitRangeEnum.Long:
+                startColor = longRange;
+                break;
+            case HitRangeEnum.Mid:
+                startColor = midRange;
+                break;
+            default:
+                startColor = shortRange;
+                break;
+        }
+    }
+
+    private IEnumerator Animate()
     {
         Vector3 startPosition = transform.position;
         Vector3 finalPosition = transform.position + new Vector3(0, 1, 0);

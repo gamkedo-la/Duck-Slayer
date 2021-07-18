@@ -48,9 +48,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: {fileID: 6353047824977261328}
-  startColor: {r: 1, g: 0, b: 0, a: 1}
-  endColor: {r: 0, g: 0.545882, b: 1, a: 0}
-  rotationSpeed: 500
+  shortRange: {r: 0.7830189, g: 0.14404595, b: 0.743495, a: 1}
+  midRange: {r: 0.9811321, g: 0.33943352, b: 0.27305093, a: 1}
+  longRange: {r: 0.9622642, g: 0.6476451, b: 0.16794233, a: 1}
+  endColor: {r: 1, g: 1, b: 1, a: 0}
   playerPosition: {fileID: 11400000, guid: 9d5706f5f6d9f8840a30ad98fd960463, type: 2}
 --- !u!114 &8354466899584060354
 MonoBehaviour:

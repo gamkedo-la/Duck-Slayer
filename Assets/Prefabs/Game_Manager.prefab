@@ -506,8 +506,8 @@ MonoBehaviour:
   gameState: 0
   gameStartEvent: {fileID: 11400000, guid: 075882a43d880b94c825b6b43ac69255, type: 2}
   worldCompleteEvent: {fileID: 11400000, guid: 25311c27b3a2d4009bfd39e23d32606a, type: 2}
-  damageTextPrefab: {fileID: 6010625102365797061, guid: 18f6ea0e87ea6064186e1d384915a37b,
-    type: 3}
+  midRangeStartDistance: 10
+  midRangeEndDistance: 30
 --- !u!114 &2431924432534302705
 MonoBehaviour:
   m_ObjectHideFlags: 0
