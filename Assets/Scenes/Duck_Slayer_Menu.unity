@@ -15055,39 +15055,42 @@ PrefabInstance:
         explosions, laser sight, assorted models (core/initial city buildings, bush,
         clouds, tree wall, guard rail, streets, office, shop, cars), base slow motion
         support, muzzle flash update, VR reload tweak, assorted bug fixing, road
-        traffic, level tuning, green duck
+        traffic, green duck, moon terrain changes, difficulty progression tuning,
+        level endings
 
 
-        Roc Lee: Project co-lead, models
-        (animated duck, gun), cloud placement, base muzzle flash, spline bird paths,
-        audio system, main audio (spatialized quacks, flaps, gunshots, duck death,
-        nature, wind, reload, space ambiance, egg attack), adjustable flight time,
-        collision adjustment, basic health system, cartridge reload system, game
-        event system, object pooling, dry fire, level win/lose manager, duck dive
-        bombing attacks, egg destruction, distance-based scoring, purple duck, shot
-        spread, moon level
+        Roc Lee: Project co-lead, models (animated duck,
+        gun), cloud placement, base muzzle flash, spline bird paths, audio system,
+        main audio (spatialized quacks, flaps, gunshots, duck death, nature, wind,
+        reload, space ambiance, egg attack), adjustable flight time, collision adjustment,
+        basic health system, cartridge reload system, game event system, object pooling,
+        dry fire, level win/lose manager, duck dive bombing attacks, egg destruction,
+        distance-based scoring, purple duck, shot spread, moon level, text fix, VR
+        pause support
 
 
-        Philip Greene: Art (additional city buildings,
-        truck, balcony, grass model, duck egg, mothership egg, earth and moon), grass
-        system, core UI, mouse input fix, fonts selection and integration, main menu,
-        lose screen UI
+        Philip Greene: Art (additional city buildings, truck,
+        balcony, grass model, duck egg, mothership egg, earth and moon), grass system,
+        core UI, mouse input fix, fonts selection and integration, main menu, lose
+        screen UI, fog, city health billboard
 
 
-        Filipe Dottori: Menu music, slow motion score event,
-        gun reload, scoring fix, minor bug fix
+        Filipe Dottori: Menu music,
+        city jazz music, slow motion score event, gun reload, scoring fix, minor
+        bug fix
 
 
-        Will McKay: Player score
-        sign, flight paths, duck spawn script, health bar
+        tiago.dev: pause menu, score pop up and animation, power 
+        up system, debug system, bug fixes, level 3 difficulty progression, additional
+        flight paths in levels, difficulty tweaks, score distance color cue, slow
+        motion powerup
 
 
-        tiago.dev: pause
-        menu, score pop up and animation, power  up system, debug system, bug fixes
+        Will McKay: Player score sign, flight paths, duck
+        spawn script, health bar
 
 
-        Chris
-        DeLeon: Compiled credits'
+        Chris DeLeon: Compiled credits'
       objectReference: {fileID: 0}
     - target: {fileID: 6948557131726400883, guid: e96d958362f77c940bf36068bfe3f701,
         type: 3}
@@ -15102,13 +15105,18 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 6948557131726400883, guid: e96d958362f77c940bf36068bfe3f701,
         type: 3}
+      propertyPath: m_fontSizeMin
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948557131726400883, guid: e96d958362f77c940bf36068bfe3f701,
+        type: 3}
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 6948557131726400883, guid: e96d958362f77c940bf36068bfe3f701,
         type: 3}
       propertyPath: m_enableAutoSizing
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6948557131794896640, guid: e96d958362f77c940bf36068bfe3f701,
         type: 3}
