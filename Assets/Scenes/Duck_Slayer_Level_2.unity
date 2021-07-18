@@ -467,8 +467,6 @@ Transform:
   m_LocalPosition: {x: 0, y: -50, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 882375300}
-  - {fileID: 396700672}
   - {fileID: 314367206}
   - {fileID: 1605080518}
   m_Father: {fileID: 0}
@@ -2662,7 +2660,7 @@ Transform:
   - {fileID: 1098071581}
   - {fileID: 898766212}
   m_Father: {fileID: 14792698}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &321748117
 PrefabInstance:
@@ -3367,11 +3365,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396700670}
   m_LocalRotation: {x: 0.35678118, y: -0.511468, z: -0.0069117453, w: 0.7817033}
-  m_LocalPosition: {x: 205, y: 62.89, z: -32.9}
+  m_LocalPosition: {x: 205, y: 12.889999, z: -32.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 14792698}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 33.417, y: -74.560005, z: -26.756}
 --- !u!1 &397108701
 GameObject:
@@ -6832,11 +6830,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882375298}
   m_LocalRotation: {x: 0.4669101, y: -0.06049625, z: 0.43606603, w: 0.76693004}
-  m_LocalPosition: {x: 0.9, y: 62.89, z: -21.7}
+  m_LocalPosition: {x: 0.9, y: 12.889999, z: -21.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 14792698}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 50.258003, y: 29.458002, z: 73.303}
 --- !u!1 &898766208
 GameObject:
@@ -11073,7 +11071,7 @@ Transform:
   - {fileID: 841925318}
   - {fileID: 652850764}
   m_Father: {fileID: 14792698}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1618485778
 GameObject:
@@ -12332,6 +12330,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319739300590876918, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7319739301334628496, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
         type: 3}
