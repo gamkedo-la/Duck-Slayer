@@ -25,7 +25,7 @@ public class RaycastShoot : MonoBehaviour
         {
             Debug.Log("no bullet manager found", gameObject);
         }
-        FireButton.action.performed += HandleFireButtonPress;
+        //FireButton.action.performed += HandleFireButtonPress;
     }
 
     void HandleFireButtonPress(InputAction.CallbackContext obj)
