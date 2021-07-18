@@ -65,7 +65,12 @@ PrefabInstance:
     - target: {fileID: 5642516305770464084, guid: 7093fe6ca432f4330b7fc64016409dd0,
         type: 3}
       propertyPath: m_Name
-      value: DuckPurple
+      value: DuckRed50Damage
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155486008812768441, guid: 7093fe6ca432f4330b7fc64016409dd0,
+        type: 3}
+      propertyPath: damage
+      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7093fe6ca432f4330b7fc64016409dd0, type: 3}
