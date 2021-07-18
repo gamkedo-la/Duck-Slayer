@@ -37,9 +37,8 @@ public class GameManagerSingleton : MonoBehaviour
         scoreKeeper = GetComponent<Score>();
         slowMotion = GetComponent<SlowMotion>();
         bulletManager = GetComponent<BulletManager>();
-        //WorldSetup();
-        GetScore().Reset(); // resets score when game restarts
 
+        GetScore().Reset(); // resets score when game restarts
 
         levelWinCondition = GetComponent<LevelWinCondition>();
         if (levelWinCondition == null)
