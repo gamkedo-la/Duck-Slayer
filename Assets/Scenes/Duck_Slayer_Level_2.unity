@@ -4890,6 +4890,7 @@ MonoBehaviour:
   DucksSpawned: {fileID: 0}
   PlayerTransform: {fileID: 11400000, guid: 9d5706f5f6d9f8840a30ad98fd960463, type: 2}
   DiveBombProbability: 0
+  logDebug: 0
 --- !u!4 &619607390
 Transform:
   m_ObjectHideFlags: 0
@@ -10008,6 +10009,115 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1693241162}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1498549666
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8863210252958310742, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863210252958310742, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863210252958310742, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863210253513948197, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863210253513948197, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863210253727012048, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863210253727012048, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863210253727012048, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -22.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863210254179565514, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: m_Name
+      value: PowerUp Mechanic
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863210254179565515, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863210254179565515, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863210254179565515, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863210254179565515, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863210254179565515, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863210254179565515, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863210254179565515, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863210254179565515, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863210254179565515, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863210254179565515, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863210254179565515, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dbec099dfdd004a41944c08e1e97f313, type: 3}
 --- !u!1001 &1502283254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10662,6 +10772,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6511c8f3fe71e6d45890ed3ae4522ffc, type: 2}
   - {fileID: 11400000, guid: 87bc679934854497a804ffb633e9a5bf, type: 2}
   CurrentIndex: 0
+  logDebug: 0
 --- !u!4 &1539341536
 Transform:
   m_ObjectHideFlags: 0
@@ -11355,6 +11466,7 @@ MonoBehaviour:
   DucksSpawned: {fileID: 11400000, guid: 8fcf81466c153a94d978e0fd0ff2ba5d, type: 2}
   PlayerTransform: {fileID: 11400000, guid: 9d5706f5f6d9f8840a30ad98fd960463, type: 2}
   DiveBombProbability: 24.8
+  logDebug: 0
 --- !u!4 &1633364385
 Transform:
   m_ObjectHideFlags: 0

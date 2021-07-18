@@ -47,6 +47,27 @@ public class GameManagerSingleton : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        gameState = GameState.Play;
+        gameStartEvent?.Invoke();
+
+        var powerUpSpawner = GameObject.FindObjectOfType<PowerUpSpawner>();
+        if(powerUpSpawner != null)
+        {
+            powerUpSpawner.SetScoreKeeper(GetScore());
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            if(logDebug) Debug.Log("L key pressed");
+            GM.instance.WorldSetup();
+        }
+    }
+
     public void WorldSetup()
     {
         GM.instance.duckSpawner = GetDuckSpawner();
@@ -97,21 +118,6 @@ public class GameManagerSingleton : MonoBehaviour
         }
 
         worldCompleteEvent?.Invoke();
-    }
-
-    private void Start()
-    {
-        gameState = GameState.Play;
-        gameStartEvent?.Invoke();
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            if(logDebug) Debug.Log("L key pressed");
-            GM.instance.WorldSetup();
-        }
     }
 
     public Score GetScore()

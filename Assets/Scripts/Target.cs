@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using Events;
-public class Target : MonoBehaviour
+public class Target : BaseTarget
 {
     public ParticleSystem onDestroyParticles;
     [SerializeField] float health = 100f;
@@ -25,7 +25,7 @@ public class Target : MonoBehaviour
         playerPosition = PlayerPosition.value.position;
     }
 
-    public void TakeDamage(float amount)
+    public override void TakeDamage(float amount)
     {
         health -= amount;
         if (health <= 0)

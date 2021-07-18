@@ -476,7 +476,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slowDownRate: 0.05
-  slowDownSeconds: 3
+  slowDownDurantionInSeconds: 6
+  restoreSlowdownInSeconds: 2
+  logDebug: 0
 --- !u!114 &2431924432534302703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,6 +493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Display: {fileID: 0}
   TrackedScore: {fileID: 0}
+  logDebug: 0
 --- !u!114 &2431924432534302704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -508,6 +511,7 @@ MonoBehaviour:
   worldCompleteEvent: {fileID: 11400000, guid: 25311c27b3a2d4009bfd39e23d32606a, type: 2}
   midRangeStartDistance: 10
   midRangeEndDistance: 30
+  logDebug: 0
 --- !u!114 &2431924432534302705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,6 +541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneBuildIndex: 0
+  logDebug: 0
 --- !u!114 &533670093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -551,3 +556,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectiveComplete: {fileID: 11400000, guid: 0f56239da7ddfa84da53e4e2aa35115d, type: 2}
   hasCalledObjectiveCompleted: 0
+  logDebug: 0

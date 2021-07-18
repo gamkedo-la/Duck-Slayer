@@ -12,7 +12,7 @@ public class SlowMotionOnActionInput : MonoBehaviour
     [Header("Debug")]
     [SerializeField] private bool logDebug = false;
 
-    void Start()
+    private void Start()
     {
         SlowMotionButton.action.performed += HandleSlowMotionButtonPress;
         slowMotionScript = GameManagerSingleton.instance.GetComponent<SlowMotion>();

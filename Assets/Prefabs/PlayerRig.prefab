@@ -81,6 +81,7 @@ MonoBehaviour:
   dryFireEvent: {fileID: 11400000, guid: fbbe723db6640404a9b9ad26748bacc2, type: 2}
   gunDamage: 100
   gunShotRadius: 0.1
+  logDebug: 0
 --- !u!1 &976897681541847101
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,6 +460,7 @@ MonoBehaviour:
   health: 2000
   display: {fileID: 0}
   onPlayerDeath: {fileID: 11400000, guid: 85af57e044b01b147b70def14b9889bb, type: 2}
+  logDebug: 0
 --- !u!114 &8220691009336205512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -688,6 +690,7 @@ MonoBehaviour:
     type: 3}
   vrLeftTrigger: {fileID: -5982496924579745919, guid: fa9bb3bb80eb242a1bbc7adb422ead58,
     type: 3}
+  logDebug: 0
 --- !u!114 &1084169921349761127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,6 +723,7 @@ MonoBehaviour:
   - {fileID: 7565988097227151467, guid: 91ebc526e060742618648ea5df3b31fe, type: 3}
   gameEvent: {fileID: 11400000, guid: ea68aeacda24b415fa0240eaf414f420, type: 2}
   unPause: {fileID: 11400000, guid: 772a4936141074b2faaa8766d5facdc0, type: 2}
+  logDebug: 0
 --- !u!1 &7319739300586218528
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,6 +974,7 @@ MonoBehaviour:
   health: 2000
   display: {fileID: 0}
   onPlayerDeath: {fileID: 11400000, guid: 85af57e044b01b147b70def14b9889bb, type: 2}
+  logDebug: 0
 --- !u!114 &5280543483696636439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1242,6 +1247,7 @@ MonoBehaviour:
   SlowMotionButton: {fileID: 7558076583981403346, guid: 91ebc526e060742618648ea5df3b31fe,
     type: 3}
   gameManager: {fileID: 0}
+  logDebug: 0
 --- !u!114 &1404370687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1257,6 +1263,7 @@ MonoBehaviour:
   FireButton: {fileID: 2915566457910256351, guid: 91ebc526e060742618648ea5df3b31fe,
     type: 3}
   isHeld: 0
+  logDebug: 0
 --- !u!1 &7319739301355512230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1735,6 +1742,7 @@ MonoBehaviour:
   SlowMotionButton: {fileID: -8270564778575511633, guid: fa9bb3bb80eb242a1bbc7adb422ead58,
     type: 3}
   gameManager: {fileID: 0}
+  logDebug: 0
 --- !u!114 &74081899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1750,6 +1758,7 @@ MonoBehaviour:
   FireButton: {fileID: 83097790271614945, guid: fa9bb3bb80eb242a1bbc7adb422ead58,
     type: 3}
   isHeld: 0
+  logDebug: 0
 --- !u!1 &7319739301531468112
 GameObject:
   m_ObjectHideFlags: 0
@@ -2227,6 +2236,7 @@ MonoBehaviour:
   SlowMotionButton: {fileID: 1263111715868034790, guid: fa9bb3bb80eb242a1bbc7adb422ead58,
     type: 3}
   gameManager: {fileID: 0}
+  logDebug: 0
 --- !u!1 &7319739301668396489
 GameObject:
   m_ObjectHideFlags: 0

@@ -56,7 +56,7 @@ public class RaycastShoot : MonoBehaviour
 
         if (Physics.SphereCast(transform.position, gunShotRadius, transform.forward, out hit))
         {
-            Target target = hit.transform.GetComponent<Target>();
+            BaseTarget target = hit.transform.GetComponent<BaseTarget>();
             if (target != null)
             {
                 target.TakeDamage(gunDamage);
