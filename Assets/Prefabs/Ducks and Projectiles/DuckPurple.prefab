@@ -231,7 +231,6 @@ GameObject:
   - component: {fileID: 652718016}
   - component: {fileID: 7176343762786340136}
   - component: {fileID: -750415349601217763}
-  - component: {fileID: 8485968993483762695}
   - component: {fileID: 666551224}
   - component: {fileID: 3924427265240231800}
   - component: {fileID: 6155486008812768441}
@@ -240,9 +239,10 @@ GameObject:
   - component: {fileID: 776258383463487385}
   - component: {fileID: 5338805508063325238}
   - component: {fileID: 9034980172431448253}
-  - component: {fileID: 3760874143490069284}
+  - component: {fileID: 3816179208029964905}
+  - component: {fileID: -4708292796947856312}
   m_Layer: 0
-  m_Name: Duck1
+  m_Name: DuckPurple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -299,8 +299,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.74023306, y: 1.1861153, z: 0.81553054}
-  m_Center: {x: -0.034694016, y: 0.90514493, z: -0.09223473}
+  m_Size: {x: 0.7998927, y: 1.1749692, z: 0.9025265}
+  m_Center: {x: -0.004864186, y: 0.8907869, z: -0.1755333}
 --- !u!54 &-750415349601217763
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -317,19 +317,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8485968993483762695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5642516305770464084}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4343fb3db2b904ac9a4e903366df4524, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DurationInSeconds: 10
 --- !u!114 &666551224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,7 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7e0fcc723a6e64c95e2da90c40fa8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1000
+  damage: 10
 --- !u!82 &7945817304928019263
 AudioSource:
   m_ObjectHideFlags: 0
@@ -626,7 +613,7 @@ MonoBehaviour:
   - {fileID: 1901891465223779018}
   destroyTimer: 2
   functionToInvoke: PlayAudio
---- !u!114 &3760874143490069284
+--- !u!114 &3816179208029964905
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -635,15 +622,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 5642516305770464084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16ad67e6d94c87e49882d682f698c57f, type: 3}
+  m_Script: {fileID: 11500000, guid: c708e5f1d2d9420bb0c89ae298c9f2c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minTimeToDive: 1.5
-  maxTimeToDive: 3
-  minSpeed: 1
-  maxSpeed: 5
-  shouldDiveBomb: 0
-  playerPosition: {x: 0, y: 0, z: 0}
+  gameEvent: {fileID: 11400000, guid: 0f56239da7ddfa84da53e4e2aa35115d, type: 2}
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 652718016}
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-4708292796947856312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642516305770464084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c708e5f1d2d9420bb0c89ae298c9f2c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 85af57e044b01b147b70def14b9889bb, type: 2}
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3924427265240231800}
+        m_MethodName: StopFollowingPath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &466132673020134225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -651,6 +674,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3467567129076637494}
     m_Modifications:
+    - target: {fileID: -8998524889591721775, guid: ac89a80746fcc8b44987c91196f7384f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 249580f7147e57940869e711ba305815, type: 2}
     - target: {fileID: -8679921383154817045, guid: ac89a80746fcc8b44987c91196f7384f,
         type: 3}
       propertyPath: m_RootOrder
@@ -706,11 +734,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6652725513331149018, guid: ac89a80746fcc8b44987c91196f7384f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 249580f7147e57940869e711ba305815, type: 2}
+    - target: {fileID: -6408099420564850757, guid: ac89a80746fcc8b44987c91196f7384f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 249580f7147e57940869e711ba305815, type: 2}
+    - target: {fileID: -4157524182732408741, guid: ac89a80746fcc8b44987c91196f7384f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 249580f7147e57940869e711ba305815, type: 2}
+    - target: {fileID: -277350666426918340, guid: ac89a80746fcc8b44987c91196f7384f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 249580f7147e57940869e711ba305815, type: 2}
+    - target: {fileID: -255007354648310844, guid: ac89a80746fcc8b44987c91196f7384f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 249580f7147e57940869e711ba305815, type: 2}
     - target: {fileID: 919132149155446097, guid: ac89a80746fcc8b44987c91196f7384f,
         type: 3}
       propertyPath: m_Name
       value: Duck Blender
       objectReference: {fileID: 0}
+    - target: {fileID: 3406245383648032383, guid: ac89a80746fcc8b44987c91196f7384f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 249580f7147e57940869e711ba305815, type: 2}
+    - target: {fileID: 8607404563757405670, guid: ac89a80746fcc8b44987c91196f7384f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 249580f7147e57940869e711ba305815, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac89a80746fcc8b44987c91196f7384f, type: 3}
 --- !u!1 &772755342057324032 stripped
