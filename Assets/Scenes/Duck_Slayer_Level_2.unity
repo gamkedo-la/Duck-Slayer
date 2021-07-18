@@ -12287,7 +12287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2033380270, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
       propertyPath: forceVR
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2072506159, guid: d5d5c836c62e247e6abab8cbcc6c2b2c, type: 3}
       propertyPath: cartridge
