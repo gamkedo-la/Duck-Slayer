@@ -1850,6 +1850,16 @@ PrefabInstance:
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
+    - target: {fileID: 8395592366294911773, guid: d371eec58aafa4776bf83046062a3ae3,
+        type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395592366294911773, guid: d371eec58aafa4776bf83046062a3ae3,
+        type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2431924432534302705, guid: d371eec58aafa4776bf83046062a3ae3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d371eec58aafa4776bf83046062a3ae3, type: 3}
@@ -8106,11 +8116,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 181960097}
+      objectReference: {fileID: 1218819629}
     - target: {fileID: 277689681771956483, guid: 62d8cd67a766ad04bb9dfd9a4eeb9f65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadNextScene
+      value: TriggerEvent
       objectReference: {fileID: 0}
     - target: {fileID: 1345880860455784200, guid: 62d8cd67a766ad04bb9dfd9a4eeb9f65,
         type: 3}
@@ -8286,6 +8296,25 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1218819625}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1218819628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 277689681771956481, guid: 62d8cd67a766ad04bb9dfd9a4eeb9f65,
+    type: 3}
+  m_PrefabInstance: {fileID: 1218819625}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1218819629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218819628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c20ae34987b558048bec253b2c582748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 48b4030c0fc5c4c0bb238cd6d4d9212e, type: 2}
 --- !u!1001 &1230858187
 PrefabInstance:
   m_ObjectHideFlags: 0
