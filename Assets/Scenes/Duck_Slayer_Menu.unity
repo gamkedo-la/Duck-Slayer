@@ -5361,6 +5361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneBuildIndex: 0
+  logDebug: 0
 --- !u!4 &338191267
 Transform:
   m_ObjectHideFlags: 0
@@ -15031,11 +15032,12 @@ PrefabInstance:
         sign, flight paths, duck spawn script, health bar
 
 
-        tiago.dev: Pause
-        menu
+        tiago.dev: pause
+        menu, score pop up and animation, power  up system, debug system, bug fixes
 
 
-        Chris DeLeon: Compiled credits'
+        Chris
+        DeLeon: Compiled credits'
       objectReference: {fileID: 0}
     - target: {fileID: 6948557131726400883, guid: e96d958362f77c940bf36068bfe3f701,
         type: 3}
