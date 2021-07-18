@@ -7,12 +7,7 @@ using Events;
 public class PauseButton : ButtonAction
 {
     public GameEvent unPause;
-    private bool isPaused;
-
-    private void Start()
-    {
-        isPaused = GameManagerSingleton.instance.IsPaused();
-    }
+    private bool isPaused = false;
 
     override public void HandleButtonPress(InputAction.CallbackContext obj)
     {

@@ -23,7 +23,7 @@ public class GameManagerSingleton : MonoBehaviour
     [SerializeField] private GameState gameState;
     [SerializeField] private GameEvent gameStartEvent;
     [SerializeField] private GameEvent worldCompleteEvent;
-    //[SerializeField] private GameObject damageTextPrefab;
+
     void Awake()
     {
         instance = this;
@@ -146,11 +146,6 @@ public class GameManagerSingleton : MonoBehaviour
     {
         return bulletManager;
     }
-
-    //public GameObject GetDamageScoreTextPrefab()
-    //{
-    //    return damageTextPrefab;
-    //}
 
     public Vector3 GetPlayerPosition()
     {
