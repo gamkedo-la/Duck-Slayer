@@ -18,8 +18,8 @@ MonoBehaviour:
   PassivePathIndexLimit: 5
   AttackWeight: 1
   PassiveWeight: 1
-  minSpawnTime: 2
-  maxSpawnTime: 3
+  minSpawnTime: 1
+  maxSpawnTime: 2
   Timer: 1
   DuckMinFlightTime: 8
   DuckMaxFlightTime: 10

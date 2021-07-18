@@ -22,7 +22,7 @@ MonoBehaviour:
   minSpawnTime: 3
   maxSpawnTime: 5
   Timer: 1
-  DuckMinFlightTime: 20
-  DuckMaxFlightTime: 30
+  DuckMinFlightTime: 10
+  DuckMaxFlightTime: 15
   DiveBombProbability: 15.5
   WinScore: 300

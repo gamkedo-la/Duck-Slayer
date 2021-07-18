@@ -20,7 +20,7 @@ MonoBehaviour:
   AttackWeight: 2
   PassiveWeight: 1
   minSpawnTime: 1
-  maxSpawnTime: 3
+  maxSpawnTime: 1
   Timer: 1
   DuckMinFlightTime: 7
   DuckMaxFlightTime: 10
