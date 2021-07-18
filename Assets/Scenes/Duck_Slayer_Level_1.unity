@@ -20758,7 +20758,7 @@ PrefabInstance:
     - target: {fileID: 8863210254179565514, guid: dbec099dfdd004a41944c08e1e97f313,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8863210254179565515, guid: dbec099dfdd004a41944c08e1e97f313,
         type: 3}
@@ -20814,6 +20814,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863210254179565516, guid: dbec099dfdd004a41944c08e1e97f313,
+        type: 3}
+      propertyPath: powerUpSpawnerThreshold
+      value: 400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbec099dfdd004a41944c08e1e97f313, type: 3}
