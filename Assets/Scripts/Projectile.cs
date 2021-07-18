@@ -38,6 +38,8 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
+        if (GameManagerSingleton.instance.IsPaused()) return;
+
         transform.position = Vector3.MoveTowards(transform.position, playerPosition, speed);
         transform.LookAt(playerPosition);
     }
