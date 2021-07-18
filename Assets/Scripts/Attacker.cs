@@ -9,7 +9,7 @@ public class Attacker : MonoBehaviour
     [SerializeField] float minAttackTime = 1f;
     [SerializeField] float maxAttackTime = 5f;
     [SerializeField] TransformRef PlayerPositionRef;
-    [SerializeField] AudioSourcePlayer audio;
+    [SerializeField] AudioSourcePlayer audioSourcePlayer;
     private Transform target;
     private float timer;
 
@@ -52,8 +52,8 @@ public class Attacker : MonoBehaviour
         GameObject shot = Instantiate(projectile, transform.position, Quaternion.identity);
         shot.transform.LookAt(target);
 
-        if (audio != null)
-            audio.PlayAudio();
+        if (audioSourcePlayer != null)
+            audioSourcePlayer.PlayAudio();
 
         ResetTimer();
     }

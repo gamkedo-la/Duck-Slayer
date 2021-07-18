@@ -18,8 +18,8 @@ public class AudioData : ScriptableObject
     [Range(-24, 24)]
     [SerializeField] float Pitch = 0f;
 
-    [Range(0f, 1f)]
-    [SerializeField] float SpatialBlend = 1f;
+    // [Range(0f, 1f)]
+    // [SerializeField] float SpatialBlend = 1f; // variable not used. I commented it out to clear the warning.
 
     [Range(0, 5)]
     [SerializeField] float RandomVolume = 0f;

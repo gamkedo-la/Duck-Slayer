@@ -105,7 +105,9 @@ public class ResonanceAudioReverbBakingWindow : EditorWindow {
 #else
     EditorApplication.playmodeStateChanged = OnSceneOrModeSwitch;
 #endif  // UNITY_2017_2_OR_NEWER
+#pragma warning disable CS0618
     SceneView.onSceneGUIDelegate += OnSceneGUI;
+#pragma warning restore CS0618
   }
 
   void OnDisable() {
@@ -116,8 +118,9 @@ public class ResonanceAudioReverbBakingWindow : EditorWindow {
 #else
     EditorApplication.playmodeStateChanged = null;
 #endif  // UNITY_2017_2_OR_NEWER
+#pragma warning disable CS0618
     SceneView.onSceneGUIDelegate -= OnSceneGUI;
-
+#pragma warning restore CS0618
     // Destroy the material mapper updater if not null.
     if (!EditorApplication.isPlaying && materialMapperUpdater != null) {
       DestroyImmediate(materialMapperUpdater.gameObject);
