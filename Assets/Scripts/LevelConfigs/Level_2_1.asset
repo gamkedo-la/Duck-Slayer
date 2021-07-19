@@ -19,10 +19,10 @@ MonoBehaviour:
   PassivePathIndexLimit: 1
   AttackWeight: 1
   PassiveWeight: 1
-  minSpawnTime: 3
-  maxSpawnTime: 5
+  minSpawnTime: 2
+  maxSpawnTime: 3
   Timer: 1
   DuckMinFlightTime: 10
   DuckMaxFlightTime: 15
   DiveBombProbability: 15.5
-  WinScore: 300
+  WinScore: 1000

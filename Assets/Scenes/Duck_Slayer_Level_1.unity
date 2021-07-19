@@ -20519,7 +20519,7 @@ PrefabInstance:
     - target: {fileID: 5976526933939171746, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
         type: 3}
       propertyPath: health
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7047857845547607286, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
         type: 3}
@@ -20604,7 +20604,7 @@ PrefabInstance:
     - target: {fileID: 7319739301621909541, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
         type: 3}
       propertyPath: health
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7319739301621909541, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
         type: 3}
@@ -20818,7 +20818,7 @@ PrefabInstance:
     - target: {fileID: 8863210254179565516, guid: dbec099dfdd004a41944c08e1e97f313,
         type: 3}
       propertyPath: powerUpSpawnerThreshold
-      value: 400
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbec099dfdd004a41944c08e1e97f313, type: 3}

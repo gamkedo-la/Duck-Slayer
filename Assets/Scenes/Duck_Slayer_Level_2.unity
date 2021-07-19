@@ -9465,6 +9465,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1345880861376805929, guid: 62d8cd67a766ad04bb9dfd9a4eeb9f65,
+        type: 3}
+      propertyPath: m_text
+      value: You Win! Go to..
+      objectReference: {fileID: 0}
     - target: {fileID: 1345880861993281292, guid: 62d8cd67a766ad04bb9dfd9a4eeb9f65,
         type: 3}
       propertyPath: m_text
@@ -9911,7 +9916,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9b73499240cfd8940bd62db5d9f2bf67, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.25
+  m_Volume: 0.04
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -11550,7 +11555,7 @@ PrefabInstance:
     - target: {fileID: 8863210254179565514, guid: dbec099dfdd004a41944c08e1e97f313,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8863210254179565515, guid: dbec099dfdd004a41944c08e1e97f313,
         type: 3}
@@ -11633,7 +11638,7 @@ PrefabInstance:
     - target: {fileID: 3312509159166861416, guid: 13782029186911c4f98fd660be8f41af,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3312509159166861420, guid: 13782029186911c4f98fd660be8f41af,
         type: 3}
@@ -14033,6 +14038,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5976526933939171746, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
         type: 3}
+      propertyPath: health
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5976526933939171746, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
+        type: 3}
       propertyPath: display
       value: 
       objectReference: {fileID: 1233548379414051282}
@@ -14135,6 +14145,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319739301621909541, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
+        type: 3}
+      propertyPath: health
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7319739301621909541, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
         type: 3}
