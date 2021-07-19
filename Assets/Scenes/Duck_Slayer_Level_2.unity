@@ -13992,6 +13992,11 @@ PrefabInstance:
       propertyPath: cartridge
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1624087162319484715, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
+        type: 3}
+      propertyPath: reloadKey
+      value: 324
+      objectReference: {fileID: 0}
     - target: {fileID: 2236504235842800194, guid: d5d5c836c62e247e6abab8cbcc6c2b2c,
         type: 3}
       propertyPath: gunPrefab
